@@ -1,0 +1,55 @@
+<tool id="paqmir_cut_fasta_identifiers" name="PAQmiR Cut Fasta identifiers" version="1.0.0">
+	<description>modifies the sequences headers in fasta file by removing all annotations located after the first space</description>
+        <stdio>
+            <!-- Anything other than zero is an error -->
+            <exit_code range="1:" />
+            <exit_code range=":-1" />
+            <!-- In case the return code has not been set propery check stderr too -->
+            <regex match="Error:" />
+            <regex match="Exception:" />
+        </stdio>
+
+	<command interpreter="bash">
+		<![CDATA[
+		cut_fasta_identifiers.sh
+                $fastafile
+                $output_fasta_id_cutted
+		]]>
+	</command>
+	<inputs>
+                <param name="fastafile" type="data" format="fasta" label="Fasta file" help="a file in FASTA format" />
+	</inputs>
+	<outputs>
+		<data format="fasta" name="output_fasta_id_cutted" label="${os.path.splitext(str($fastafile.name))[0]}_id_cutted.fa"/>
+	</outputs>
+        <tests>
+            <test>
+                 <param name="fastafile" value="mature.h1000.fasta"/>
+                 <output name="output_fasta_id_cutted" file="mature.h1000_id_cutted.fa"/>
+            </test>
+        </tests>
+	<help>
+<![CDATA[
+
+        | This tool is part of the workflow **PAQmiR** for the *Prediction Annotation and Quantification of miRNA with miRDeep2*
+        |
+        | Wrappers are the product of Valentin Marcon, Kevin Normand & Sylvain Marthey (Thanks to INRA Migale, IFB ressources & INRA GABI)
+
+**What it does**
+
+	| Modifies the sequence headers by removing all data after the first space.
+	| **ex 1 :**
+	| original id : >cel-mir-1 MI0000003 Caenorhabditis elegans
+	| modified id : >cel-mir-1
+	| **ex 2 :**
+	| original id : >Chr4 length= 120829699
+	| modified id : >Chr4
+
+**Input**
+A FASTA file.
+
+**Output**
+A file FASTA.
+]]>
+	</help>
+</tool>

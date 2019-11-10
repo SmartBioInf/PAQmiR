@@ -1,0 +1,974 @@
+miRDeep2 score	novel miRNAs reported by miRDeep2	novel miRNAs, estimated false positives	novel miRNAs, estimated true positives	known miRNAs in species	known miRNAs in data	known miRNAs detected by miRDeep2	estimated signal-to-noise	excision gearing
+10	1	0 +/- 0	1 +/- 0 (82 +/- 39%)	1030	0	0 (0%)	4.7	1
+9	1	0 +/- 0	1 +/- 0 (82 +/- 39%)	1030	0	0 (0%)	4.7	1
+8	1	0 +/- 0	1 +/- 0 (82 +/- 39%)	1030	0	0 (0%)	4.7	1
+7	1	0 +/- 0	1 +/- 0 (82 +/- 39%)	1030	0	0 (0%)	4.7	1
+6	1	0 +/- 0	1 +/- 0 (82 +/- 39%)	1030	0	0 (0%)	4.7	1
+5	1	0 +/- 0	1 +/- 0 (81 +/- 40%)	1030	0	0 (0%)	4.5	1
+4	1	0 +/- 1	1 +/- 0 (74 +/- 44%)	1030	0	0 (0%)	3.3	1
+3	1	1 +/- 1	0 +/- 0 (38 +/- 49%)	1030	0	0 (0%)	1.1	1
+2	1	1 +/- 1	0 +/- 0 (29 +/- 46%)	1030	0	0 (0%)	1	1
+1	2	1 +/- 1	1 +/- 1 (43 +/- 39%)	1030	0	0 (0%)	1.6	1
+0	3	2 +/- 1	1 +/- 1 (46 +/- 30%)	1030	0	0 (0%)	1.8	1
+-1	3	2 +/- 1	1 +/- 1 (43 +/- 31%)	1030	0	0 (0%)	1.7	1
+-2	3	2 +/- 1	1 +/- 1 (42 +/- 32%)	1030	0	0 (0%)	1.6	1
+-3	3	2 +/- 1	1 +/- 1 (39 +/- 31%)	1030	0	0 (0%)	1.5	1
+-4	3	2 +/- 1	1 +/- 1 (39 +/- 31%)	1030	0	0 (0%)	1.5	1
+-5	3	2 +/- 1	1 +/- 1 (38 +/- 30%)	1030	0	0 (0%)	1.5	1
+-6	3	2 +/- 1	1 +/- 1 (38 +/- 30%)	1030	0	0 (0%)	1.5	1
+-7	3	2 +/- 1	1 +/- 1 (37 +/- 30%)	1030	0	0 (0%)	1.5	1
+-8	3	2 +/- 1	1 +/- 1 (37 +/- 30%)	1030	0	0 (0%)	1.5	1
+-9	3	2 +/- 1	1 +/- 1 (37 +/- 30%)	1030	0	0 (0%)	1.5	1
+-10	3	2 +/- 1	1 +/- 1 (36 +/- 29%)	1030	0	0 (0%)	1.4	1
+
+
+
+novel miRNAs predicted by miRDeep2
+provisional id	miRDeep2 score	estimated probability that the miRNA candidate is a true positive	rfam alert	total read count	mature read count	loop read count	star read count	significant randfold p-value	miRBase miRNA	example miRBase miRNA with the same seed	UCSC browser	NCBI blastn	consensus mature sequence	consensus star sequence	consensus precursor sequence	precursor coordinate
+chr25_10	138.4	82 +/- 39%	rRNA	270	126	72	72	no	-	cre-miR1150.3	-	-	ggcagcggagcggg	ccagcaaccc	ggcagcggagcggggagcgcagggcagggcgggggggggggaauccuccccauuguuauguuggcuccucccagcaaccc	chr25:4011286..4011366:+
+chr25_36	1.1	43 +/- 39%	rRNA/tRNA	237	114	123	0	yes	-	-	-	-	gaggaggaggag	ucccugcuguc	gaggaggaggaggaggaggagggagagggaggggacagcaaccagagcgcugaugggacgcugucccuuuaagaggauccagcagguucccugcuguc	chr25:33768600..33768698:+
+chr25_114	0.2	46 +/- 30%	rRNA/tRNA	42	30	12	0	no	-	dme-miR-190-3p	-	-	accaggaaggc	cuuccucuagc	cuuccucuagccacuugcagaaccacgcggcgcucucaggcgguugaccaucaguguagguggcaaccaggaaggc	chr25:28645901..28645977:-
+
+
+
+mature miRBase miRNAs detected by miRDeep2
+tag id	miRDeep2 score	estimated probability that the miRNA is a true positive	rfam alert	total read count	mature read count	loop read count	star read count	significant randfold p-value	mature miRBase miRNA	example miRBase miRNA with the same seed	UCSC browser	NCBI blastn	consensus mature sequence	consensus star sequence	consensus precursor sequence	precursor coordinate
+
+#miRBase miRNAs not detected by miRDeep2
+miRBase precursor id	total read count	mature read count(s)	star read count	remaining reads	UCSC browser	NCBI blastn	miRBase mature sequence(s)	miRBase star sequence(s)	miRBase precursor sequence
+444	348	0	96	-	-	uuugguccccuucaaccagcug	-	caaugcuuugcuagagcugguaaaauggaaccaaaucgccucuucaauggauuugguccccuucaaccagcuguagcuaugcauuga	
+774	690	0	84	-	-	uaaggcacgcggugaaugccaag	uaaggcacgcggugaaugccaag	-	ugagggccccucugcguguucacagcggaccuugauuuaaugucuauacaauuaaggcacgcggugaaugccaagagaggcgccucc	
+453	441	0	12	-	-	cuauacaaucuacugucuuuc	ugagguaguagguuguauaguu	-	gggugagguaguagguuguauaguuuggggcucugcccugcuaugggauaacuauacaaucuacugucuuuccu	
+324	324	0	0	-	-	uggaagacuagugauuuuguuguu	-	agacuggagcgguuguggucuagugcuguguggaagacuagugauuuuguuguucugauguacuaugacaacaagucacagc	
+411	348	0	63	-	-	ucuuugguuaucuagcuguaug	auaaagcuagauaaccg	-	ggaagcgaguuguuaucuuugguuaucuagcuguaugaguguauuggucuucauaaagcuagauaaccgaaaguaaaaacuccuuca	
+366	294	0	72	-	-	uacccuguagauccgaauuugug	-	gaucugucugucuucuguauauacccuguagauccgaauuuguguaaggaauuuugugaucacaaauucguaucuaggggaauauguaguugacauaaacacuccgcuc	
+342	288	0	54	-	-	aacccguagauccgaacuugug	-	ccuguugccacaaacccguagauccgaacuuguggugguagugcacacaagcuugugucuauagguaugugucugu	
+339	285	0	54	-	-	ucccugagacccuaacuuguga	-	gacuuuuccuagucccugagacccuaacuugugagguauuuuaguagcaucacaagucaggcucuugggaccuaggcggagggga	
+270	261	0	9	-	-	uggacggagaacugauaagggu	-	ccagucacauccccuuaucacuuuuccagccagcuuugugacucuaacuguuggacggagaacugauaaggguaggugauuga	
+282	243	0	39	-	-	ugagguaguagauuguauaguu	-	ugugggaugagguaguagauuguauaguuuuagggucauaccccaucuuggagauaacuauacagucuacugucuuucccacg	
+243	243	0	0	-	-	uauugcacuugucccggccugu	-	uggguggggauuuguugcacugcuuguguuauauauaaaguauugcacuugucccggccuguggaaga	
+297	240	0	57	-	-	agcagcauuguacagggcuauga	-	uugugcuuucagcuucuuuacagugcugccuuguagcauucaggucaagcagcauuguacagggcuaugaaagaac	
+291	291	0	0	-	-	agaauuguggcuggacaucug	ugauuguccaaacgcaauucuu	-	acucaggagcuucgccacugauuguccaaacgcaauucuuguacgagucugcggccaaccgagaauuguggcuggacaucuguggcugagcucugg	
+288	231	0	57	-	-	uggaauguaaagaaguauguau	-	accuacucagaguacauacuucuuuauguacccauaugaacauacaaugcuauggaauguaaagaaguauguauuuuugguaggc	
+288	225	0	63	-	-	uauggcuuuuuauuccuauguga	-	agauaaauucacucuagugcuuuauggcuuuuuauuccuaugugauaguaauaaagucucauguagggauggaagccaugaaauacauugugaaaaauca	
+288	288	0	0	-	-	aagcugccaguugaagaacug	aguucuucaguggcaagcuuua	-	ggcugagccgcaguaguucuucaguggcaagcuuuauguccugacccagcuaaagcugccaguugaagaacuguugcccucugcc	
+297	216	0	81	-	-	uacccuguagaaccgaauuugug	-	cagugacguugucuauauauacccuguagaaccgaauuugugugguauccauguagucacagauucgauucuaggggaauauauggucgaugcaaaaac	
+261	213	0	48	-	-	uucaaguaauccaggauaggcu	-	ggcuguggcuggauucaaguaauccaggauaggcuguuuccaucugugaggccuauucuugauuacuuguuucuggaggcagcu	
+273	213	0	60	-	-	uagcaccauuugaaaucaguguu	-	cuucuggaagcugguuucacaugguggcuuagauuuuuccaucuuuguaucuagcaccauuugaaaucaguguuuuaggag	
+270	213	0	57	-	-	uacaguacugugauaacugaa	-	acuguccuuuuucgguuaucaugguaccgaugcuguauaucugaaagguacaguacugugauaacugaagaaugguggu	
+246	210	0	36	-	-	uagguaguuucauguuguuggg	-	agcugaucuguggcuuagguaguuucauguuguugggauugaguuuugaacucggcaacaagaaacugccugaguuacaucaguc	
+255	210	0	45	-	-	cagugcaauguuaaaagggcau	-	ugcugcgggccggagcucuuuucacauugugcuacugucugcgccugucacuagcagugcaauguuaaaagggcauuggcugugcagcg	
+270	201	0	69	-	-	cagugcaauaguauugucaaagcau	-	acugcuaacgaaugcucugacuuuauugcacuacuguacuuuacagcuagcagugcaauaguauugucaaagcaucugaaagcag	
+216	198	0	18	-	-	ugugcaaauccaugcaaaacuga	-	acugcuacuuacaguuaguuuugcugguuugcauuucagcguguggauauauggcugugcaaauccaugcaaaacugauugug	
+216	192	0	24	-	-	gugcauuguaguugcauugca	-	cugcggugcauuguaguugcauugcauguucuggcgguacccgugcaauguuuccacagugcaucacag	
+246	192	0	54	-	-	uugcauagucacaaaagugauc	-	agcgguggccagugucauuuuugugauguugcagcuaguaauaugagcccaguugcauagucacaaaagugaucauuggaaacugug	
+420	420	0	0	-	-	acaguagucugcacauugguua	uacaguagucugcacauugg	cccaguguuuagacuaucuguuc	-	ccuccacuccgucuacccaguguuuagacuaucuguucaggacucccaaauuguacaguagucugcacauugguuaggcugggcuggguuagacccucgg	
+249	189	0	60	-	-	uaaagugcuuauagugcagguag	-	guagcacuaaagugcuuauagugcagguaguguuuaguuaucuacugcauuaugagcacuuaaaguacugc	
+264	189	0	75	-	-	uucacaguggcuaaguucugc	-	accucucugacgaggugcagagcuuagcugauuggugaacagugacugguuuccgcuuuguucacaguggcuaaguucugcaccugaagagaaggug	
+210	186	0	24	-	-	uggcucaguucagcaggaacag	-	cucugccucccgugccuacugagcugaaacacaguugauuugugcacacuggcucaguucagcaggaacagg	
+222	183	0	39	-	-	aacauucauugcugucgguggguu	-	cugauggcugcacucaacauucauugcugucgguggguuugacuuugaaucaacucacugaucaaugaauguaaacugcggaccaaaca	
+198	183	0	15	-	-	uugugcuugaucuaaccaugug	-	uuugugcuugaucuaaccaugugguggaacgauggaaacggaacaugguucugucaagcacc	
+288	183	0	105	-	-	ugagguaguagguuguaugguu	-	gcauccggguugagguaguagguuguaugguuuagaguuacacccugggaguuaacuguacaaccuucuagcuuuccuuggagc	
+285	285	0	0	-	-	acugcagugaaggcacuugu	caaagugcuuacagugcagguagu	-	gucagaauaaugucaaagugcuuacagugcagguagugauaugugcaucuacugcagugaaggcacuuguagcauuauggugac	
+228	177	0	51	-	-	uucccuuugucauccuaugccu	-	uuucuucaugugacucguggacuucccuuugucauccuaugccugagaauauaugaaggaggcugggaaggcaaagggacguucaauugucaucac	
+222	174	0	48	-	-	agcagcauuguacagggcuauc	-	cucucugcuuucagcuucuuuacaguguugccuuguggcauggaguucaagcagcauuguacagggcuaucaaagcacaga	
+219	171	0	48	-	-	uguaaacauccuacacucucagc	-	cagacuguaaccaugccguaguguguguaaacauccuacacucucagcugugagcucgagguggcugggagaggguuguuuacuccuucugccauggaaaacguc	
+222	171	0	51	-	-	uagcagcacguaaauauuggc	-	cauacuuguuccgcuguagcagcacguaaauauuggcguaguaaaauaaauauuaaacaccaauauuauugugcugcuuuagcgugacaggga	
+225	171	0	54	-	-	ugagguaguaguuuguacaguu	-	aggcugagguaguaguuuguacaguuugagggucuaugauaccacccgguacaggagauaacuguacaggccacugccuugcc	
+462	462	0	0	-	-	aucacauugccagggauuaccac	ggguuccuggcaugcugauuu	aucacauugccagggauuaccacg	uggguuccuggcaugcugauuu	-	ucuggcugcuuggguuccuggcaugcugauuugugacuuaagauuaaaaucacauugccagggauuaccacgcaaccacgac	
+237	165	0	72	-	-	uaaggugcaucuagugcagaua	-	uguucuaaggugcaucuagugcagauagugaaguagauuagcaucuacugcccuaagugcuccuucuggca	
+546	546	0	0	-	-	cccaguguucagacuaccuguu	uacaguagucugcacauugg	acaguagucugcacauugguua	-	gccaacccaguguucagacuaccuguucagggggcucugaauguguacaguagucugcacauugguuaggc	
+408	408	0	0	-	-	cuuuuugcggucugggcuugcu	aagcccuuaccccaaaaagcau	cuuuuugcggucugggcuugcu	-	cugcccuucgcgaaucuuuuugcggucugggcuugcuguacauaacucaauagccggaagcccuuaccccaaaaagcauucgcggagggcgcac	
+228	162	0	66	-	-	acagcaggcacagacaggcagu	-	ggccuggcuggacggaguugucaugugucugccugucuacacuugcugugcagaacauccgcucaccuguacagcaggcacagacaggcagucacaugacaacccagccu	
+231	159	0	72	-	-	agcuacauugucugcuggguuu	-	ccaacauccaggucuagggcaugaaccuggcauacaauguagauuucuguguuuguugagcaacagcuacauugucugcuggguuucaggcuaccuggaaacacguucuu	
+198	159	0	39	-	-	ucagugcaucacagaacuuugu	-	uuagcauuugaggugaaguucuguuauacacucaggcuguggcucucugaaagucagugcaucacagaacuuugucucgaaagcuuucua	
+213	213	0	0	-	-	ugaccgauuucuccugguguu	uagcaccauuugaaaucgguua	-	aucucuuacacaggcugaccgauuucuccugguguucagagucuguuuuugucuagcaccauuugaaaucgguuaugauguaggggga	
+210	153	0	57	-	-	aacauucaacgcugucggugaguu	-	ugccagggccaggacccagucuucagaggacuccaaggaacauucaacgcugucggugaguuugggauuugaaaaaaccaccgaccguugacuguaccuuggguuccuua	
+186	153	0	33	-	-	agcuacaucuggcuacugggu	-	gcugcuggaauguguagguacccucaauggcucaguagccaguguagauccugucuuuuguaaucaguagcuacaucuggcuacugggucucugauggcaucuucuaccu	
+180	153	0	27	-	-	aucacauugccagggauuucca	-	ggccggcugggguuccuggggaugggauuugcugccugucacaaaucacauugccagggauuuccaaccgacc	
+180	150	0	30	-	-	uauggcacugguagaauucacug	-	cuguguauggcacugguagaauucacugugaacagucucggucagugaauuaccgaagggccauaaacag	
+195	150	0	45	-	-	aggcaagaugcuggcauagcu	-	uccuguaacuuggaacuggagaggaggcaagaugcuggcauagcuguugaacugcgaaccugcuaugccaacauauugccaucucucuuguccg	
+204	204	0	0	-	-	caagcucgcuucuaugggu	aacccguagauccgaucuugu	-	cccauuggcauaaacccguagauccgaucuuguggugaaguggaccgcacaagcucgcuucuaugggucugugucagugug	
+195	195	0	0	-	-	ggguuccuggcaugcugauuu	aucacauugccagggauuaccac	-	ggguuccuggcaugcugauuugugacuuaagauuaaaaucacauugccagggauuaccac	
+177	147	0	30	-	-	uguaacagcaacuccaugugga	-	uggcucccacccccuguaacagcaacuccauguggaaguaccucuaguuccaguggggcugcuguuaucuggggugggggcca	
+195	147	0	48	-	-	uuugguccccuucaaccagcua	-	cccugcucuggcuggucaaacggaaccaaguccgucuuccugagagguuugguccccuucaaccagcuacagcagggcuggcaa	
+177	177	0	0	-	-	agggcuuagcugcuugugagca	uucacaguggcuaaguuccg	-	uggccuggggagcagggcuuagcugcuugugagcagguccacaucaaaucguguucacaguggcuaaguuccgccccc	
+180	180	0	0	-	-	cugggagguggauguuuacuu	uguaaacauccuacacucagcu	-	ccaaguuuucaguucauguaaacauccuacacucagcuguaacacacgagucggcugggagguggauguuuacuucagcugacuugga	
+210	144	0	66	-	-	ugugcaaaucuaugcaaaacuga	-	gcaguccucuguuaguuuugcauaguugcacuacaagaagaauguaguugugcaaaucuaugcaaaacugaugguggccugc	
+156	141	0	15	-	-	uccuucauuccaccggagucug	-	cucuuguccuucauuccaccggagucugucucguacccaaccagauuucaguggagugaaguucaggag	
+189	141	0	48	-	-	uggcagugucuuagcugguugu	-	ggccagcugugaguguuucuuuggcagugucuuagcugguuguugugaguaauaaugcaggaagcaaucagcaaguauacugcccuagaagugcugcacguuguggg	
+177	141	0	36	-	-	ucagugcacuacagaacuuugu	-	gaggcaaaguucugagacacuccgacucugaauaugauagaagucagugcacuacagaacuuugucuc	
+192	138	0	54	-	-	uuauugcuuaagaauacgcguag	-	gguccucugacucucuucggugacggguauucuuggguggauaauacggauuacguuguuauugcuuaagaauacgcguagucgaggagaguaccagcggca	
+195	138	0	57	-	-	agcugguguugugaaucaggccg	-	guugcugcagcugguguugugaaucaggccgacgagcagcgcauccucuuacccggcuauuucacgacaccaggguugcauca	
+213	138	0	75	-	-	uuuggcaaugguagaacucacacu	-	cgccgccgccugccucccaccauuuuuggcaaugguagaacucacacuggugagguaaugggauccggugguucuagacuugccaacuauggugcgagggcuuggccagca	
+198	138	0	60	-	-	uaaugccccuaaaaauccuuau	-	agagugcucgaggacagcaagaaaaaugagggacuuucaggggcagcuguguuuucugacucagucauaaugccccuaaaaauccuuauuguucuugcagugugcaucagg	
+207	138	0	69	-	-	ugagaugaagcacuguagcucg	-	gcguccugucucccagccugaggugcagugcugcaucucuggucaguugggagucugagaugaagcacuguagcucgggaagggagaaguuguucugcagc	
+162	135	0	27	-	-	uuuggcacuagcacauuuuugcu	-	ccacuaccgucugcuuggccgacuuuggcacuagcacauuuuugcuugugucucuccgcucugagcaaucaugugcagugccaauaugggaaaagcaggaugc	
+135	135	0	0	-	-	ucacagugaaccggucucuuu	-	ugugcagugggaaggggggccgaggcacuguccgagagugaguagcaggucucacagugaaccggucucuuucccuacuguguc	
+246	135	0	111	-	-	uaccacaggguagaaccacgga	-	ucucucuguguccugccagugguuuuacccuaugguagguuacgucaugcuguucuaccacaggguagaaccacggacaggauaccggggcacc	
+207	135	0	72	-	-	uguaaacauccuugacuggaagcu	-	gggcagucuuugcuacuguaaacauccuugacuggaagcuguaaggcguugcaaggagcuuucagucggauguuuacagcggcaggcugcca	
+171	132	0	39	-	-	ugagguaguaaguuguauuguu	-	aggacucugcucaugcuggggugagguaguaaguuguauuguugugggguagggauuuuaggccccaauuugaagauaacuauacaacuuacuacuuucccugguguguagcacauuca	
+186	132	0	54	-	-	ugauauguuugauauauuaggu	-	ugcaggccucugugugauauguuugauauauuagguuguuauuuaauccaacuauauaucaaacauauuccuacagugucuugcc	
+159	132	0	27	-	-	uaacacugucugguaacgauguu	-	gggccucuguggacaucuuaccggacagugcuggauuucucggcucgacucuaacacugucugguaacgauguucaaaggugaccc	
+177	132	0	45	-	-	aggcaguguaguuagcugauug	-	agucuaguuacuaggcaguguaguuagcugauugcuaauaauaccaaucacuaaccacacggccagguaaaaagauu	
+201	132	0	69	-	-	ugagguaguaguuugugcuguu	-	cuggcugagguaguaguuugugcuguuggucggguugugacauugcccgcuguggagauaacugcgcaagcuacugccuugcua	
+156	132	0	24	-	-	ugagguaguagguugugugguu	-	cggggugagguaguagguugugugguuucaggguagugauguugcccccucggaagauaacuauacaaccuacugccuucc	
+177	132	0	45	-	-	uagcagcacauaaugguuugu	-	ccuuggaguaaaguagcagcacauaaugguuuguggauuuugaaaaggugcaggccauauugugcugccucaaaaauacaagg	
+198	129	0	69	-	-	uguaaacauccccgacuggaagcu	-	guuguuguaaacauccccgacuggaagcuguaccacacagcuaagcuuucagucagauguuugcugcuac	
+162	129	0	33	-	-	uaaucucagcuggcaacuguga	-	gauggcugugaguuggcuuaaucucagcuggcaacugugagauguucauacaguccuccacaguggucucugggauuaugcuaaacagagcaaucuccuugcccucaug	
+159	129	0	30	-	-	cauugcacuugucucggucuga	-	ggccaguguugagaggcggagacuugggcaauugcuggacgcugccccgggcauugcacuugucucggucugacagugccggcc	
+198	129	0	69	-	-	uggagugugacaaugguguuug	-	ccuuagcagagcuguggagugugacaaugguguuuguguccaaacuaucaaacgccauuaucacacuaaauagcuacuguuaggc	
+180	129	0	51	-	-	uccagcaucagugauuuuguuga	-	gcacgggccguccuccccaacaauauccuggugcugagugaugacacacgcaacuccagcaucagugauuuuguugaagagggcagcugcca	
+195	126	0	69	-	-	uaacagucuacagccauggucg	-	ccgcccccgcgucuccagggcaaccguggcuuucgauuguuacugugggaaccggagguaacagucuacagccauggucgccccgcagcacgcccacgcgc	
+195	126	0	69	-	-	guccaguuuucccaggaaucccu	-	caccuuguccucacgguccaguuuucccaggaaucccuuagaugcuaagauggggauuccuggaaauacuguucuugaggucaugguu	
+168	126	0	42	-	-	uggaauguaaggaagugugugg	-	ugcuucccaaggccacaugcuucuuuauauccccauacggauuacuuugcuauggaauguaaggaagugugugguuucggcgagcg	
+159	126	0	33	-	-	uuaaugcuaaucgugauaggggu	-	uguuaaugcuaaucgugauagggguuuuuaccucggacugacuccuacauguuagcauuaaca	
+147	126	0	21	-	-	uuuuguucguucggcucgcguga	-	ccccgcgacgagccccucgcacaaaccggaccugagcguuuuguucguucggcucgcgugaggc	
+231	165	0	66	-	-	aguguuuccuacuuuauggaug	cauaaaguagaaagcacuac	-	gacagugcagucacccauaaaguagaaagcacuacuaacagcacuggaggguguaguguuuccuacuuuauggaugaguguacugug	
+165	123	0	42	-	-	uacugcaucaggaacugauuggau	-	aauauaauuaacacagaguuuuugaugucgcagauacugcaucaggaacugauuggauaagaaucggucaccaucaguuccucaugcauugccuucagcaucuaaacaag	
+168	168	0	0	-	-	uagcuuaucagacugauguugacu	aacagcagucgaugggcugucu	-	ugucggguagcuuaucagacugauguugacuguugaaucucauggcaacagcagucgaugggcugucugaca	
+165	120	0	45	-	-	uuaagacuugcagugauguuu	-	gggcgggcggccguuaagacuugcagugauguuuaacuccucuccacgugaacaucacagcaagucugugcugcuucccguccccacgcugccugggcagggu	
+207	207	0	0	-	-	gcaguccaugggcauauacacu	uaugugccuuuggacuacauc	-	ucccuggcgugaggguaugugccuuuggacuacaucguggaagccagcaccaugcaguccaugggcauauacacuugccucaaggccua	
+222	222	0	0	-	-	cguaccgugaguaauaaugcg	cauuauuacuuuugguacgcg	-	ugacgggacauuauuacuuuugguacgcgcugugacacuucaaacucguaccgugaguaauaaugcgcuguca	
+240	117	0	123	-	-	uguaaacauccucgacuggaagcu	-	cuguaaacauccucgacuggaagcugugaggcugcagaaaggcuuucagucggauguuugcagcugc	
+135	117	0	18	-	-	ugauauguuugauauuggguu	-	ugcuucugugugauauguuugauauuggguuguuuaauuaggaaccaacuaaaugucaaacauauucuuacagcaguag	
+147	117	0	30	-	-	uauugcacucgucccggccucc	-	cgggccccgggcgggcgggagggacgggacgcggugcaguguuguucuuuccccugccaauauugcacucgucccggccuccggcccccucggccc	
+138	114	0	24	-	-	acugugcgugugacagcggcuga	-	ccuccaggcgcagggcagccacugcccaccgcacacugcgcugcuccggacccacugugcgugugacagcggcugaucugucccugggcagcgcgacc	
+135	114	0	21	-	-	augaccuaugaauugacagaca	-	uguacaggaaaaugaccuaugaauugacagacaacgugacuaagucugucugucauuucuguaggccaauguucuguau	
+141	114	0	27	-	-	cugaccuaugaauugacagccag	-	agaccgagugcacagggcucugaccuaugaauugacagccagugcucuuguguccccucuggcugccaauuccauaggucacagguauguucgccucaaugccagc	
+156	111	0	45	-	-	ucuacagugcacgugucuccagu	-	guguacucuacagugcacgugucuccaguguggcucggaggcuggagacgcggcccuguuggaguaac	
+171	171	0	0	-	-	ugggucuuugcgggcgagauga	aacuggccuacaaagucccagu	-	ugggagcugagagcugggucuuugcgggcgagaugaaggugucgguucaacuggccuacaaagucccaguccucggccccc	
+156	108	0	48	-	-	uagcagcacguaaauauuggug	-	gucagcagugccuuagcagcacguaaauauugguguuaagauucuaaaauuaucuccaguauuaacugugcugcugaaguaagguuggc	
+126	108	0	18	-	-	caaagugcucacagugcaggua	-	aguaccaaagugcucacagugcagguaguuuuggcagcgcucuacuguagugugggcacuuccaguacu	
+141	108	0	33	-	-	caacggaaucccaaaagcagcug	-	ggcuggacagcgggcaacggaaucccaaaagcagcuguugucuccagagcauuccagcugcgcuuggauuucguucccugcucuccugccu	
+105	105	0	0	-	-	gugugcggaaaugcuucugcua	-	uaugaaucuaguggaaacacuucugcacaggcuagauuauggauaccagugugcggaaaugcuucugcuacauuuuuagg	
+126	105	0	21	-	-	uaauacugucugguaaugccgu	-	agccugccgaugggcgucuuaccagacacgguuagaucugguccuucugucuaauacugucugguaaugccguccauccccggc	
+117	105	0	12	-	-	aaaagcuggguugagagggcga	-	aaaaacgaaaaagaggccuucucuucccgguucuucccggagucgggaaaagcuggguugagagggcgaaaaaggaagaggg	
+123	105	0	18	-	-	ucgugucuuguguugcagccgg	-	ggccgggcuccccacgacacggugugagaccucgggcuacaacacgggacccgggcgcugcuccgaccccucgugucuuguguugcagccggagggacgcaaguccgca	
+195	105	0	90	-	-	uacaguauagaugauguacuag	-	gggcccugacugggauaucaucauauacuguaaguuugcaacgagacacuacaguauagaugauguacuaguccgggugcuccc	
+156	102	0	54	-	-	aacuggcccacaaagucccgcuuu	-	guggucccagaaucgggguuuugagggcgagaugaguuuauguuuuauccaacuggcccacaaagucccgcuuuuggggucau	
+141	102	0	39	-	-	uucaaguaauucaggauagguu	-	ugcccgggacccaguucaaguaauucaggauagguugugugcuguccagccuguucuccauuacuuggcucgggggccggugccc	
+132	102	0	30	-	-	caaagugcuguucgugcaggua	-	cugggggcuccaaagugcuguucgugcagguagugugaucaccugaccuacugcugagccagcacuucccgagcccc	
+114	96	0	18	-	-	uagugcaauauugcuuauagggu	-	cuguuuauuaccagauccuagaacccuaucgauauugucucugcuguguaaauagcucugaguagugcaauauugcuuauaggguuuugguguuugggaagaacaaugggcaug	
+120	96	0	24	-	-	aaaagugcuuacagugcaggua	-	ccuuggccauguaaaagugcuuacagugcagguagcuuuuugagaucuacugcaaugcaagcacuucuuacauuaccaugg	
+96	96	0	0	-	-	acuggacuuggagucagaaggc	-	ggagagcacuggacuuggagucagaaggcuggagcuuacagggcagcaccgucaucuacugguggagaacuacgcc	
+132	96	0	36	-	-	ugucaguuugucaaauacccca	-	cccagccuccugcagugccaugcuccguguauuugacaagcugaguuggacacuccauguaguagugucaguuugucaaauaccccaaguguggcauaugccuagcag	
+153	93	0	60	-	-	cuagcaccaucugaaaucgguua	-	augacugauuucuuuugguguucagagucaauauaauuuucuagcaccaucugaaaucgguuau	
+135	93	0	42	-	-	uagcagcacaucaugguuuaca	-	uugagaccuuaaaguacuguagcagcacaucaugguuuacauacuacagucaagaugcgaaucauuauuugcugcucuagaaauuuaaggaaauucau	
+120	93	0	27	-	-	ugagaacugaauuccauaggcugu	-	uaagagaacuuuggccaccuggcucugagaacugaauuccauaggcugugagcucuagcaaaugcccuagggacucaguucuggugcccggcugugcuacaccauc	
+135	93	0	42	-	-	uaaggugcaucuagugcaguua	-	cuuguguuaaggugcaucuagugcaguuagugaagcagcucagaaucuacugcccuaaaugcuccuucuggcaca	
+117	90	0	27	-	-	ucggauccgucugagcuuggcu	-	ugaucacugucuccagccugcugaagcucagagggcucugauucagaaagaucaucggauccgucugagcuuggcuggucggaagucuccucauc	
+120	90	0	30	-	-	accuuggcucuagacugcuuacu	-	cggagccacccugcccgggcagcgcgccggcaccuuggcucuagacugcuuacugcccgggccgcccucaguaacagucuccagucacggccaccgacgccuggccccgcc	
+90	90	0	0	-	-	ucucccaacccuuguaccagugu	-	ccucucuccucacggcccugucucccaacccuuguaccagugugugucucagacccugguacagguacggggaggcagggaccugggggaucccagcagc	
+120	87	0	33	-	-	uauugcacaugacuaaguugcau	-	ggagguauugcacaugacuaaguugcauguugucacggccucagugcaauuuaguaugugugauauuuuc	
+129	84	0	45	-	-	agaucagaaggugauuguggcu	-	cuccucagaucagaaggugauuguggcuuuggguggauaucaaucagccacagcacugccuggucagaaagag	
+270	270	0	0	-	-	gugccuacugagcugauaucagu	uggcucaguucagcaggaacag	-	cuccggugccuacugagcugauaucaguucucauuuuacacacuggcucaguucagcaggaacaggag	
+117	117	0	0	-	-	aucgggaaugucguguccgccc	augacacgaucacucccguuga	-	gaaagcgcuuuggaaugacacgaucacucccguugagugggcacccaagaagccaucgggaaugucguguccgcccagugcucuuuc	
+87	81	0	6	-	-	ugagaacugaauuccauagguugu	-	cccauguguauccucagcuuugagaacugaauuccauagguugugucagugucagaccugugaaguuuaguucuuuagcugggauaucucuaucauccu	
+108	81	0	27	-	-	uuccuaugcauauacuucuuu	-	gccacucgcuguuccuuuuuccuaugcauauacuucuuugagggucuggccuaaagagguguagggcaugggaaaauggggccccgagguuccccugcg	
+111	81	0	30	-	-	ucagugcaugacagaacuuggg	-	uguccucccggcccagguucugugauacacuccgacucgggcucuggagcagucagugcaugacagaacuugggcccggacggacc	
+105	81	0	24	-	-	ggcgacccauacuugguuucag	-	agagaaguucuccuggccuaagaaaucaagcgugggugagaccuggugcagaacaggaaggcgacccauacuugguuucagaggcugugagaaua	
+87	87	0	0	-	-	aucucagguuugucagcccgca	aggacuguccaaccugagaau	-	ccugggcggugccuucaggacuguccaaccugagaauggugagcauccagggacaaucucagguuugucagcccgcaaggugccguccccuc	
+120	81	0	39	-	-	caaagaauucuccuuuugggcu	-	ugcuuauaacuuuccaaagaauucuccuuuugggcuuucugauuuuauuuuaagcccaaaggugaauuuuuugggaaguuugagcu	
+93	81	0	12	-	-	aaaccguuaccauuacugaguuu	-	cuugggguggcgaggaaaccguuaccauuacugaguuuaguaaugguaacgguucucuugcugcacccaga	
+138	78	0	60	-	-	caaccuggaggacuccaugcug	-	uggagacuugcugguuuggaaaguucauuguucgacaccauggaucuccaggugggucacguuuagagauacaccaaccuggaggacuccaugcuguugagcuguucacaagcagcggacacuucua	
+132	78	0	54	-	-	agagguaguagguugcauaguu	-	ccuaggaagagguaguagguugcauaguuuucgggcagggauuuugcccacaaggagguaacuauacgaccugcugccuuucuuagg	
+105	78	0	27	-	-	uauacaagggcaagcucucugu	-	uacucagagcgagguugcccuuuguauauucgguuuuuugauguagaauauacaagggcaagcucucugugagua	
+132	78	0	54	-	-	cagugcaaugaugaaagggcau	-	ggccugccugacacucuuucccuguugcacuacugugcgccccuggcaagcagugcaaugaugaaagggcaucggucaggcc	
+108	78	0	30	-	-	uagguaguuuccuguuguuggga	-	aacuggucggugauuuagguaguuuccuguuguugggauccaccuuucucucgacagcacgacacugccuucauuacuucaguug	
+105	78	0	27	-	-	uuuugcgauguguuccuaauau	-	caaagaaagaugcuaaacuauuuuugcgauguguuccuaauauguaaucuaaauguauugggaacauuuugcauucauaguuuuguaucaau	
+93	75	0	18	-	-	uaacacugucugguaaagaugg	-	gaccggcucuggguccaucuuccagcacaguguuggauggucuaauggugaagcuccuaacacugucugguaaagauggcccccggcugg	
+105	72	0	33	-	-	cagcagcacacugugguuugua	-	ccaccccaguccugcucccgccccagcagcacacugugguuuguacggcacuguggccacguccaaaccacacugugguguuagagcgagggugggggaggcaccgcugagg	
+81	81	0	0	-	-	guggauauuccuucuauguuua	aacauagaggaaaauccacauu	-	ugauauucaaaagguggauauuccuucuauguuuacaggauugacagcuaaacauagaggaaaauccacauuuuaaguaucu	
+114	72	0	42	-	-	caugccuugaguguaggaccgu	-	gacuugcuuucucucuuacaugccuugaguguaggaccguuggcaucuuaauuacccucccacacccaaggcuugcaggagagcca	
+114	69	0	45	-	-	aaggagcucacagucuauugag	-	gguccuugcccucaaggagcucacagucuauugaguugccuuucugacuuucccacuagauugagagcuccuggagggcaggcacu	
+111	69	0	42	-	-	aacauucaaccugucggugaguuu	-	uugccaaggguuugggggaacauucaaccugucggugaguuugggcagcucaggcaaaccaucgaccguugaguggaccccgaggccuggaacugcc	
+78	69	0	9	-	-	aaaucucugcaggcaaauguga	-	gcagacuggaaaaucucugcaggcaaaugugaugucacuaaagaaaucacacacuuacccguagagauucuacagucugaca	
+114	69	0	45	-	-	uaaagugcugacagugcagau	-	ccugccggggcuaaagugcugacagugcagauagugguccugugugcuaccgcacuguggguacuugcugcuccggcagg	
+93	93	0	0	-	-	cagcagcaauucauguuuuga	caaaacgugaggcgcugcuau	-	ucguugacuccgaggggaugcagcagcaauucauguuuugaagugcuuuaaacgguucaaaacgugaggcgcugcuauacccccuugcgaggaagu	
+93	66	0	27	-	-	uagcagcacagaaauauuggca	-	agcuccccuggcucuagcagcacagaaauauuggcacugggaagaaagccugccaauauuggcugugcugcuccaggcaggguggug	
+66	66	0	0	-	-	uccuguacugagcugccccgag	-	gccagcuuggaccugcguccucccugacggguccuguacugagcugccccgaggcccuucgcugugcccagcucgggucagcucaguaccgggcgcgucggggugggagucggccggaagcagg	
+96	63	0	33	-	-	auaguagaccguauagcguacg	-	ugguacuuggagagauaguagaccguauagcguacgcuuuaucugugacguauguaacacgguccacuaacccucaguauca	
+93	63	0	30	-	-	ugagguaggagguuguauagu	-	cccgggcugagguaggagguuguauaguugaggaggacacccaaggagaucacuauacggccuccuagcuuuccccagg	
+75	63	0	12	-	-	uacccauugcauaucggagcug	-	cugcuccuucucccguacccauugcauaucggagcugugaauucucaaagcaccuccuaugugcauggauuacaggaggg	
+132	126	0	6	-	-	uaagugcuuccauguuuuaguag	uaagugcuuccauguuuuagu	-	cucccuuuaacuuuaacaugguaguacuuucugugacuuuugaaauaguaagugcuuccauguuuuaguagaagu	
+84	63	0	21	-	-	cagugcaaugauauugucaaagcau	-	uccugcuggccgcaggugcucugacgagguugcacuacugugcuuugaggagcagugcaaugauauugucaaagcauccgggaccagccuuggag	
+120	120	0	0	-	-	ucgaggagcucacagucuagu	cuagacugaagcuccuugagg	-	ccugcccucgaggagcucacagucuaguacgucucauccccuacuagacugaagcuccuugaggacagg	
+102	63	0	39	-	-	uuaucagaaucuccagggguac	-	ggagcuuaucagaaucuccagggguacuuauaauuugaaaaagucccccaggugugauucugauuugcuuc	
+150	126	0	24	-	-	aagugcuuccauguuuuaguga	uaagugcuuccauguuuuagu	-	cccaccacuuaaacguggauguacuugcuuuauagcuaaaaaaguaagugcuuccauguuuuagugaugg	
+90	63	0	27	-	-	aauauaacacagauggccugu	-	ggguacuugaggagagguugucugugaugaguucgcuuuauuaaugacgaauauaacacagauggccuguuuucaguacca	
+99	63	0	36	-	-	ucccugagacccuuuaaccugug	-	ugccggccucugcgucccugagacccuuuaaccugugaggacguccagggucacaggugagguucuugggagccuggcguccggcc	
+117	117	0	0	-	-	aagcucggucugaggccccucagu	ugaggggcagagagcgagacuuu	-	auaaaggaaguuaggcugaggggcagagagcgagacuuuucuauuuuccaaaagcucggucugaggccccucagucuugcuuccuaccccgcgc	
+93	60	0	33	-	-	acuccauuuguuuugaugaugga	-	uuggaugagcccucggaggacuccauuuguuuugaugauggauucuuacgcuccaucaucgucucaaaugagucuucagaggguuccaucau	
+84	60	0	24	-	-	uaauacugccggguaaugaugga	-	cgucuuacccagcaguguuugggugcugguugggagucucuaauacugccggguaaugauggagg	
+99	93	0	6	-	-	ucuagguauggucccagg	gccccugggccuauccuagaa	-	gaguuugguuuuguuuggguuuguucuagguauggucccagggaucccagaucaaaccaggccccugggccuauccuagaaccaaccuaa	
+99	99	0	0	-	-	aucgaccguguuauauucgc	aauaauacaugguugaucuuu	-	ugaagggagaucgaccguguuauauucgcuuuauugacuucgaauaauacaugguugaucuuuucucag	
+78	60	0	18	-	-	cuggcccucucugcccuuccgu	-	cuguuucggagccuggagcgggggggcaggaggggcucagggagauagugugugcugccccuggcccucucugcccuuccguccccuguucc	
+93	60	0	33	-	-	caucccuugcaugguggagggu	-	ugcucccucucucacaucccuugcaugguggagggugagcuuucugaaaaccccucccacaugcaggguuugcaggauggugagcc	
+78	57	0	21	-	-	uggcaguguauuguuagcuggu	-	ugugugauggguuggcaguguauuguuagcugguugaauaugugagugccaucagcuaacaugcaacugcuaucuuauugcauguaua	
+93	57	0	36	-	-	aucauagaggaaaauccacgu	-	aauccuucuuugguauuuaaaagguagauucuccuucuaugaguacauuauuuacgauuaaucauagaggaaaauccacguuuucaguaucaaaugcug	
+84	57	0	27	-	-	auaagacgagcaaaaagcuugu	-	ugacgggcgagcuuuuggcccggguuauaccugaugcucacguauaagacgagcaaaaagcuuguugguca	
+84	57	0	27	-	-	caagucacuagugguuccguuua	-	gggcuuucaagucacuagugguuccguuuaguagaugguuguacauuguuucaaaaugguacccuagugacuacaaagccc	
+87	57	0	30	-	-	ugguagacuauggaacguagg	-	ugguuccugcagagaugguagacuauggaacguaggcuuugugauuuuugaccuauguaacaugguccacuaacucucaguaucca	
+99	57	0	42	-	-	cgcauccccuagggcauuggugu	-	aacuggcuaugccuccccgcauccccuagggcauugguguaaagcuggagacccacugccccaggugcugcuggggguuguagucugac	
+60	57	0	3	-	-	aggcaguguaauuagcugauug	-	gugcucgguuuguaggcaguguaauuagcugauuguacucucaugcuuacaaucacuaguuccacugccaucaaaacaaggcac	
+111	57	0	54	-	-	uaauacugccugguaaugaug	-	ccaucuuacugggcagcauuggauggugucuggucucuaauacugccugguaaugauga	
+87	57	0	30	-	-	aaggagcuuacaaucuagcuggg	-	cugugugugaagugguaacugcccucaaggagcuuacaaucuagcuggggguaaacgacuugcacaugaacgcaucuagacugugagcuucuagagggcagggaccuua	
+75	57	0	18	-	-	aacauucauuguugucggugggu	-	uccccucccuuaggccacagcgaaggucacaaucaacauucauuguugucgguggguugugacagagaccagacccaccgagggaugaaugucacuguggcugggccagacac	
+81	54	0	27	-	-	ucaagagcaauaacgaaaaaugu	-	uuuugggcgggggucaagagcaauaacgaaaaauguuugucauaaaccguuuuucauuauugcuccugaccuccucucauuugcuguacuca	
+57	57	0	0	-	-	ugaccgauuucuccugguguu	uagcaccauuugaaaucgauua	-	aucucuuacacaggcugaccgauuucuccugguguucagagucuguuuuugucuagcaccauuugaaaucgauuaugauguaggggga	
+78	54	0	24	-	-	ucuuggaguaggucauugggugg	-	gcaugacuccuccaagucuuggaguaggucauuggguggauccuuuauuucccuaugugggccacuggauggcuccuccaugucuuggcg	
+75	54	0	21	-	-	agacccuggucugcacucuguc	-	gcugcuguugggagacccuggucugcacucugucuguaugcuuacugaagggagcgcagggcaggguuucccauacagagggc	
+87	54	0	33	-	-	gcacauuacacggucgaccucu	-	uugguacuuggagagaggugguccguggcgcguucgcuuuauuuauggcgcacauuacacggucgaccucuuugcaguaucuaauc	
+81	54	0	27	-	-	cgucaacacuugcugguuuccu	-	aaauugaugcacccagugggggagccaggaaguauugauguuucuaccaguuuagcgucaacacuugcugguuuccucucuggagcguca	
+51	51	0	0	-	-	uggagagaaaggcaguuccuga	-	gggggugagggacuggagagaaaggcaguuccugaugguccccuccccaggggcuggcuuuccuccggccccuccuucc	
+69	51	0	18	-	-	gaauugcacuuuagcaaugguga	-	ccauuacuguugcuaauaugcaacucuguucaauucaaauuggaauugcacuuuagcaauggugaugg	
+69	51	0	18	-	-	aaacaaacauggugcacuucuu	-	uggugccuggaaagaaguugcccauguucuuuucgcugauaugugacgaaacaaacauggugcacuucuuuuccggcauca	
+72	51	0	21	-	-	aauggcgccacuaggguugug	-	acgaauggcuaugcacugcacaacccuaggagagggugccauucacauagacuagaauugaauggcgccacuaggguugugcagugcacaaccuacac	
+78	51	0	27	-	-	cugcccuggcccgagggaccga	-	uuagcccugcggccccacgcaccaggguaagagagacucacuuccugcccuggcccgagggaccgacuggcugggc	
+96	51	0	45	-	-	ugguuuaccgucccacauacau	-	aagaaaugguuuaccgucccacauacauucugaauauguaugugggacgguaaaccgcuucuu	
+75	51	0	24	-	-	augcugacauauuuacuagagg	-	auagcuguugugucacuuccucaugcugacauauuuacuagaggguaaaauuaauaaccuucuaguaagaguggcagucgaagggaagggcucau	
+63	51	0	12	-	-	uucaccaccuucuccacccagc	-	ggggcugugccggguagagagggcagugggagguaagagcucuucacccuucaccaccuucuccacccagcagggccagca	
+60	51	0	9	-	-	acgcccuucccccccuucuuca	-	gggaggagggaggagaugggccacguucccucugccuggaacgcccuucccccccuucuucaccu	
+78	51	0	27	-	-	auauaauacaaccugcuaagug	-	gaagaaauccuacucggauggauauaauacaaccugcuaaguguccuagcacuuaucagguuguauuaucauuguccgugucuauggcucucguc	
+69	48	0	21	-	-	ucaaaugcucagacuccuguggu	-	ugugcaucguagucaaaugcucagacuccugugguggcugcucaugcaccacggauguuugagcaugugcuacggugucua	
+66	48	0	18	-	-	uuagggcccuggcuccaucucc	-	ccuaccuaacuggguuagggcccuggcuccaucuccuuuaggaaaaccuucuguggggaguggggcuuugacccuaaccuagcugggcugu	
+72	48	0	24	-	-	uagguuauccguguagccuucg	-	gcggaacuugaagauagguuauccguguagccuucgcuuuacuugugacgaaucauacacgguucaccuauuuuuuaguaccaa	
+66	48	0	18	-	-	aucaacagacauuaauugggcgc	-	gcacauuguaggccucauuaaauguuuguugaaugaaaaaaugaaucaucaacagacauuaauugggcgccugcucugugaucuc	
+69	48	0	21	-	-	gcaggaacuugugagucuccu	-	gugugcauuugcaggaacuugugagucuccuauugaacaugaacaggaggcugaugaguucccgggaacacccacaa	
+69	48	0	21	-	-	uaagugcuuccauguuucagugg	-	ccucugcuuuaacauggggguaccugcuguguaaagcaaaaguaagugcuuccauguuucaguggagg	
+90	48	0	42	-	-	gaaguuguucgugguggauucg	-	uacuugaagagaaguuguucgugguggauucgcuuuacuuaugacgaaucauucacggacaacacuuuuuucagua	
+75	48	0	27	-	-	uuugugaccugguccacuaacc	-	gccuggguacaugagaugguugaccagagagcacacgcuuuauuugugccguuugugaccugguccacuaacccucaguaucuaaucc	
+69	48	0	21	-	-	ugaaacauacacgggaaaccuc	-	ucgauacuugaaggagagguuauccguguugucuucucuuuauuuaugaugaaacauacacgggaaaccucuuuuuuaguaucaa	
+75	48	0	27	-	-	ucucacacagaaaucgcacccaucu	-	uggaagcgggugcgaggcgaggggugcuaucugugguugaggacacggcaaaugaaacugucucacacagaaaucgcacccaucuccucggccc	
+66	48	0	18	-	-	ugugacugguugaccagagugg	-	cagggugugugacugguugaccagaguggccagcacucgguucacccucugggccaccuagucaccaacccuc	
+66	48	0	18	-	-	auaagacgaacaaaagguuugu	-	ccucucagggaagcuuuuugcucgcguuauguuucucauccgaauauaagacgaacaaaagguuugucugagggcag	
+72	48	0	24	-	-	gccugcugggguggaaccuggu	-	aggcagagaagccaggucacgucucugcaguuacaccgcucacgagugccugcugggguggaaccuggucugucu	
+69	69	0	0	-	-	ucuggcuccgugucuucacuccc	gagggagggacgggggcugugc	-	gccggcgcccaggcucuggcuccgugucuucacucccguguguguccaccgagggagggagggacgggggcugugcuggggcggccggga	
+78	48	0	30	-	-	aaucguacagggucauccacuu	-	uugguacuuggagagugguuaucccuguccuguucguuuuacucaugucgaaucguacagggucauccacuuuuucaguaucaa	
+117	117	0	0	-	-	aucauagaggaaaauccauguu	guggauauuccuucuauguuua	-	uucuuugguauuuaaaagguggauauuccuucuauguuuacgugauucauagauaaucauagaggaaaauccauguuuucaguaucaaaugcu	
+57	45	0	12	-	-	aaacauucgcggugcacuucuu	-	ggugcuuaaggagaaguugcccgugucuuuuucgcuuuauaugugacgaaacauucgcggugcacuucuuuuucaguauc	
+66	45	0	21	-	-	ugaguauuacauggccaaucuc	-	ccgagucggguacucgaauggagguuguccaugguguguucauuuuauuuaugaugaguauuacauggccaaucuccuuucaguacuaaauucuucauggg	
+60	45	0	15	-	-	ccaccuccccugcaaacgucc	-	ccaccuccccugcaaacguccagugaugcagagguaauggacguuggcucugguggug	
+99	45	0	54	-	-	uauggcuuuucauuccuauguga	-	cucugcuguggccuauggcuuuucauuccuaugugauuacuguuccaaacucauguagggcuaaaagccaugggcuacagugaggggcgcgcgcc	
+114	45	0	69	-	-	agguuacccgagcaacuuugcau	-	ugguacgcggggagagguuacccgagcaacuuugcaucuggacgacgaauguugcucggugaaccccuuuucgguauca	
+69	45	0	24	-	-	aucaugaugggcuccucggugu	-	uggccggggagaaguacggugagccugucauuguucagagaggcuagauccuccuuguugagaaggaucaugaugggcuccucgguguucuccagguagcggcaccacaccaugaaggcagccc	
+84	45	0	39	-	-	gcaaagcacacggccugcagaga	-	cuucggcgaucacugccucucugggccugugucuuaggcucugcaagaucaaccgagcaaagcacacggccugcagagaggcagcgcucagcuc	
+60	45	0	15	-	-	ccucugggcccuuccuccag	-	cucgucugucuguugggcuggaggcagggccuuugugaaggcggguugugcucagaucgccucugggcccuuccuccagcccagaggcggauuca	
+45	45	0	0	-	-	aaugcaccugggcaaggauuca	-	cugcucuguuccccuguauccaaucuuaaugcccagaugcagguacugucucagugcaaugcaccugggcaaggauucacagaagauaag	
+114	42	0	72	-	-	uaauccuugcuaccugggugaga	-	gcucccccucucuaauccuugcuaccugggugagagugcuuucugaaugcaaugcaccugggcaaggauucugagagagggagc	
+81	81	0	0	-	-	aacacaccuauucaaggauuc	aauccuuggaaccuaggugugagu	-	cucgaauccuuggaaccuaggugugagugcuguucuagugcaacacaccuauucaaggauucaaa	
+66	42	0	24	-	-	uuauaauacaaccugauaagug	-	uacaucggccauuauaauacaaccugauaaguguuacagcacuuaucagguuguauuguaauugucugugua	
+102	42	0	60	-	-	ucggggaucaucaugucacgag	-	augcacagaccucagacaucucggggaucaucaugucacgagauaccacugugcacuugugacagauugauaacugaaaggucugggagccgcucau	
+87	42	0	45	-	-	uuuugcaauauguuccugaaua	-	aaaauuauuuuugcaauauguuccugaauauuuaauauaaguauauugggaacauuuugcauccauaguuuuguaucaguauuuag	
+69	42	0	27	-	-	uuacaguuguucaaccaguuacu	-	aucuguucucuuugguuacaguuguucaaccaguuacuaaucuaccuaauuguaaccaguugaacaacugaacccaaagggugcaaagugaaaacauu	
+63	42	0	21	-	-	aaucauacagggacauccagu	-	gguacuugaagagugguuaucccugcuguguucgcuguauuuaugacgaaucauacagggacauccaguuuuucaguauc	
+51	51	0	0	-	-	ggaguauuguuucugcugcccgg	uagcagcgggaacaguacug	-	agccgugcccuagcagcgggaacaguacugcagugggcaauuggugaucuggaguauuguuucugcugcccgggcaagacugg	
+81	42	0	39	-	-	agaggcuggccgugaugaauucg	-	acuugaagagaggcuggccgugaugaauucgauucaucaaagcgagucauacacggcucuccucucuuuuagu	
+66	42	0	24	-	-	cacccguagaaccgaccuugcg	-	ggcacccacccguagaaccgaccuugcggggccuucgccgcacacaagcucgugucuguggguccguguc	
+87	84	0	3	-	-	ucccuguccuccaggagcuc	ucccuguccuccaggagcucac	-	ggggcagccgcugucccuguccuccaggagcucacuugguccggccgugcgcuccucgaggccagagcccgugucugc	
+180	180	0	0	-	-	agggacuuuugggggcagaugug	uaaugccccuaaaaauccuuau	-	accgcagggaaaaugagggacuuuugggggcagauguguuugcauuccacuaucauaaugccccuaaaaauccuuauugcucuugca	
+39	39	0	0	-	-	ucaggcucaguccccucccgau	-	gucaggcucaguccccucccgauaaaccucuaaauagggaccuucccggggggcuaccucggc	
+78	39	0	39	-	-	acuucaccugguccacuagcugu	-	cugggguacaggacggauggucgaccaguuggaaaguaauuguuucuaauguacuucaccugguccacuagcuguccguacccacugcag	
+63	39	0	24	-	-	gagagaucagaggcgcagagu	-	cuguucucuugagagaucagaggcgcagagugcgucaaugucaaugaagccugugccuuuuaccucuuuaagagcgcac	
+90	39	0	51	-	-	aggaagcccuggaggggcuggag	-	gccgccgaccuggcaggccaggaagaggaggaagcccuggaggggcuggaggugauggauguuuuccuccgguucucagggcuccaccuuuuccgggccguggagccagggcuggugc	
+57	39	0	18	-	-	uucccuuugucauccuuugcc	-	uccccuggcugugugaccugugggcuucccuuugucauccuuugcccaggguucugaguggggcagggacagcaaaggggugcucagucgucaccucccacagcauggag	
+69	39	0	30	-	-	aguggggaacccuuccaugagg	-	uugacuuagcuggguaguggggaacccuuccaugaggaguagaacacuccuuaugcaagauucccuucuaccugacuggguugg	
+54	54	0	0	-	-	ccccucaguccaccagagcccg	cggcucugggucugugggga	-	ggaggaugcugcagcguggggcgcgucgccccccucaguccaccagagcccggauaccuuagaaauucggcucugggucuguggggagcgaaaugcaacccaaacuccauuuugccg	
+78	39	0	39	-	-	aucacacaaaggcaacuuuugu	-	uugagcagagguugcccuuggugaauucgcuuuauuuauguugaaucacacaaaggcaacuuuuguuug	
+54	39	0	15	-	-	guugugucaguuuaucaaac	-	aaagacgugcuguccacaguguguuugauaagcugacaugggacagggacucuuuucacuguugugucaguuuaucaaacccauacguggaugac	
+48	39	0	9	-	-	uucaacggguauuuauugagca	-	aacacagcgggcgcucaauaaauguuuguugaauugagaugcgcuaaauucaacggguauuuauugagcacccacucugug	
+57	39	0	18	-	-	aauauuauacagucaaccucu	-	cugaaauagguugccugugagguguucacuuuucuaagcgaugaauauuauacagucaaccucuuuccgauaucgaauc	
+66	36	0	30	-	-	acucggcguggcgucggucgug	-	caucaagagucggcugagucacugccacugccuaccaaucucgaccggaccucgaccggcucgucuauauugccaaucgacucggcguggcgucggucgugguagauaggcggucauacagacgaguuuucaaguguugcucuggugac	
+42	36	0	6	-	-	auugugucaauaugcgaugaugu	-	uauuaugccaugacauugugucaauaugcgaugaugugugugauggcacagcgucaucacguggugacgcaacaucaugacguaagacgucacaac	
+48	36	0	12	-	-	uugcauauguaggaugucccau	-	gcggggagguugaacauccugcauagugcugccaggaaaucccuauuuuauacuaaggggggguuggcugguugcauauguaggaugucccaucuccccacccacaucauc	
+57	36	0	21	-	-	gugcauugcuguugcauugc	-	gcgggcggccccgcggugcauugcuguugcauugcaugugugaggcaggugcagugccucggcagugcagcccggagccggccccuggcaccgc	
+48	36	0	12	-	-	auucugcauuuuuagcaaguuc	-	auuuucaucaccuagggaucuuguuaaaaggcagauucugauucagggaccaagauucugcauuuuuagcaaguucccaagugaugcuaau	
+60	36	0	24	-	-	ggagaaauuauccuuggugugu	-	auacuugaggagaaauuauccuugguguguucgcuuuauuugggaugaaucauacaaggacaauuucuuucugaguau	
+45	33	0	12	-	-	uaggacacauggucuacuucu	-	cuuccugguauuugaagacgcgguugaccaugguguguacgcuuuauuuaugacguaggacacauggucuacuucuucucgauaucacaucuucgcc	
+45	33	0	12	-	-	guagaggagauggcgcaggg	-	gcucgagaagguagaggagauggcgcaggggacacgggcuaagacugggggcucccgggaccccccaacauguguccucuucucccuccucccagguguacg	
+102	33	0	69	-	-	uccgucucaguuacuuuauagcc	-	uuguaccuggugugauuauaaagcaaugagacugauugucaugugucguuugugggauccgucucaguuacuuuauagccauaccugguaucuua	
+51	33	0	18	-	-	uaagugcuuccauguuuuagu	-	ccucuacuuuaacauggaggcacuugcugugacuucauaaaaaaauaagugcuuccauguuuuagugcgg	
+48	33	0	15	-	-	cacagcaaguguagacaggca	-	gucaugugacugccugucugugccugcuguacaggugagcggauguucugcacagcaaguguagacaggcagacacaugac	
+51	51	0	0	-	-	ucaguaaauguuuauuggaug	aucaacaaacauuuauugugug	-	cccagccuggcacauucguaggccucaguaaauguuuauuggaugaauaaaugaauggcucaucaacaaacauuuauugugugccugcuaacgugaucuccacagg	
+42	33	0	9	-	-	ugucugcccgcaugccugccucu	-	ggucucuguguugggcgucugucugcccgcaugccugccucucuguugcucugaaggaggcaggggcugggcuugcagcugccugggcagagcgg	
+60	60	0	0	-	-	gcugacuccuaguccagugcu	ccugaacuaggggucuggag	-	acccaaacccaggucugcugacuccuaguccagugcuugugauggcuggugggcccugaacuaggggucuggaggccuggguuugaauauc	
+33	33	0	0	-	-	acuggacuuggagucagaagu	-	caaaaccaccacuggacuuggagucagaaguuccaugugugagucuugguagggccaguggauugcuaa	
+72	33	0	39	-	-	agagguuuucuggguuucuguuu	-	ugguaccugaagagagguuuucuggguuucuguuucuuuaaugaggaugaaacacaccugguuaaccucuuuuccaguaucaa	
+51	30	0	21	-	-	uauaccucaguuuuaucaggug	-	uuagugggacuauaccucaguuuuaucagguguuauuuaaaaucaccuggaaauacugagguuguguuucacugaac	
+42	30	0	12	-	-	auaauacaugguuaaccucucu	-	aacuguucagggauauuugaggagagguuauccguguuauguucgcuuggcucaucaugaauaauacaugguuaaccucucuuugaauaucagacuc	
+48	30	0	18	-	-	ugcggggcuagggcuaacagca	-	gguugggcggggugcggggcuagggcuaacagcaggcucacugacgguuucccggaaaccacgcacaugcuguugccacuaaccucaaccuuacucgguc	
+51	30	0	21	-	-	agaggauacccuuuguauguu	-	uuugguacuugaagagaggauacccuuuguauguucacuuuauuaauggcgaauauacagagggagacucuuauuugcguaucaaa	
+72	30	0	42	-	-	ugaaggucuacugugugccagg	-	cuggcccccagggccuuguacaugguaggcuuucauucauucguuugcacauucggugaaggucuacugugugccaggcccugugccag	
+60	30	0	30	-	-	uccauuacacuacccugccucu	-	ccgcgcucucuccauuacacuacccugccucuucuccacgagaggcagcgggguguaguggauagagcacgggu	
+54	30	0	24	-	-	uugaaaggcuguuucuugguc	-	gagaaucaucucucccagauaauggcacucucaaacagguuuccagguuguuugaaaggcuguuucuuggucagaagacucucaauuccuucugga	
+45	27	0	18	-	-	uucauucggcuguccagaugua	-	agaugagaaguuaagaguucauucggcuguccagauguauccaaguacccugauauuuggcaauaaauacaucugggcaacugauugaacuuuuugcuuuucggacuc	
+33	27	0	6	-	-	ugagaccuccggguucugagcu	-	gacuuggugcugauucccggcgcucugaccugagaccuccggguucugagcugugauguugcuucccagcugggaucucuggggucucgguucagggucgggaccucuggguucugagc	
+39	27	0	12	-	-	ugucuugcaggccgucaugcagg	-	uccugcgcguccugcgaggugucuugcaggccgucaugcaggccacacugacggaaacguugcaggucgucuugcagggcuucucgcaagacgacauauucaucacccucgacg	
+27	27	0	0	-	-	gcagcagggugaaacugacaca	-	uggcaagaggaggagcagcagggugaaacugacacaguucuggugaguuucacuuugcugcuccuccagauucuca	
+42	27	0	15	-	-	gugaggacucgggagguggag	-	gugaggacucgggagguggaggguggcgcugccagggccagggcacugucucagcucgcuucuccccccaccuccucucuccucag	
+27	27	0	0	-	-	aucccaccacugccacca	-	guugcugcugcucgccaucgaucccaccacugccaccacugcugcuacugcuccgcaggugcugcugguggugaugaugauaguccggcgggggcgcugg	
+36	27	0	9	-	-	aggcaguguauuguuagcuggc	-	ugaccugaaucagguaggcaguguauuguuagcuggcugcuuugggucaauucagcagccacaacugcccugccacuugcuucuggauaaauucuucu	
+51	27	0	24	-	-	uggauuucuuugugaaucacca	-	ugaagugcuguggauuucuuugugaaucaccauaucuaagcuaaugugguggugguuuacaaaguaauucauagugcuuca	
+39	27	0	12	-	-	ugcaccaugguugucugagcaug	-	uuuguauuauagguuuuugcucaugcaccaugguugucugagcaugcagcaugcuugucugcucauaccccaugguuccugagcaggaaccgucacugcuuacug	
+51	51	0	0	-	-	ugguugaccauagaacaugcgc	uauguaaugugguccacgucu	-	aagaugguugaccauagaacaugcgcugucucuaugucguauguaaugugguccacgucuu	
+27	27	0	0	-	-	ugagugugugugugugagugugug	-	uucuuuugagcuuacuucccagucucgaauccgugugagugugugugugugagugugugugagagug	
+39	27	0	12	-	-	uaugucugcugaccaucaccuu	-	ggguuaguggaaagguggugggcugcagaacaugugcuuccuucgugucauaugucugcugaccaucaccuuuagaagccc	
+66	27	0	39	-	-	ggggguccccggugcucggauc	-	cucgggaggggcgggagggggguccccggugcucggaucucgagggugcuuauuguucgguccgagccugggucucccucuccccccaccccc	
+33	33	0	0	-	-	cuccuggggcccgcacucuc	uggggagcggcccccgggcggg	-	ggcuucggugcuggggagcggcccccgggcgggccucugcucuggccccuccuggggcccgcacucucgcuccgggcc	
+45	27	0	18	-	-	acucuagcugccaaaggcgcu	-	guggacucuagcugccaaaggcgcuucuccuucugaaccgagcgcuuugcucagccaguguagacauggc	
+24	24	0	0	-	-	auguauaaauguauacacac	-	auauacacuauauuauguauaaauguauacacacuuccuauauauauccauauauauauaguguauauauuauacauguauagguguguauaug	
+42	39	0	3	-	-	acccgucccgugcguccccgga	cgggaacgucgggacuggagc	-	cgccgggcgcacccgucccgugcguccccggacgucgcugucugccccgggaacgucgggacuggagcgcccgcgcug	
+99	24	0	75	-	-	agaguugagucuggacgucccg	-	ugauuguccaaacgcaauucucgagucucuagcucuggccgagaguugagucuggacgucccg	
+39	24	0	15	-	-	uacguagauauauauguauuuu	-	accucccaaauauauauauauauguacguauguguauaugaauguauacguagauauauauguauuuuugguggguuu	
+24	24	0	0	-	-	gcgacccaaucuugguuucca	-	ggggaccaccugcugacccugaaacccagagcaggugaggccugucugacuguuucugggcgacccaaucuugguuuccaugguugcccuggaaa	
+39	24	0	15	-	-	uugccacacugcaacaccuuaca	-	uuuuauuuuuggucuggcuguuguggugugcaaaacccuguacauugcuauuuugccacacugcaacaccuuacagauguggaa	
+81	24	0	57	-	-	auugcacgguauccaucugcg	-	uguugucggguggaucacgaugcaauuuugauuaguauaauaggagaaaaauugcacgguauccaucugcgaac	
+24	24	0	0	-	-	aagguagauagaacaggucuuguu	-	aaugaaaagguagauagaacaggucuuguuugcaaaaugaauucaugaccuacauaucuaccaacagcaaug	
+45	21	0	24	-	-	ucccugaguauauguggugaa	-	gguuuagggguggaucugacgucccugaguauauguggugaaccggaauuugccugggguuuccucauauucauucaggagugucaguucucccugcgc	
+21	21	0	0	-	-	ucacuccucuccucccgucuu	-	ggggagggcgggaagaaaggagggcguggucugugcagcuccucacuccucuccucccgucuucuccu	
+27	21	0	6	-	-	cuccguuugccuguuuugcuga	-	guugaagaggugggugguuucuccguuugccuguuuugcugauguucauuugacuuauucucagcaaaauaagcaaauggaaaauucauccaucaac	
+36	36	0	0	-	-	gguugaucagagaacauacauu	uguaugucaacugauccacagu	-	gggaguggaugguugaucagagaacauacauuuugucaaugauguaugucaacugauccacagucccucccuau	
+36	18	0	18	-	-	aagugccgccauguuuugagugu	-	cagccugugguacucaaacugugggggcacuuccguuuuacgaagggaagugccgccauguuuugaguguuaccgguug	
+18	18	0	0	-	-	gcagacugcaaacaauuuugac	-	ggauuauaauaaauuaaaugccuaaacuggcagacugcaaacaauuuugacuuagaucuaaauguuugcacuggcuguuuaaacauuuaauuuguu	
+18	18	0	0	-	-	aagcauucuuucauugguugg	-	ggccagaagggaagaagcauucuuucauugguugguguauguugccuugucaaccaaucagaggaugccauuuauccuuuucugacuagc	
+24	18	0	6	-	-	agauauugcacgguugaucucu	-	uucgaaaggagguuguccgugauguauuugcuuuauuuguggcagauauugcacgguugaucucuuuucuucauc	
+18	18	0	0	-	-	agguuguccguggugaguucgca	-	gcgggaacgccaccagcagcacugccucacgguacuuggagggagguuguccguggugaguucgcauuauuuaaugaugc	
+36	18	0	18	-	-	uaggucacccguuugacuauc	-	ccagccgcucuccaggguagcugaggggaugguaggccggugacgugcacuucauuuacgauguaggucacccguuugacuauccaccagcacccaguccaucug	
+36	15	0	21	-	-	agaauugcguuuggacaaucagu	-	agagcucagccacagauguccagccacaauucucgguuggccgcagacucguacaagaauugcguuuggacaaucaguggcgaagcuc	
+15	15	0	0	-	-	ucguuugccuuuuucugcuu	-	ccuucuucucguuugccuuuuucugcuucugcugcaugaucuccgagucccuagggguagagaugauggggcacugggagguaccagagggcaaaaaggac	
+15	15	0	0	-	-	ccaguuaccgcuuccgcuaccgc	-	ggcgggggcgcgggcggcaguggcgggagcggccccucggccauccuccgucugcccaguuaccgcuuccgcuaccgccgccgcucccgcu	
+24	15	0	9	-	-	cccagauacaauggacaauaugc	auuguccuugcuguuuggagau	-	gucauucccagauacaauggacaauaugcuguuauaauuguguggcauuguccuugcuguuuggagauaauacugcugac	
+36	15	0	21	-	-	uggugggcacagaauccggccu	-	acgucagggaaaggauucugcugucggucccacuccaaaguucaaaaaauggguggugggcacagaauccggccucugcuugug	
+18	18	0	0	-	-	gagggccccccccaauccu	gaggguugggcggaggcuuucc	-	aggacccuuccggagggccccccccaauccuguugugcuugguucagaggguugggcggaggcuuuccugaagggucu	
+33	15	0	18	-	-	ugaguaccgccaugucuguuggg	-	ugaguaccgccaugucuguugggaauccacaaucucccaccaggcauuguggucucugcu	
+15	15	0	0	-	-	accuucuuguauaagcacugugcuaaa	-	uauaccuucuuguauaagcacugugcuaaaauuacagaaaccaagauagccuugguuuuuguaauaaugcuagcagaguauuacacaagaagaagaggaacugca	
+27	15	0	12	-	-	uguuguacuuuuuuuuuuguuc	-	gguuggguuuggauuguuguacuuuuuuuuuuguucguugcauuuuuaggaacaaaaaaaaaagcccaacccuucacaccgcuuca	
+21	12	0	9	-	-	caagucuuauuugagcaccugu	-	agguccucaauaaguauuuguugcaagaauaagagaaccaacaagucuuauuugagcaccugu	
+18	12	0	6	-	-	uguggccucuggguguguacccuc	-	aguguacuuccuggggccucugggcauauaauuccuguggccucuggguguguacccuc	
+27	12	0	15	-	-	cuuggcaccuaguaaguacuca	-	cacccagaucagugcuuggcaccuaguaaguacucaguauauacuuguugagugccugcuaugugccaggcauugugcugagggcu	
+15	12	0	3	-	-	ccgagccccugugccgcccccag	-	guggguacggcccagggggggagagggacgcacccugggcccagcagagcccagggcgcagccggacugaccgagccccugugccgcccccag	
+15	12	0	3	-	-	uggcccugacugaagaccugcagu	-	uggcccugacugaagaccugcaguuacacuauagcugcugguuucaaacagaggcccagagcacugucuuccug	
+24	12	0	12	-	-	aucauagaggaaaauccacau	-	gguauuuaaaagguagauuuuccuucuaugauuacggguuuggugauuaaucauagaggaaaauccacauuuucgguaucaa	
+24	9	0	15	-	-	agaggucuuccauggugcauucg	-	guacuugaagagaggucuuccauggugcauucgcuuuauucuuugacgaaucauacaugguugaccuuuuuuuagguauca	
+9	9	0	0	-	-	uauaccaggaugccagcauaguu	-	cugguuggcauucugggccugguucaugccuacucuguuauuaacuauaccaggaugccagcauaguu	
+15	15	0	0	-	-	cgucaaccauccagcuguuuga	aaacaucugguugguugagaga	-	gagugaaaaguuccgucaaccauccagcuguuugaggugaugcaaacaaacaucugguugguugagagaauuuuuuacuu	
+9	9	0	0	-	-	ccagcugggaggaaccaguggc	-	aaugauggaggugcaggcauuuccugaggauuaaugaccagcugggaggaaccaguggcccuuggcucugccucccagccagccauuaauuccgaggaaaugucuuuugcugaggucguu	
+9	9	0	0	-	-	uuugcaguaacaggugugaac	-	uuugcaguaacaggugugaacauucuagcagcaguuugaugaucauguaugauacugcaaac	
+9	9	0	0	-	-	aauggauuuuuggagcagg	-	caacauauuaaauggauuuuuggagcaggaaguuggaauagaggcuuucucagacaaauacuuuacugugcag	
+9	9	0	0	-	-	uaaccaaugugcagacuacugu	-	cagccuaaccaaugugcagacuacuguacaauuugggaguccugaacagauagucuaaacacuggguagacgg	
+21	9	0	12	-	-	ucaacaaaaucacugaugcugga	-	ucaacaaaaucacugaugcuggaguugcgugugucaucacucagcaccaggauauuguugggg	
+9	9	0	0	-	-	ucaaaugcucagacuccuuggu	-	ugugcaucguggucaaaugcucagacuccuugguggcugcuuaugcaccauggauguuugagcaugugcuauggugucua	
+9	9	0	0	-	-	ucccuguccuccaggagcuc	-	ucccuguccuccaggagcuccaggucugggguggguguggggauuucugcaggaggga	
+9	9	0	0	-	-	ugcuggaucagugguuugaguc	-	gcucugcuuucccaggugcuggaucagugguuugagucugagccucuaaaagccacucuagcaacggacgcagugauuggagcuaugacaa	
+9	9	0	0	-	-	gcugaacugucuuacucccacaucc	uggagugacugucagaugcagcca	-	gaggaaauguggagugacugucagaugcagccagcagaauaagugguuuggcugaacugucuuacucccacauccuc	
+6	6	0	0	-	-	cacaauacacggucggccucu	-	ugaugcuugaggagagguugcccguggcccguucgcauucuucaugacgcacaauacacggucggccucucuucgguauc	
+12	6	0	6	-	-	uugcagcugccuaggagugauuuc	-	ggguuguggggggucacucuaggccccgcagcacugugcuggauguugcagcugccuaggagugauuucacacaguccuc	
+6	6	0	0	-	-	aauguggaaguggucugaggcau	-	aauguggaaguggucugaggcauauagaguauaugccaagaacacuaccauau	
+72	6	0	66	-	-	uguaaacacccuacacucucagcu	-	gagggccagauacuguaaacacccuacacucucagcugugcacagugagaaagcugggagaaggcuguuuacucucucugccuu	
+18	6	0	12	-	-	aacacaccugguuaaccuuuuu	-	gugguacuugaggagagguuuucuaggucucuguuucuuucaugaggaugaaacacaccugguuaaccuuuuuuccaguauca	
+15	6	0	9	-	-	guaugugggacgguaaaccau	-	cgguuuaccgucccacauacauauucagaauguaugugggacgguaaaccau	
+6	6	0	0	-	-	acugacaggagagcauuuuaa	-	cuggacaaaguuaaaaugcuauucugucauugugauaguucauaugggcacugacaggagagcauuuuaauuuugucaag	
+12	6	0	6	-	-	uggucgaccauaaaacguacgu	-	uguggagagauggucgaccauaaaacguacgugugcuuuaugacguaugucacaugguccacuaauucucagcau	
+9	6	0	3	-	-	accaguaggccgaggccccu	-	ucuccuugaggggucuuggccucugcccaggacucuuucaugaccaguaggccgaggccccucacaggcggc	
+15	6	0	9	-	-	augucacucggcccacuaccc	-	cgagcgggagucaccccugcuuaggguaagugugucucgggugagcaugcaaugaacgugcucgcaugucacucggcccacuacccaagauuguuc	
+6	6	0	0	-	-	gaacgaaauccaagcgcagcug	-	gaacgaaauccaagcgcagcuggaaugcucuggagacaacagcugcuuuugggauuccguugcc	
+9	9	0	0	-	-	uggcacaggguccagcugucggc	ucgaugauggucccuguguuuu	-	uguccccauggcacaggguccagcugucggccgugauacccgaugggucgaugauggucccuguguuuuggggcg	
+21	6	0	15	-	-	guguugaaacaaucucuguug	-	ucauucccucaguguugaaacaaucucuguugaaccauguuacaggaaguucacuggaguuuguuucaacauuggaggaaugauaagaug	
+3	3	0	0	-	-	acaguucuucaacuggcagcuu	-	cagagggcaacaguucuucaacuggcagcuuuagcugggucaggacauaaagcuugccacugaagaacuacugcggcucag	
+3	3	0	0	-	-	ugggucacagaagagggucugg	-	ccccgggguccucuugucugagccccagaaagaggagagagugcugggucacagaagagggucuggggg	
+3	3	0	0	-	-	ucaggauucuaggcuuagaggu	-	uaugaccucuaagucuagaaccccucugauucaggauucucugagucaggauucuaggcuuagaggucaua	
+3	3	0	0	-	-	aaacucgaaugaacucuuuggc	-	ggaaaacucgaaugaacucuuuggcugacucaguauuauguuuagcaucagagagucaucagcauguucc	
+3	3	0	0	-	-	aaaaguucguugggguuuuu	-	gguuagccuaaaaguucguugggguuuuucuuuaugaucuuauggaagaacccuaacaaaauuuuuggcccacc	
+3	3	0	0	-	-	aaaaccugaaugaacucuuugg	-	aaaaguuuguucggauuuuucuguaacauuuuguggaaaaaccugaaugaacucuuugg	
+3	3	0	0	-	-	cucgaguuggaagaggcg	-	gugacggcuagcuccgccucuuccucucggucccauauugaacucgaguuggaagaggcgaguccggucucaaa	
+6	6	0	0	-	-	gcaaaucauuuuuuacucuccaa	agagguaaaaaauugauuugacu	-	auuuugagagguaaaaaauugauuugacuaguucuuuaacacaucuagcaaaucauuuuuuacucuccaaaaagaac	
+12	3	0	9	-	-	aggcagugcaucucuagcugg	-	augaagcuugaaugugucagguaggcagugcaucucuagcuggcuguuaaaauuucuuuuuaacaguugcuaguugcacuccccucuguugcauucauaaucuugc	
+3	3	0	0	-	-	guuuuguuuggguuuguuuu	-	aggcucuugcguuuuguuuggguuuguuuucaacaggcuuguaaagguuguugaugugccaaaccugaacagccu	
+3	3	0	0	-	-	guaucccacuucugacacca	-	guugggggucgguggugagcaagcagagacuacauagguugccuuguaucccacuucugacaccauguauugucaac	
+3	3	0	0	-	-	auucugcauuucuaacaaguuc	-	aucaccuggggaucuuguuaaaugagauucugguucgguaggaauggggccugagauucugcauuucuaacaaguucucaggugaugccacu	
+3	3	0	0	-	-	uugcacugcaugguaucugc	-	uguugcacugcaugguaucugcauucagcaguuuguuccugcuggcuguucaaaagacagugcgaua	
+9	3	0	6	-	-	uggaaggccuggcuuugcagcg	-	agcguggagggccuggaaggccuggcuuugcagcguggacuggacccugcagacccggccuuggcaagcccuuccgcu	
+6	3	0	3	-	-	uggcucugugaggucggcuca	-	uggcucugugaggucggcucaaggugggucuggauguugagcaggccugucagggcguug	
+6	3	0	3	-	-	cucggagagugcagcugugg	-	uuggugggagcucggagagugcagcugugggugucagggucaggcacacgcacagcaccucacugagcuccuuccaa	
+3	3	0	0	-	-	cgguuuaaggucuuggagacaaag	-	cauagcagcuccagcaccacgugacugacugccuggaggcucucgguuuaaggucuuggagacaaagug	
+3	3	0	0	-	-	guuuuguuuggguuuguuucu	-	gguuuuuuguuuuguuuggguuuguuucuggaugccagggaaaaccuggaccugucucugaacc	
+3	3	0	0	-	-	guguaugaugaauuaucugacc	-	ugucaggaaccccguguaugaugaauuaucugacccggccguugccucucauguaacgcuucucauggcucucacugca	
+6	3	0	3	-	-	acguggaugcugaaggucagagg	-	gccagguacguggaugcugaaggucagagggaagugcuucugucugcacauguguucuccaguccucugaccuuccugcaucccguucaucucuagga	
+3	3	0	0	-	-	agccuauccuggauuacuugaa	-	caggcccgcguccgcgugcaaguaaccgagaauaggccccuugggaccugcacagccuauccuggauuacuugaacgaggccacggccuu	
+6	3	0	3	-	-	ugcgggaucuuuaguuguggug	-	aaacagccgacguugcggcaugcgggaucuuuaguuguggugugugaauucuuaguugcagcaacuaaagaucccucaggcugcaaugaagaucaga	
+6	3	0	3	-	-	aauccaccugggcaaggauuc	-	gcuccccucucuaauucuugcuccccaggugagagugcuuugugaaugcaauccaccugggcaaggauucugaaugugagagc	
+3	3	0	0	-	-	aaaaucugagugaacuuuuugg	-	cugggguagccaaaaaguucauuuggguuuuucuguaagauguuacagaaaaaucugagugaacuuuuuggccaacucuau	
+63	3	0	60	-	-	uguuugcagaggaaacugagac	-	gcuaagcacuuacaacuguuugcagaggaaacugagacuuuguaacuauaucucagucucaucugcaaagaaguaagugcuuugc	
+3	3	0	0	-	-	agaucuuugguaaucugauggcu	-	uccagaggacuuagccugugcuguggccacugagagaugaaacacagaucuuugguaaucugauggcugcaaaugcuggg	
+3	3	0	0	-	-	agauaaugaugacuaacugaau	-	guagauaaugaugacuaacugaauugaugacuuugggcaugguuuaguaaucaguuucaugauuucuau	
+3	3	0	0	-	-	acccugcagccaaagaagcua	ggcuuccgugccugcagaugucu	-	ggguggcuuccgugccugcagaugucugugaauuccucaaggcugagacccugcagccaaagaagcuaccc	
+3	3	0	0	-	-	uacaguagucugcacauugg	-	aucagugguucuuacgguguguuugcuacuauugaaacgucaguguacaguagucugcacauuggcuucuugugau	
+3	3	0	0	-	-	gggguucaccgagcaacauuc	-	ugauaccgaaaagggguucaccgagcaacauucgucguccagaugcaaaguugcucggguaaccucuccccgcguacca	
+3	3	0	0	-	-	ucugcacagacccuggcuuuuc	-	auuuugauauauaaaccaguuuaauguuuucugcacagacccuggcuuuucuuaaauuuuauauauuggaaaccccguguuuguauuggaccuucugguuuguuucauauugaaaauc	
+3	3	0	0	-	-	agguuuuuugguuuuguuuu	-	aagcaaagguuuuuugguuuuguuuucuguaacaaguuugcagagaacgauacuaaagcaggcaccuagcuu	
+3	3	0	0	-	-	gccucugguggucgguuugu	-	cucgccguuauucggggaagcagggcacuggagagcgcuucagcacugccucugguggucgguuuguggaugggggcggg	
+6	3	0	3	-	-	agaacucuugcagucuuagaugu	-	cugaauaaagaacucuugcagucuuagauguuauaaaaaauauauauaucugaauuguaagaguuguuagcacagg	
+3	3	0	0	-	-	auagccaguuggggaagaaugc	auuguucuccaaccuggcucuuu	-	cuauugagacauagccaguuggggaagaaugcuguuaccuuagagagaagcuggauuguucuccaaccuggcucuuuauguugccgg	
+3	3	0	0	-	-	cuggacuuggagucagaagacc	-	ugggcuuucuggguccaggcagcaguaugcucagggaggcagcuacggugcagagaaagggagcucuggacuuggagucagaagaccucag	
+6	3	0	3	-	-	ccucagucagccuuguggaugu	-	auacccaaugaaugcgaaaaccucagucagccuuguggauguauguucugcagaccugacaucuagaggacugacugaaauuuucacuuucagcuaa	
+3	3	0	0	-	-	aaaccugaacaaacuuuuuggc	-	gccgaaauguucguugaaguuuuuccauggggugucacggaagaaaccugaacaaacuuuuuggc	
+3	3	0	0	-	-	gagggcggguggaggagg	-	ccgcccccgucuccaccccgccccccggagccgcugaguggcggcagcggccccaggaccggguuuccucagacaagagggcggguggaggaggaagcgg	
+6	6	0	0	-	-	aaaaccugaaugaacucuuugg	aaaaccugaaugaacucuuuggu	-	aaaaaguucauuccaguuuuucaagacauaucauauagaugggaaaaccugaaugaacucuuuggu	
+3	3	0	0	-	-	agguuguuugguuuuguguu	-	gugaacaaacacugaauauacucaaucaugagagaaguggggaagguuguuugguuuuguguucau	
+3	3	0	0	-	-	gaccgagagggccucggcugu	-	gcgggggaccgagagggccucggcugugugaggacaggaggcggccgaggcccgggccgguucccccga	
+3	3	0	0	-	-	aggcugaggacaggggcugacgu	-	cagggaggcugaggacaggggcugacguucauuuucuacaagugugcgucugccccugggcacagcaccccug	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3	0	0	3	-	-	gaauccaccacgaacaacuuc	-	uuugguacugaaaaaaguguuguccgugaaugauucgucauaaguaaagcgaauccaccacgaacaacuucucuucaaguaccaca	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3	0	0	3	-	-	aauaaguucguuuggguuuuu	-	aauaaguucguuuggguuuuuccauaagauguaaugggaaaacuugaaugaacuuuuugg	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3	0	0	3	-	-	uauucauuuaucucccagccuac	-	caggcuaggagaaaugauuggauagaaaauuuuauucuauucauuuaucucccagccuac	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3	0	0	3	-	-	aaaguucuguagugcacugacu	-	aaaguucuguagugcacugacuucuaucauauucagagucggagugucucagaacuuugcc	
+
+
+
+
+
+
+
+
+
+
+3	0	0	3	-	-	uuacaauacaaccugauaagu	-	uuacaauacaaccugauaagugcuguaacacuuaucagguuguauuauaaug	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6	0	0	6	-	-	uggcaccagcacuggcggugg	-	cgcuggcaguguugguggcacuugcgugggggcgguggcaccagcacuggcggugg	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3	0	0	3	-	-	auuugguuccauuuuaccagc	-	gccaucaaugcgcagcuacagcugguugaaggggaccaaauccaucgaacaguugauuugguuccauuuuaccagcuuuagcaaagcauucggu	
+
+
+
+
+
+
+
+
+
+
+
+
+
+15	0	0	15	-	-	ugguuugccugggacugag	-	aggauggccaagcauucugguuugccugggacugagugccugagguacgggacuugcagugccaagauuaggauguuguuguugcugc	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3	0	0	3	-	-	gugacaucacauauauggcgac	-	guggcagcuugguggucguauguguggcgccaucuacuggaacguuuaggagugacaucacauauauggcgacuaaacugcu	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+60	0	0	60	-	-	uagcaucauuugaaaucaguguuu	-	cuucuggaagcugguuucacaugguggcuuagauuuuuccaucuuuguaucuagcaucauuugaaaucaguguuuuaggag	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3	0	0	3	-	-	ugauugguacuucuuagagugga	-	cacuucaggaagugccauccauguggauaaaaauaugauugguacuucuuagagugga	
+
+
+
+
+

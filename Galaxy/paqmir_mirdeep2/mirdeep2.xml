@@ -1,0 +1,292 @@
+<tool id="paqmir_mirdeep2" name="PAQmiR MiRDeep2" version="2.1.0">
+    <description>identification of novel and known miRNAs</description>
+    <requirements>
+        <requirement type="package" version="2.0.0.8">mirdeep2</requirement>
+    </requirements>
+    <command detect_errors="aggressive">
+<![CDATA[
+    miRDeep2.pl
+
+    $reads
+    $genome
+    $mappings
+
+    #if $mature_this
+        $mature_this
+    #else
+        none
+    #end if
+
+    #if $mature_other
+        $mature_other
+    #else
+        none
+    #end if
+
+    #if $precursors
+        $precursors
+    #else
+        none
+    #end if
+
+    #if $species.value != 'all'
+        -t $species
+    #end if
+
+    #if $option.choice
+    	#if $option.star_sequences
+        	-s $option.star_sequences
+    	#end if
+
+    	#if $option.min_read_stack
+        	-a $option.min_read_stack
+    	#end if
+
+    	#if $option.min_read_stack
+        	-a $option.min_read_stack
+    	#end if
+
+    	-g $option.max_precursors_analyze
+    	-b $option.min_score_cutoff
+    	$option.disable_randfold
+        $option.identifiers_supv18
+    #end if
+
+    &&
+
+    ## html output
+    mv result*.html $html 2> /dev/null
+
+    ## move pdf directory to be accessible from the new index.html
+    &&
+    mkdir -p $html.files_path 2> /dev/null
+    &&
+    mv pdfs* $html.files_path 2> /dev/null
+]]>
+    </command>
+    <inputs>
+        <param name="reads" format="fasta" type="data" label="Collapsed deep sequencing reads">
+            <help>
+<![CDATA[
+Reads in fasta format. The identifier should contain a prefix, a running
+number and a '_x' to indicate the number of reads that have this sequence.
+There should be no redundancy in the sequences.
+]]>
+            </help>
+        </param>
+        <param name="genome" format="fasta" type="data" label="Genome" help="Genome contigs in fasta format. The identifiers should be unique."/>
+        <param name="mappings" format="tabular" type="data" label="Mappings" help="Reads mapped against genome. Mappings should be in ARF format."/>
+        <param name="mature_this" optional="true" format="fasta" type="data" label="Mature miRNA sequences for this species"
+            help="miRBase miRNA sequences in fasta format. These should be the known mature sequences for the species being analyzed."/>
+        <param name="mature_other" optional="true" format="fasta" type="data" label="Mature miRNA sequences for related species">
+            <help>
+<![CDATA[
+miRBase miRNA sequences in fasta format. These should be the pooled known
+mature sequences for 1-5 species closely related to the species being analyzed.
+]]>
+            </help>
+        </param>
+        <param name="precursors" optional="true" format="fasta" type="data" label="Precursor sequences"
+            help="miRBase miRNA precursor sequences in fasta format. These should be the known precursor sequences for the species being analyzed."/>
+
+        <param name="species" type="select" label="Search in species" help="If not searching in a specific species all species in your files will be analyzed. (-t) [ If you don't find the specie you need you can use 'All species' or contact the administrator to update the list ] ">
+            <option value="all">All species</option>
+            <option value="hsa">Human</option>
+            <option value="ptr">Chimp</option>
+            <option value="na">Orangutan</option>
+            <option value="na">Rhesus</option>
+            <option value="na">Marmoset</option>
+            <option value="mmu">Mouse</option>
+            <option value="rno">Rat</option>
+            <option value="na">GuineaPig</option>
+            <option value="lca">Cat</option>
+            <option value="cfa">Dog</option>
+            <option value="eca">Horse</option>
+            <option value="bta">Cow</option>
+            <option value="na">Opossum</option>
+            <option value="na">Platypus</option>
+            <option value="gga">Chicken</option>
+            <option value="na">Zebrafinch</option>
+            <option value="na">Lizard</option>
+            <option value="xtr">X.tropicalis</option>
+            <option value="dre">Zebrafish</option>
+            <option value="tni">Tetraodon</option>
+            <option value="fru">Fugu</option>
+            <option value="na">Stickleback</option>
+            <option value="na">Medaka</option>
+            <option value="na">Lamprey</option>
+            <option value="bfl">Lancelet</option>
+            <option value="cin">C.intestinalis</option>
+            <option value="spu">S.purpuratus</option>
+            <option value="cel">C.elegans</option>
+            <option value="na">C.brenneri</option>
+            <option value="cbr">C.briggsae</option>
+            <option value="na">C.remanei</option>
+            <option value="sja">C.japonica</option>
+            <option value="na">P.pacificus</option>
+            <option value="dme">D.melanogaster</option>
+            <option value="dsi">D.simulans</option>
+            <option value="dse">D.sechellia</option>
+            <option value="dya">D.yakuba</option>
+            <option value="der">D.erecta</option>
+            <option value="dan">D.ananassae</option>
+            <option value="dps">D.pseudoobscura</option>
+            <option value="dpe">D.persimilis</option>
+            <option value="dvi">D.virilis</option>
+            <option value="dmo">D.mojavensis</option>
+            <option value="dgr">D.grimshawi</option>
+            <option value="aga">A.gambiae</option>
+            <option value="ame">A.mellifera</option>
+            <option value="na">S.cerevisiae</option>
+            <option value="cel">Worm</option>
+        </param>
+        <conditional name="option">
+        	<param name="choice" type="boolean" truevalue="yes" falsevalue="no" label="More options?"/>
+                <when value="no">
+                         <param name="detailed_fasta" hidden="true" type="boolean" checked="false" label="detailed_fasta hidden input" help="This hidden param is here to filter the output even if the options are not show (If you see this input there is a problem)"/>
+
+                </when>
+                <when value="yes">
+			<param name="identifiers_supv18" type="boolean" truevalue="-P" falsevalue="" label="Mature miRNA reference contain miRBase v>=18 identifiers" help="Use this switch if Mature miRNA reference contain miRBase v18 (or more recent) identifiers (5p and 3p) instead of previous ids from v17. (-P)"/>
+        		<param name="star_sequences" format="fasta" type="data" optional="true" label="Star sequences" help="From miRBase in fasta format (optional). (-s)"/>
+		        <param name="min_read_stack" optional="true" type="integer" min="0" label="Minimum read stack height">
+		            <help>
+<![CDATA[
+minimum read stack height that triggers analysis. Using this option disables
+automatic estimation of the optimal value and all detected precursors are analyzed. (-a)
+]]>
+		            </help>
+		        </param>
+		        <param name="max_precursors_analyze" type="integer" value="50000" label="Maximum precursors"
+		            help="Maximum number of precursors to analyze when automatic excision gearing is used. If set to -1 all precursors will be analyzed. (-g)"/>
+		        <param name="min_score_cutoff" type="integer" value="0" label="Minimum miRNA score"
+		            help="Minimum score cut-off for predicted novel miRNAs to be displayed in the overview table. (-b)"/>
+		        <param name="disable_randfold" type="boolean" truevalue="-c" falsevalue="" label="Disable randfold analysis" help="(-c)"/>
+        		<param name="detailed_fasta" type="boolean" checked="false" label="Detailed fasta output" help="Output fasta files of precursors, mature and star strand for both novel and known miRNAs"/>
+		</when>
+        </conditional>
+
+    </inputs>
+    <outputs>
+        <data name="tab_results" format="tabular" from_work_dir="result*.csv" label="Tabular output of ${tool.name} on ${on_string}"/>
+        <data format="html" name="html" label="${tool.name} on ${on_string} (html report)"/>
+        <data name="pred_acc" format="tabular" from_work_dir="mirdeep_runs/run*/survey.csv" label="Prediction accuracy output of ${tool.name} on ${on_string}"/>
+        <data name="bed_out" format="bed" from_work_dir="result*.bed" label="Bed output of ${tool.name} on ${on_string}"/>
+        <data name="mrd_out" format="txt" from_work_dir="mirdeep_runs/run*/output.mrd" label="Text output of ${tool.name} on ${on_string}"/>
+
+        <data name="known_mature" format="fasta" from_work_dir="mirna_results_*/known_mature_*.fa" label="${tool.name} on ${on_string}: known mature">
+            <filter>option["detailed_fasta"]</filter>
+        </data>
+        <data name="known_pres" format="fasta" from_work_dir="mirna_results_*/known_pres_*.fa" label="${tool.name} on ${on_string}: known precursors">
+            <filter>option["detailed_fasta"]</filter>
+        </data>
+        <data name="known_star" format="fasta" from_work_dir="mirna_results_*/known_star_*.fa" label="${tool.name} on ${on_string}: known star">
+            <filter>option["detailed_fasta"]</filter>
+        </data>
+        <data name="not_mature" format="fasta" from_work_dir="mirna_results_*/not_mature_*.fa" label="${tool.name} on ${on_string}: not detected mature">
+            <filter>option["detailed_fasta"]</filter>
+        </data>
+        <data name="not_pres" format="fasta" from_work_dir="mirna_results_*/not_pres_*.fa" label="${tool.name} on ${on_string}: not detected precursors">
+            <filter>option["detailed_fasta"]</filter>
+        </data>
+        <data name="not_star" format="fasta" from_work_dir="mirna_results_*/not_star_*.fa" label="${tool.name} on ${on_string}: not detected star">
+            <filter>option["detailed_fasta"]</filter>
+        </data>
+        <data name="novel_mature" format="fasta" from_work_dir="mirna_results_*/novel_mature_*.fa" label="${tool.name} on ${on_string}: novel mature">
+            <filter>option["detailed_fasta"]</filter>
+        </data>
+        <data name="novel_pres" format="fasta" from_work_dir="mirna_results_*/novel_pres_*.fa" label="${tool.name} on ${on_string}: novel precursors">
+            <filter>option["detailed_fasta"]</filter>
+        </data>
+        <data name="novel_star" format="fasta" from_work_dir="mirna_results_*/novel_star_*.fa" label="${tool.name} on ${on_string}: novel star">
+            <filter>option["detailed_fasta"]</filter>
+        </data>
+    </outputs>
+    <tests>
+        <test>
+            <param name="reads" value="reads_collapsed.fa"/>
+            <param name="genome" value="cel_cluster.fa"/>
+            <param name="mappings" value="reads_collapsed_vs_genome.arf"/>
+            <param name="mature_this" value="mature_ref_this_species.fa"/>
+            <param name="mature_other" value="mature_ref_other_species.fa"/>
+            <param name="precursors" value="precursors_ref_this_species.fa"/>
+
+            <output name="tab_results" file="result.csv" compare="sim_size"/>
+            <output name="pred_acc" file="survey.csv" compare="sim_size"/>
+            <output name="bed_out" file="result.bed" compare="sim_size"/>
+            <output name="mrd_out" file="output.mrd" compare="sim_size"/>
+        </test>
+        <test>
+            <param name="reads" value="reads_collapsed.fa"/>
+            <param name="genome" value="cel_cluster.fa"/>
+            <param name="mappings" value="reads_collapsed_vs_genome.arf"/>
+            <param name="mature_this" value="mature_ref_this_species.fa"/>
+            <param name="mature_other" value="mature_ref_other_species.fa"/>
+            <param name="precursors" value="precursors_ref_this_species.fa"/>
+            <param name="detailed_fasta" value="true"/>
+
+            <output name="tab_results" file="result.csv" compare="sim_size"/>
+            <output name="pred_acc" file="survey.csv" compare="sim_size"/>
+            <output name="bed_out" file="result.bed" compare="sim_size"/>
+            <output name="mrd_out" file="output.mrd" compare="sim_size"/>
+
+            <output name="known_mature" file="detailed_fasta/known_mature.fa" compare="sim_size"/>
+            <output name="known_pres" file="detailed_fasta/known_pres.fa" compare="sim_size"/>
+            <output name="known_star" file="detailed_fasta/known_star.fa" compare="sim_size"/>
+            <output name="not_mature" file="detailed_fasta/not_mature.fa" compare="sim_size"/>
+            <output name="not_pres" file="detailed_fasta/not_pres.fa" compare="sim_size"/>
+            <output name="not_star" file="detailed_fasta/not_star.fa" compare="sim_size"/>
+            <output name="novel_mature" file="detailed_fasta/novel_mature.fa" compare="sim_size"/>
+            <output name="novel_pres" file="detailed_fasta/novel_pres.fa" compare="sim_size"/>
+            <output name="novel_star" file="detailed_fasta/novel_star.fa" compare="sim_size"/>
+        </test>
+    </tests>
+    <help>
+<![CDATA[
+
+        | This tool is part of the workflow **PAQmiR** for the *Prediction Annotation and Quantification of miRNA with miRDeep2*
+        | 
+        | *This wrapper was forked from the rbc_mirdeep2 wrapper of the RNA-Bioinformatics network*
+        | ==> https://www.denbi.de/network/rna-bioinformatics-center-rbc
+        | ==> https://github.com/bgruening
+        |
+        | Modifications are the product of Valentin Marcon & Sylvain Marthey (Thanks to INRA Migale, IFB ressources & INRA GABI)
+
+**What it does**
+
+MiRDeep2 is a software package for identification of novel and known miRNAs in deep sequencing data. Furthermore, it can be used for miRNA expression profiling across samples.
+
+**Input**
+
+A FASTA file with deep sequencing reads, a FASTA file of the corresponding genome, a file of mapped reads to the genome in miRDeep2 arf format, an optional fasta file with known miRNAs of the analysing species and an option fasta file of known miRNAs of related species.
+
+Arf format:
+Is a proprietary file format generated and processed by miRDeep2. It contains information of reads mapped to a reference genome. Each line in such a file contains 13 columns:
+
+1. read identifier
+2. length of read sequence
+3. start position in read sequence that is mapped
+4. end position in read sequence that is mapped
+5. read sequence
+6. identifier of the genome-part to which a read is mapped to. This is either a scaffold id or a chromosome name
+7. length of the genome sequence a read is mapped to
+8. start position in the genome where a read is mapped to
+9. end position in the genome where a read is mapped to
+10. genome sequence to which a read is mapped
+11. genome strand information. Plus means the read is aligned to the sense-strand of the genome. Minus means it is aligned to the antisense-strand of the genome.
+12. Number of mismatches in the read mapping
+13. Edit string that indicates matches by lowercase 'm' and mismatches by uppercase 'M'
+
+**Dependency**
+
+MiRDeep2_ 2.0.0.8, Conda version
+
+.. _mirdeep2: https://anaconda.org/bioconda/mirdeep2
+
+]]>
+    </help>
+    <citations>
+        <citation type="doi">10.1093/nar/gkr688</citation>
+        <citation type="doi">10.1002/0471250953.bi1210s36</citation>
+    </citations>
+</tool>

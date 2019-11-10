@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repositories description="Worflow test PAQmiR"> 
+    <repository name="paqmir_create_mirna_references" owner="smarthey" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository name="paqmir_cut_fasta_identifiers" owner="smarthey" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository name="paqmir_mapper" owner="smarthey" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository name="paqmir_mirdeep2" owner="smarthey" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository name="paqmir_postprocess_mirdeep2" owner="smarthey" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository name="paqmir_postprocess_quantifier" owner="smarthey" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+    <repository name="paqmir_quantifier" owner="smarthey" toolshed="http://testtoolshed.g2.bx.psu.edu"/>
+</repositories>

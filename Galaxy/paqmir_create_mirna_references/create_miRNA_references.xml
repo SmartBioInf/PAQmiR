@@ -1,0 +1,86 @@
+<tool id="paqmir_create_miRNA_references" name="PAQmiR Create miRNA/Precursors reference files" version="1.0.0">
+	<description>creates the microRNA reference files used by the miRDeep2 software</description>
+	<requirements>
+                 <requirement type="binary">perl</requirement>
+                 <requirement type="package" version="1.6.924">perl-bioperl</requirement>
+        </requirements>
+        <stdio>
+            <!-- Anything other than zero is an error -->
+            <exit_code range="1:" />
+            <exit_code range=":-1" />
+            <!-- In case the return code has not been set propery check stderr too -->
+            <regex match="Error:" />
+            <regex match="Exception:" />
+        </stdio>
+
+	<command interpreter="bash" >
+		<![CDATA[
+		create_miRNA_references.sh
+		$hairpinfile
+		$maturefile
+                $id
+                $precurseur_espece
+                $mirna_mature_espece
+                $mirna_mature_no_espece
+		]]>
+	</command>
+	<inputs>
+                <param name="hairpinfile" type="data" format="fasta" label="Hairpin file" help="Fasta file containing all known precursors"/>
+		<param name="maturefile" type="data" format="fasta" label="Mature file" help="Fasta file containing all known mature miRNAs"/>
+		<param format="txt" name="id" size="30" value="bta" type="text" label="Species ID" help="3 letter code that identifies the species studied in the miRBase database"/>
+	</inputs>
+	<outputs>
+		<data format="fasta" name="precurseur_espece" label="${os.path.splitext(str($hairpinfile.name))[0]}_${id}.fa"/>
+		<data format="fasta" name="mirna_mature_espece" label="${os.path.splitext(str($maturefile.name))[0]}_${id}.fa"/>
+		<data format="fasta" name="mirna_mature_no_espece" label="${os.path.splitext(str($maturefile.name))[0]}_no_${id}.fa"/>
+	</outputs>
+        <tests>
+            <test>
+                 <param name="hairpinfile" value="hairpin.fasta"/>
+                 <param name="maturefile" value="mature.fasta"/>
+                 <param name="id" value="bta"/>
+	    
+                 <output name="precurseur_espece" file="hairpin_bta.fa"/>
+                 <output name="mirna_mature_espece" file="mature_bta.fa"/>
+                 <output name="mirna_mature_no_espece" file="mature_no_bta.fa"/>
+            </test>
+        </tests>
+	<help><![CDATA[
+
+        | This tool is part of the workflow **PAQmiR** for the *Prediction Annotation and Quantification of miRNA with miRDeep2*
+        |
+        | Wrappers are the product of Valentin Marcon, Kevin Normand & Sylvain Marthey (Thanks to INRA Migale, IFB ressources & INRA GABI)
+
+**What it does**
+
+	| Prepares files containing hairpin and mature miRNAs that are necessary for the use of miRDeep2 software.
+	| This tool will use the "species code" provided as parameter to identify the sequences belonging to the reference species in the mature and hairpin files passed as parameters.
+
+**Input**
+
+	| Two FASTA files : 
+	| - File containing all known precursors
+	| - File containing all known mature miRNAs
+	| generally, these files are downloaded from the miRBase database: http://www.mirbase.org (hairpin.fa and mature.fa)
+
+**Output**
+
+	| Three FASTA files:
+	| - File containing  containing all hairpins of selected species
+	| - File containing containing all matures of selected species
+	| - File containing containing all matures exepted selected species 
+
+**Dependency**
+
+perl-bioperl_ 1.6.924, Conda version
+
+.. _perl-bioperl: https://anaconda.org/bioconda/perl-bioperl
+
+	]]></help>
+        <citations>
+                <citation type="doi">10.1371/journal.pone.0091938</citation>
+                <citation type="doi">10.1186/s12864-015-1471-y</citation>
+        	<citation type="doi">10.1093/nar/gkr688</citation>
+	        <citation type="doi">10.1002/0471250953.bi1210s36</citation>
+        </citations>
+</tool>

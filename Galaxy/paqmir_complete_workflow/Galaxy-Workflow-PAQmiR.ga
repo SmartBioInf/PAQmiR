@@ -1,0 +1,106 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "PAQmiR", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "Hairpin File", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 240, 
+                "top": 275
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "4e86bc4c-4fcd-4ac2-ac9e-b3186b434591", 
+            "workflow_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "content_id": null, 
+            "errors": null, 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": "Mature File", 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 240, 
+                "top": 351
+            }, 
+            "tool_id": null, 
+            "tool_state": "{}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "uuid": "57acb0ea-1ef6-49a5-8e52-912e018521ee", 
+            "workflow_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "content_id": "create_miRNA_references", 
+            "errors": null, 
+            "id": 2, 
+            "input_connections": {
+                "hairpinfile": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "maturefile": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool PAQmiR Create miRNA/Precursors reference files", 
+                    "name": "maturefile"
+                }, 
+                {
+                    "description": "runtime parameter for tool PAQmiR Create miRNA/Precursors reference files", 
+                    "name": "hairpinfile"
+                }
+            ], 
+            "label": null, 
+            "name": "PAQmiR Create miRNA/Precursors reference files", 
+            "outputs": [
+                {
+                    "name": "precurseur_espece", 
+                    "type": "fasta"
+                }, 
+                {
+                    "name": "mirna_mature_espece", 
+                    "type": "fasta"
+                }, 
+                {
+                    "name": "mirna_mature_no_espece", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 509, 
+                "top": 285
+            }, 
+            "post_job_actions": {}, 
+            "tool_id": "create_miRNA_references", 
+            "tool_state": "{\"__page__\": null, \"maturefile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"__rerun_remap_job_id__\": null, \"hairpinfile\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"chromInfo\": \"\\\"/projet/galaxydev/galaxy/tool-data/shared/ucsc/chrom/?.len\\\"\", \"id\": \"\\\"bta\\\"\"}", 
+            "tool_version": "1.0.0", 
+            "type": "tool", 
+            "uuid": "ce4214c9-198a-4aa6-955d-f90df78b48a9", 
+            "workflow_outputs": []
+        }
+    }, 
+    "tags": [], 
+    "uuid": "5b3dcb55-bb42-4fe5-b5af-cd3981997a49", 
+    "version": 1
+}

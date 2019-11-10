@@ -1,0 +1,88 @@
+<tool id="paqmir_postprocess_quantifier" name="PAQmiR Postprocess Quantifier" version="1.0.0">
+	<description>filters results to quantify, annotate, and eliminate redundancy in miRNAs</description>
+	<stdio>
+            <!-- Anything other than zero is an error -->
+            <exit_code range="1:" />
+            <exit_code range=":-1" />
+            <!-- In case the return code has not been set propery check stderr too -->
+            <regex match="Error:" />
+            <regex match="Exception:" />
+        </stdio>
+	<command interpreter="bash">
+	<![CDATA[
+		postprocess_quantifier.sh $res_quantifier $miRBase $mature_and_new_mapped $option.filtre $nbCondition 
+                #if $option.filtre=="yes"
+			$option.valeur_filtre
+                #else 
+			1
+		#end if
+	]]>
+	</command>
+       	<inputs>
+		<param name="res_quantifier" format="tabular" type="data" label="Quantification file" help="Tabular quantification file from Quantifier"/>
+		<param name="miRBase" format="tabular" type="data" label="MiRBase.mrd file" help="MiRBase.mrd file from Quantifier"/>
+		<param name="mature_and_new_mapped" format="tabular" type="data" label="MiRNA mapping" help="Reference matures against precursors. Mapping file from quantifier in ARF format"/>
+		<param name="nbCondition" format="txt" size="30" value="1" type="integer" min="1" max="99" label="Total number of sample processed" help="Number of read sets used in the initial mapping step (Mapper)"/>
+		<conditional name="option">
+                        <param name="filtre" type="boolean" truevalue="yes" falsevalue="no" label="Apply read count filter?"/>
+			<when value="no">
+			</when>
+			<when value="yes">
+				<param name="valeur_filtre" format="txt" size="30" value="1" type="integer" label="Minimal read count" help="Minimal read count per sample"/>
+			</when>
+		</conditional>
+	</inputs>
+	<outputs>
+		<data name="miRNAs_expressed_all_samples.pre_uniq" format="tabular" from_work_dir="miRNAs_expressed_all_samples.pre_uniq.csv" label="miRNAs_expressed_all_samples.pre_uniq.csv"/>
+		<data name="miRNAs_expressed_all_samples.pre_uniq.matureSEQ_uniq" format="tabular" from_work_dir="miRNAs_expressed_all_samples.pre_uniq.matureSEQ_uniq.csv" label="miRNAs_expressed_all_samples.pre_uniq.matureSEQ_uniq.csv"/>
+		<data name="annotation_statistics" format="txt" from_work_dir="annotation_statistics.txt" label="annotation_statistics.txt"/>
+	</outputs>
+        <!--tests> Don't work with "from_work_dir"
+            <test>
+                 <param name="res_quantifier" value="quantifier_output.tsv"/>
+                 <param name="miRBase" value="miRBase.mrd"/>
+                 <param name="mature_and_new_mapped" value="matures_and_new_predicted_matures.fa_mapped.arf"/>
+                 <param name="nbCondition" value="3"/>
+                 <param name="valeur_filtre" value="1"/>
+
+                 <output name="miRNAs_expressed_all_samples.pre_uniq" file="miRNAs_expressed_all_samples.pre_uniq.csv"/>
+                 <output name="miRNAs_expressed_all_samples.pre_uniq.matureSEQ_uniq" file="miRNAs_expressed_all_samples.pre_uniq.matureSEQ_uniq.csv"/>
+                 <output name="annotation_statistics" file="annotation_statistics.txt"/>
+            </test>
+        </tests-->
+	<help>
+<![CDATA[
+
+        | This tool is part of the workflow **PAQmiR** for the *Prediction Annotation and Quantification of miRNA with miRDeep2*
+	|
+	| Wrappers are the product of Valentin Marcon, Kevin Normand & Sylvain Marthey (Thanks to INRA Migale, IFB ressources & INRA GABI)
+
+
+**What it does**
+This module assigns mature miRNAs to a set of precursors, and report the quantification of the best two mature (3p & 5p predicted from their position on the precursor) observed for each precursor.
+The module uses output files provided by the quantifier.pl module from miRdeep2 and assigns the matures to the precursors by using the following order of priority:
+
+	| - Mature known in the species studied (generaly all matures from miRBase known for the species are used)
+        | - Mature known in another species (all mature from miRBase, or only those corresponding to a subset of closely related species are used). In case where several mature are detected, mature with the highest count is chosen.
+        | - Mature unknown (generaly matures predicted by miRDeep2.pl module are used)
+
+**Input**
+
+	| - Standard results file of Quantifier
+        | - MiRBase.mrd file produced by Quantifier
+	| - Mapping of miRNAs file
+
+**Output**
+
+	| - Quantification pre_uniq file :  tabular file containing the quantification of the two tbest matures (3p & 5p) observed for each precursor.
+	| - Quantification matureSeq_uniq file : tabular subpart of file pre_uniq containing only one quantification per mature sequence.
+	| - Annotation statistics : Txt file containing statistics about annotation process
+]]>
+	</help>
+	<citations>
+                <citation type="doi">10.1371/journal.pone.0091938</citation>
+                <citation type="doi">10.1186/s12864-015-1471-y</citation>
+	        <citation type="doi">10.1093/nar/gkr688</citation>
+        	<citation type="doi">10.1002/0471250953.bi1210s36</citation>
+        </citations>
+</tool>

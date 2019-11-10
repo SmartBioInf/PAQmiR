@@ -1,0 +1,198 @@
+<tool id="paqmir_mirdeep2_quantifier" name="PAQmiR MiRDeep2 Quantifier" version="2.1.0">
+    <description>fast quantitation of reads mapping to known miRBase precursors</description>
+    <requirements>
+        <requirement type="package" version="2.0.0.8">mirdeep2</requirement>
+    </requirements>
+    <stdio>
+        <!-- Anything other than zero is an error -->
+        <exit_code range="1:" />
+        <exit_code range=":-1" />
+        <!-- In case the return code has not been set propery check stderr too -->
+        <regex match="Error:" />
+        <regex match="Exception:" />
+    </stdio>
+    <command>
+<![CDATA[
+#import subprocess
+#set $mature_file = $subprocess.check_output(["basename",$mature.file_name])
+#set $mature_file = $mature_file.rstrip()
+    quantifier.pl 
+    
+    -p $precursors 
+    
+    -m $mature 
+    
+    -r $reads
+    
+    #if $species.value != 'all'
+        -t $species
+    #end if
+    
+   #if $option.choice
+
+    	#if $option.star_sequences
+            -s $option.star_sequences
+    	#end if
+    
+    	$option.sortReadsInPDF
+    	$option.flexibleIdMapping
+    	$option.skipFileConversion
+    	$option.wholePrecursAsMature
+    	$option.discardReadMultiMap
+    
+    	-e $option.upstreamNtides
+    	-f $option.downstreamNtides
+	-g $option.allowedMismatches
+
+	$option.identifiers_supv18
+
+    #end if
+
+    -y galaxy
+    
+     ## html output
+    ;
+    cp expression_galaxy.html $html 2> /dev/null
+    
+    ## move pdf directory to be accessible from the new index.html
+    ;
+    mkdir -p $html.files_path 2> /dev/null
+    ;
+    cp -R pdfs_galaxy $html.files_path 2> /dev/null
+    ;
+    cp expression_analyses/expression_analyses_galaxy/${mature_file}_mapped.arf expression_analyses/expression_analyses_galaxy/mature_mapped.arf
+    ]]>
+    </command>
+    <inputs>
+        <param name="reads" format="fasta" type="data" label="Collapsed deep sequencing reads" help="Reads in fasta format. (-r)"/>
+        <param name="precursors" format="fasta" type="data" label="Precursor sequences" help="miRNA precursor sequences from miRBase. (-p)"/>
+        <param name="mature" format="fasta" type="data" label="Mature miRNA sequences" help="Mature miRNA sequences from miRBase. (-m)"/>
+        <param name="species" type="select" label="Search in species" help="If not searching in a specific species all species in your files will be analyzed. (-t) [ If you don't find the specie you need you can use 'All species' or contact the administrator to update the list ] ">
+            <option value="all">All species</option>
+            <option value="hsa">Human</option>
+            <option value="ptr">Chimp</option>
+            <option value="na">Orangutan</option>
+            <option value="na">Rhesus</option>
+            <option value="na">Marmoset</option>
+            <option value="mmu">Mouse</option>
+            <option value="rno">Rat</option>
+            <option value="na">GuineaPig</option>
+            <option value="lca">Cat</option>
+            <option value="cfa">Dog</option>
+            <option value="eca">Horse</option>
+            <option value="bta">Cow</option>
+            <option value="na">Opossum</option>
+            <option value="na">Platypus</option>
+            <option value="gga">Chicken</option>
+            <option value="na">Zebrafinch</option>
+            <option value="na">Lizard</option>
+            <option value="xtr">X.tropicalis</option>
+            <option value="dre">Zebrafish</option>
+            <option value="tni">Tetraodon</option>
+            <option value="fru">Fugu</option>
+            <option value="na">Stickleback</option>
+            <option value="na">Medaka</option>
+            <option value="na">Lamprey</option>
+            <option value="bfl">Lancelet</option>
+            <option value="cin">C.intestinalis</option>
+            <option value="spu">S.purpuratus</option>
+            <option value="cel">C.elegans</option>
+            <option value="na">C.brenneri</option>
+            <option value="cbr">C.briggsae</option>
+            <option value="na">C.remanei</option>
+            <option value="sja">C.japonica</option>
+            <option value="na">P.pacificus</option>
+            <option value="dme">D.melanogaster</option>
+            <option value="dsi">D.simulans</option>
+            <option value="dse">D.sechellia</option>
+            <option value="dya">D.yakuba</option>
+            <option value="der">D.erecta</option>
+            <option value="dan">D.ananassae</option>
+            <option value="dps">D.pseudoobscura</option>
+            <option value="dpe">D.persimilis</option>
+            <option value="dvi">D.virilis</option>
+            <option value="dmo">D.mojavensis</option>
+            <option value="dgr">D.grimshawi</option>
+            <option value="aga">A.gambiae</option>
+            <option value="ame">A.mellifera</option>
+            <option value="na">S.cerevisiae</option>
+            <option value="cel">Worm</option>
+        </param>
+
+        <conditional name="option">
+                        <param name="choice" type="boolean" truevalue="yes" falsevalue="no" label="More options?"/>
+                        <when value="no">
+                        </when>
+                        <when value="yes">
+	                        <param name="identifiers_supv18" type="boolean" truevalue="-P" falsevalue="" label="Mature miRNA reference contain miRBase v>=18 identifiers" help="Use this switch if Mature miRNA reference contain miRBase v18 (or more recent) identifiers (5p and 3p) instead of previous ids from v17. (-P)"/>
+			        <param name="star_sequences" format="fasta" type="data" optional="true" label="Star sequences" help="From miRBase in fasta format (optional) (-s)"/>
+			       <!-- <param name="generatePDFs" type="boolean" checked="true" truevalue="" falsevalue="-d" label="Generate PDFs" help="(-d)"/> -->
+			        <param name="sortReadsInPDF" type="boolean" checked="true" truevalue="" falsevalue="-o" label="Sort reads by sample in PDF" help="(-o)"/>
+			        <param name="flexibleIdMapping" type="boolean" checked="false" truevalue="-k" falsevalue="" label="Include ID-flexible mapping" help="Also considers precursor-mature mappings that have different ids, eg let7c would be allowed to map to pre-let7a. (-k)"/>
+			        <param name="skipFileConversion" type="boolean" checked="false" truevalue="-n" falsevalue="" label="Skip file conversion" help="(-n)"/>
+			        <param name="skipPrecursMapping" type="boolean" checked="false" truevalue="-x" falsevalue="" label="Skip mapping against precursor" help="(-x)"/>
+			        <!-- <param name="noMrdPDF" type="boolean" checked="false" truevalue="-j" falsevalue="" label="Do not create output.mrd file or PDFs" help="(-j)"/> -->
+			        <param name="wholePrecursAsMature" type="boolean" checked="false" truevalue="-w" falsevalue="" label="Consider the whole precursor as the 'mature sequence'" help="(-w)"/>
+			        <param name="discardReadMultiMap" type="boolean" checked="false" truevalue="-U" falsevalue="" label="Discard all read multimapper" help="(-U)"/>
+        
+			        <param name="upstreamNtides" type="integer" value="2" min="0" label="Upstream nucleotides" help="Number of nucleotides upstream of the mature sequence to consider. (-e)"/>
+			        <param name="downstreamNtides" type="integer" value="5" min="0" label="Downstream nucleotides" help="Number of nucleotides downstream of the mature sequence to consider. (-f)"/>
+                                <param name="allowedMismatches" type="integer" value="1" min="0" label="Allowed mismatches" help="Number of allowed mismatches when mapping reads to precursors. (-g)"/>
+                        </when>
+        </conditional>
+    </inputs>
+    <outputs>
+        <data name="miRNAsExpressed" format="tabular" from_work_dir="miRNAs_expressed_all_samples_galaxy.csv" label="output of ${tool.name} on ${on_string}"/>
+        <data format="html" name="html" label="${tool.name} on ${on_string} (html report)"/>
+	<data name="miRBase" format="tabular" from_work_dir="expression_analyses/expression_analyses_galaxy/miRBase.mrd" label="miRBase.mrd of ${tool.name} on ${on_string}"/>
+	<data name="mature_and_new_mapped" format="tabular" from_work_dir="expression_analyses/expression_analyses_galaxy/mature_mapped.arf" label="${mature.name}_mapped.arf of ${tool.name} on ${on_string}"/>	
+    </outputs>
+    <tests>
+        <test>
+            <param name="reads" value="reads_collapsed.fa"/>
+            <param name="precursors" value="precursors_ref_this_species.fa"/>
+            <param name="mature" value="mature_ref_this_species.fa"/>
+            <param name="species" value="cel"/>
+            <output name="miRNAsExpressed" file="miRNAs_expressed_all_samples.csv"/>
+            <output name="html" file="expression_galaxy.html"/>
+        </test>
+    </tests>
+    <help>
+<![CDATA[
+
+        | This tool is part of the workflow **PAQmiR** for the *Prediction Annotation and Quantification of miRNA with miRDeep2*
+        | 
+        | *This wrapper was forked from the rbc_mirdeep2_quantifier wrapper of the RNA-Bioinformatics network*
+        | ==> https://www.denbi.de/network/rna-bioinformatics-center-rbc
+        | ==> https://github.com/bgruening
+        |
+        | Modifications are the product of Valentin Marcon & Sylvain Marthey (Thanks to INRA Migale, IFB ressources & INRA GABI)
+
+**What it does**
+
+	| The module maps the deep sequencing reads to predefined miRNA precursors and determines by that the expression of the corresponding miRNAs. 
+	| First, the predefined mature miRNA sequences are mapped to the predefined precursors. Optionally, predefined star sequences can be mapped to the precursors too. 
+	| By that the mature and star sequence in the precursors are determined. Second, the deep sequencing reads are mapped to the precursors. 
+	| The number of reads falling into an interval 2nt upstream and 5nt downstream of the mature/star sequence is determined.
+
+**Input**
+
+A FASTA file with precursor sequences, a FASTA file with mature miRNA sequences, a FASTA file with deep sequencing reads and optionally a FASTA file with star sequences and the 3 letter code of the species of interest.
+
+**Output**
+
+A tab separated file with miRNA identifiers and its read count, a signature file, a html file that gives an overview of all miRNAs the input data and a pdfs that contains for each miRNA a pdf file showing its signature and structure.
+
+**Dependency**
+
+MiRDeep2_ 2.0.0.8, Conda version
+
+.. _mirdeep2: https://anaconda.org/bioconda/mirdeep2
+
+]]>
+    </help>
+    <citations>
+        <citation type="doi">10.1093/nar/gkr688</citation>
+        <citation type="doi">10.1002/0471250953.bi1210s36</citation>
+    </citations>
+</tool>

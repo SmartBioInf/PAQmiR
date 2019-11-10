@@ -1,0 +1,103 @@
+<tool id="paqmir_postprocess_mirdeep2" name="PAQmiR Postprocess MiRDeep2" version="1.0.0">
+	<description>filter and use the results of miRDeep2 to create new reference datasets for quantification and annotation steps</description>
+        <stdio>
+            <!-- Anything other than zero is an error -->
+            <exit_code range="1:" />
+            <exit_code range=":-1" />
+            <!-- In case the return code has not been set propery check stderr too -->
+            <regex match="Error:" />
+            <regex match="Exception:" />
+        </stdio>
+
+        <command interpreter="bash">
+		<![CDATA[
+                        #if $specie_choice.specie
+				postprocess_mirdeep2_same_specie.sh
+                        #else 
+				postprocess_mirdeep2_diff_specie.sh
+                        #end if
+			$prediction_file 
+                        $word
+			$specie_choice.score_new	
+			#if $option.choice
+				$option.randfold $option.exemple_mirbase $option.score_know 
+			#else
+				no no -50.0
+                        #end if
+			$mature_file
+			$precursor_file 
+		]]>
+	</command>
+	<inputs>	
+		<param format="tabular" name="prediction_file" type="data" label="prediction file from miRDeep2" help="Tabular result file from miRDeep2"/>
+		<param format="txt" name="word" size="30" value="hsa" type="text" label="Species ID" help="3 letter code that identifies the species studied"/>
+		<param name="mature_file" type="data" format="fasta" label="Known matures" help="File containing all known mature miRNAs"/>		
+		<param name="precursor_file" type="data" format="fasta" label="Reference precursor sequences" help="File containing containing all hairpins of réference species"/>
+
+		<conditional name="specie_choice">
+			<param name="specie" type="boolean" truevalue="yes" falsevalue="no" checked="true" label="Same specie for genome and precursor?" help="Select ‘no’ if the matures and hairpins provided for prediction don’t belong to the reference genome used for prediction"/>
+                        <when value="yes">
+				<param format="txt" name="score_new" size="30" value="0" type="float" min="0" max="10" label="Score for the filtering of news mirna" hidden="true"/>
+                        </when>
+                        <when value="no">
+				<param format="txt" name="score_new" size="30" value="0" type="float" min="0" max="10" label="Score for the filtering of news mirna"/>
+                        </when>
+                </conditional>
+		<conditional name="option">
+                        <param name="choice" type="boolean" truevalue="yes" falsevalue="no" label="More options?"/>
+                        <when value="no">
+                        </when>
+                        <when value="yes">
+				<param name="randfold" type="boolean" truevalue="yes" falsevalue="no" label="Significant randfold" help="Do you want to retrieve only miRNA with significant randfold?"/>
+				<param name="exemple_mirbase" type="boolean" truevalue="yes" falsevalue="no" label="Example miRNA with same seed region in mirbase" help="Do you want to retrieve only miRNAs without example of same seed region in miRBase?"/>
+				<param format="txt" name="score_know" size="30" value="-50" type="float" min="-100" label="Score for the filtering of knows miRNA"/>
+			</when>
+		</conditional>
+	</inputs>
+	<outputs>
+		<data format="fasta" name="mature_and_new" from_work_dir="mature_and_new.fa" label="${os.path.splitext(str($mature_file.name))[0]}_and_new_predicted_matures.fa"/>
+		<data format="fasta" name="hairpin_espece_and_new" from_work_dir="hairpin_espece_and_new.fa" label="${os.path.splitext(str($precursor_file.name))[0]}_and_new_predicted_hairpins.fa"/>
+	</outputs>
+        <tests>
+            <test>
+                 <param name="prediction_file" value="Tabular_output_of_PAQmiR_MiRDeep2.tabular"/>
+                 <param name="word" value="bta"/>
+                 <param name="mature_file" value="mature.fasta"/>
+                 <param name="precursor_file" value="hairpin_bta.fa"/>
+                 <param name="specie" value="yes"/>
+
+	    
+                 <output name="mature_and_new" file="mature_and_new_predicted_matures.fa"/>
+                 <output name="hairpin_espece_and_new" file="hairpin_bta_and_new_predicted_hairpins.fa"/>
+            </test>
+        </tests>
+	<help>
+<![CDATA[
+
+        | This tool is part of the workflow **PAQmiR** for the *Prediction Annotation and Quantification of miRNA with miRDeep2*
+        |
+        | Wrappers are the product of Valentin Marcon, Kevin Normand & Sylvain Marthey (Thanks to INRA Migale, IFB ressources & INRA GABI)
+
+**What it does**
+	| This module will use miRDeep2's prediction results to create new reference datasets (hairpin and mature) which can be used for the quantification and annotation of miRNAs. The two reference datasets will be created by combining the prediction results and the reference miRNA/hairpin provided.
+	|   
+	| *This module allow to implement the three strategies described in this publication : Annotation of the goat genome using next generation sequencing of microRNA expressed by the lactating mammary gland: comparison of three approaches. Mobuchon et al. BMC Genomics. 2015*
+
+**Input**
+	| - Tabulate output file from miRDeep2
+	| - File containing all known mature miRNAs (usually all matures from mirbase, or a subset of matures from related species). All the provided matures will be used to make the annoation of predicted miRNAs.
+	| - File containing containing all hairpins of réference species 
+
+**Output**
+	| - Fasta file containing predicted mature sequences in addition to miRNA sequences provided in input
+	| - Fasta file containing predicted hairpin sequences in addition to miRNA sequences provided in input
+
+]]>
+	</help>
+        <citations>
+                <citation type="doi">10.1371/journal.pone.0091938</citation>
+                <citation type="doi">10.1186/s12864-015-1471-y</citation>
+        	<citation type="doi">10.1093/nar/gkr688</citation>
+	        <citation type="doi">10.1002/0471250953.bi1210s36</citation>
+        </citations>
+</tool>
