@@ -1,0 +1,14 @@
+mature-seq	#miRNA	read_count	precursor	predicted_position	total	F01	F02	F03
+tgtaaacatccccgactggaagct	bta-miR-30d	152.00	bta-mir-30d	5p	152.00	41.00	57.00	54.00
+aggcagtgtagttagctgattg	bta-miR-34c	614.00	bta-mir-34c	5p	614.00	195.00	189.00	230.00
+tgaggtagtaggttgtatagtt	bta-let-7a-5p	193.00	bta-let-7a-1	5p	193.00	35.00	93.00	65.00
+ttccctttgtcatcctatgcct	bta-miR-204	128.00	bta-mir-204	5p	128.00	20.00	72.00	36.00
+tggaagactagtgattttgttgtt	bta-miR-7	234.00	bta-mir-7-2	5p	234.00	102.00	77.00	55.00
+aatcactagttccactgccatc	chi-miR-34b-3p	271.00	bta-mir-34b	3p	271.00	79.00	120.00	72.00
+tagcttatcagactgatgttgact	bta-miR-21-5p	577.00	bta-mir-21	5p	577.00	172.00	222.00	183.00
+tgaaaagttcgttcgggtttt	bta-miR-2284x	388.00	bta-mir-2284x	5p	388.00	137.00	114.00	137.00
+aacccgtagatccgatcttgt	bta-miR-99a-5p	160.00	bta-mir-99a	5p	160.00	49.00	55.00	56.00
+caacggaatcccaaaagcagctg	bta-miR-191	230.00	bta-mir-191	5p	230.00	63.00	99.00	68.00
+ttttgttcgttcggctcgcgtga	bta-miR-375	112.00	bta-mir-375	3p	112.00	28.00	53.00	31.00
+tcagtgcactacagaactttgt	bta-miR-148a	338.00	bta-mir-148a	3p	338.00	164.00	115.00	59.00
+aacccgtagatccgaacttgtg	bta-miR-100	2674.00	bta-mir-100	5p	2674.00	967.00	1051.00	656.00

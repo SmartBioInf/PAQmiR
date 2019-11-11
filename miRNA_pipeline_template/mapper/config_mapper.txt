@@ -1,0 +1,3 @@
+fichier1.clean.fastq F01
+fichier2.clean.fastq F02
+fichier3.clean.fastq F03

@@ -1,0 +1,37 @@
+
+
+handling file 'fichier1.clean.fastq' with prefix 'F01'
+parsing fastq to fasta format
+converting rna to dna alphabet
+discarding sequences with non-canonical letters
+discarding short reads
+collapsing reads
+mapping reads to genome index
+trimming unmapped nts in the 3' ends
+
+
+handling file 'fichier2.clean.fastq' with prefix 'F02'
+parsing fastq to fasta format
+converting rna to dna alphabet
+discarding sequences with non-canonical letters
+discarding short reads
+collapsing reads
+mapping reads to genome index
+trimming unmapped nts in the 3' ends
+
+
+handling file 'fichier3.clean.fastq' with prefix 'F03'
+parsing fastq to fasta format
+converting rna to dna alphabet
+discarding sequences with non-canonical letters
+discarding short reads
+collapsing reads
+mapping reads to genome index
+trimming unmapped nts in the 3' ends
+Mapping statistics
+
+#desc	total	mapped	unmapped	%mapped	%unmapped
+total: 67657	36830	30827	0.544	0.456
+F01: 22156	12250	9906	0.553	0.447
+F02: 22885	12406	10479	0.542	0.458
+F03: 22616	12174	10442	0.538	0.462

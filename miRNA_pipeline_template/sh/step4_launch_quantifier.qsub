@@ -1,0 +1,17 @@
+#$ -M sylvain.marthey@jouy.inra.fr
+#$ -m ea
+#$ -o ../quantifier/quantifier_clust.out
+#$ -e ../quantifier/quantifier_clust.err
+#$ -cwd
+#$ -q workq
+
+# command(s):
+#Go into quantifier
+cd  ../quantifier/
+
+#Launch quantifier.pl with new sets
+quantifier.pl \
+-r ../mapper/processed_reads.fa \
+-m ../mirdeep2/mature_and_new.fa \
+-p ../mirdeep2/hairpin_bta_and_new.fa \
+-k -P

@@ -1,0 +1,18 @@
+Start: 01_03_2018_t_11_30_34
+Script	/home/smarthey/bin/miRDeep2.pl
+args /home/smarthey/bin/miRDeep2.pl ../mapper/processed_reads.fa /home/smarthey/work/miRNA_pipeline_template/index/bosTau8.fa ../mapper/reads_vs_genome_bta8.arf ../mirbase21/mature_bta.fa ../mirbase21/mature_no_bta.fa ../mirbase21/hairpin_bta.fa -t Cow -P -g 100000
+
+dir_with_tmp_files	dir_miRDeep2_01_03_2018_t_11_30_34
+dir	/work/smarthey/miRNA_pipeline_template/mirdeep2
+file_reads	../mapper/processed_reads.fa
+file_genome	/home/smarthey/work/miRNA_pipeline_template/index/bosTau8.fa
+file_reads_vs_genome	../mapper/reads_vs_genome_bta8.arf
+file_mature_ref_this_species	../mirbase21/mature_bta.fa
+file_mature_ref_other_species	../mirbase21/mature_no_bta.fa
+option{t} =	Cow
+miRDeep runtime: 
+
+started: 11:30:34
+ended: 12:4:34
+total:0h:34m:0s
+

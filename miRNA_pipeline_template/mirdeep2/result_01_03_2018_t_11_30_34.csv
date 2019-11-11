@@ -1,0 +1,818 @@
+miRDeep2 score	novel miRNAs reported by miRDeep2	novel miRNAs, estimated false positives	novel miRNAs, estimated true positives	known miRNAs in species	known miRNAs in data	known miRNAs detected by miRDeep2	estimated signal-to-noise	excision gearing
+10	0	0 +/- 0	0 +/- 0 (0 +/- 0%)	793	161	12 (7%)	54.5	1
+9	0	0 +/- 0	0 +/- 0 (0 +/- 0%)	793	161	12 (7%)	48	1
+8	0	0 +/- 0	0 +/- 0 (0 +/- 0%)	793	161	12 (7%)	44.4	1
+7	0	0 +/- 0	0 +/- 0 (0 +/- 0%)	793	161	14 (9%)	46.7	1
+6	0	0 +/- 0	0 +/- 0 (0 +/- 0%)	793	161	15 (9%)	48.4	1
+5	1	0 +/- 0	1 +/- 0 (85 +/- 36%)	793	161	51 (32%)	24.6	1
+4	1	1 +/- 1	1 +/- 1 (50 +/- 50%)	793	161	57 (35%)	14.9	1
+3	2	3 +/- 2	0 +/- 1 (14 +/- 28%)	793	161	63 (39%)	7.2	1
+2	4	4 +/- 2	1 +/- 1 (19 +/- 28%)	793	161	73 (45%)	6.5	1
+1	4	5 +/- 2	0 +/- 1 (9 +/- 21%)	793	161	88 (55%)	5.9	1
+0	30	9 +/- 3	21 +/- 3 (69 +/- 10%)	793	161	114 (71%)	6.2	1
+-1	59	20 +/- 4	39 +/- 4 (66 +/- 7%)	793	161	125 (78%)	5	1
+-2	63	115 +/- 8	0 +/- 0 (0 +/- 0%)	793	161	127 (79%)	1.5	1
+-3	68	175 +/- 10	0 +/- 0 (0 +/- 0%)	793	161	129 (80%)	1	1
+-4	122	221 +/- 11	0 +/- 0 (0 +/- 0%)	793	161	141 (88%)	1.1	1
+-5	188	262 +/- 12	0 +/- 0 (0 +/- 0%)	793	161	144 (89%)	1.2	1
+-6	233	332 +/- 14	0 +/- 0 (0 +/- 0%)	793	161	144 (89%)	1.1	1
+-7	260	373 +/- 15	0 +/- 0 (0 +/- 0%)	793	161	144 (89%)	1	1
+-8	322	402 +/- 16	0 +/- 0 (0 +/- 0%)	793	161	144 (89%)	1.1	1
+-9	349	426 +/- 17	0 +/- 0 (0 +/- 0%)	793	161	145 (90%)	1.1	1
+-10	378	446 +/- 18	0 +/- 0 (0 +/- 0%)	793	161	145 (90%)	1.1	1
+
+
+
+novel miRNAs predicted by miRDeep2
+provisional id	miRDeep2 score	estimated probability that the miRNA candidate is a true positive	rfam alert	total read count	mature read count	loop read count	star read count	significant randfold p-value	miRBase miRNA	example miRBase miRNA with the same seed	UCSC browser	NCBI blastn	consensus mature sequence	consensus star sequence	consensus precursor sequence	precursor coordinate
+chr28_4425	5.1	85 +/- 36%	-	12	12	0	0	yes	-	cel-miR-4927	-	-	auggguuugggcuggguu	cuggguucgaaucccaaua	auggguuugggcuggguuugagucccagccauguggguuuaagucccaaacuggguuuuggcuggguucgaaucccaaua	chr28:25304892..25304972:-
+chr23_3703	3	14 +/- 28%	-	7	7	0	0	yes	-	cpa-miR8150	-	-	gaaaccugacugaacuuuuuggu	caaaaaguucauuuggguuuuuc	caaaaaguucauuuggguuuuuccguaagaugguguggggaaaccugacugaacuuuuuggu	chr23:43158967..43159029:+
+chr1_158	2.5	19 +/- 28%	-	7	7	0	0	yes	-	bmo-miR-2769	-	-	auauauuaagcuguuugaugga	cauuaaacaucuuaauauauug	cauuaaacaucuuaauauauugaacacuagaccuauauauuaagcuguuugaugga	chr1:113974437..113974493:-
+chrX_6576	2.4	19 +/- 28%	-	7	7	0	0	yes	-	cpa-miR8150	-	-	gaaaccugacugaacuuuuuggc	caaaaaguucacuggggaacagc	caaaaaguucacuggggaacagcuuauggaaaccugacugaacuuuuuggc	chrX:118468184..118468235:-
+chr12_894	0.7	69 +/- 10%	-	9	9	0	0	yes	-	-	-	-	aaagcaauagggucugugugu	acacagaaccauauuguuuuug	aaagcaauagggucugugugugugucugugugccuccccauucacacacagaaccauauuguuuuug	chr12:61092396..61092463:+
+chrX_6479	0.6	69 +/- 10%	-	4	4	0	0	yes	-	dps-miR-2521	-	-	cauaauuuuuggaggcuuugugaa	cuggguaagccucggaagaaauauagg	cuggguaagccucggaagaaauauaggcugugcugcucauaauuuuuggaggcuuugugaa	chrX:137196425..137196486:+
+chrX_6475	0.5	69 +/- 10%	-	4	4	0	0	yes	-	dps-miR-2521	-	-	cauaauuuuuggaggcuuugugaa	cuggcuaagccucggaagaaauauagg	cuggcuaagccucggaagaaauauaggcugugcugcucauaauuuuuggaggcuuugugaa	chrX:137177700..137177761:+
+chr5_5363	0.4	69 +/- 10%	-	1	1	0	0	yes	-	cel-miR-1832b-3p	-	-	agugggcagcccgugaccuggacuc	gccaggggacugggggccaugga	agugggcagcccgugaccuggacucccagggcugggcuaggcccuguccuagggggccaggggacugggggccaugga	chr5:119848414..119848492:-
+chrX_6439	0.4	69 +/- 10%	-	1	1	0	0	yes	-	gga-miR-1615	-	-	cggcagcugaggaggaggagc	uccucggacuuggcuggcu	uccucggacuuggcuggcuccggagcgcccucgccuggugggggagcccaggcggcggcagcugaggaggaggagc	chrX:91742108..91742184:+
+chr10_397	0.3	69 +/- 10%	-	2	1	0	1	yes	-	oan-miR-1376-3p	-	-	cagaaaguucauguagguuuuu	aaaaacccaaaugaacuuuuu	cagaaaguucauguagguuuuucuauagcaucuuauggaaaaacccaaaugaacuuuuu	chr10:12923798..12923857:-
+chr25_4070	0.3	69 +/- 10%	-	3	3	0	0	yes	-	hsa-miR-6756-5p	-	-	cgggugggaagaggcggg	cgccugcuugcccgcccgcg	cgggugggaagaggcggguucuccuccgccugcuugcccgcccgcg	chr25:32460509..32460555:+
+chr9_6235	0.3	69 +/- 10%	-	1	1	0	0	yes	-	mmu-miR-149-3p	-	-	gagggagggagauggggggug	cccuccuccuccuccuccuc	gagggagggagaugggggguggggggagggacccuccuccuccuccuccuc	chr9:100511747..100511798:-
+chr18_2378	0.3	69 +/- 10%	-	1	1	0	0	yes	-	hsa-miR-1296-3p	-	-	cagugggggguugggacugggg	uuggucccagcccaccccuccc	cagugggggguugggacugggguuggugucuuggucccagcccaccccuccc	chr18:55114886..55114938:+
+chr11_669	0.2	69 +/- 10%	-	1	1	0	0	yes	-	hsa-miR-4512	-	-	cagggccugggugggggacaggg	caugggcacacccagggaccgug	caugggcacacccagggaccgugugaccugcauccgggaagguguggggcaggugcacagaggacagggccugggugggggacaggg	chr11:103208710..103208797:+
+chr2_2863	0.2	69 +/- 10%	-	1	1	0	0	yes	-	mml-miR-1230	-	-	cuggguggggcagagggc	cuggaacccacgcaggg	cuggaacccacgcagggauggccagacucuggguggggcagagggc	chr2:127860580..127860626:+
+chr21_3362	0.2	69 +/- 10%	-	2	2	0	0	yes	-	hsa-miR-4446-3p	-	-	cagggcugggagcgggga	ccugauaccaccuggau	ccugauaccaccuggaugagggaacagucucugucagcagggcugggagcgggga	chr21:14757660..14757715:-
+chr17_2214	0.1	69 +/- 10%	-	1	1	0	0	yes	-	mml-miR-7203-3p	-	-	acgggacugggaggcaggg	aaauccccaguccuggcc	aaauccccaguccuggccaggguuaguccuggagccuuggaaggacgggacugggaggcaggg	chr17:67205452..67205515:-
+chr18_2374	0.1	69 +/- 10%	-	1	1	0	0	yes	-	sma-miR-8420-3p	-	-	gaggaagaggacgaggaagagga	caggcuucagcuucuguucuuccucca	gaggaagaggacgaggaagaggaggggccucccagucccccaggcuucagcuucuguucuuccucca	chr18:53800900..53800967:+
+chrX_6561	0.1	69 +/- 10%	-	1	1	0	0	yes	-	kshv-miR-K12-12-3p	-	-	ugggggaggggaggggcg	auaaucuucucuuucguc	ugggggaggggaggggcggugcgcgcaggcgaggguaccggguacccuagcugggugaauaaucuucucuuucguc	chrX:109951155..109951231:-
+chr18_2379	0.1	69 +/- 10%	-	1	1	0	0	yes	-	mmu-miR-542-5p	-	-	uucggggacaccggggagggcug	ggaccgccucgugacccuggagg	ggaccgccucgugacccuggaggaguuccucgcauccacgcagaggaaggaguucggggacaccggggagggcug	chr18:55953513..55953588:+
+chr21_3026	0.1	69 +/- 10%	-	1	1	0	0	yes	-	hsa-miR-676-3p	-	-	uuguccuacuucucagcugucu	auagcagaggaguaggaggaca	uuguccuacuucucagcugucuugacucccuaacaagauagcagaggaguaggaggaca	chr21:2296461..2296520:+
+chr17_2246	0	69 +/- 10%	-	1	1	0	0	yes	-	sme-miR-2170	-	-	acagugaagcuggaggaca	uccccagcagcgucuuccugugu	uccccagcagcgucuuccuguguccccagaagcccagggugauggcaggcacagugaagcuggaggaca	chr17:71682748..71682817:-
+chr8_6111	0	69 +/- 10%	-	1	1	0	0	yes	-	ptc-miR474a	-	-	gaaaaguucguuuggguuuuu	aaaucuaaaggaauuuuucag	gaaaaguucguuuggguuuuuccagaacaucuuauggaaaaaucuaaaggaauuuuucag	chr8:71787174..71787234:-
+chr15_1607	0	69 +/- 10%	-	1	1	0	0	yes	-	oan-miR-1421p-5p	-	-	ugggggccuggggaguaggggc	uuucuuagggcuuggcu	ugggggccuggggaguaggggcaaggguuuaccagauggaaucccaggcuuucuuagggcuuggcu	chr15:76598222..76598288:-
+chr19_2625	0	69 +/- 10%	-	1	1	0	0	yes	-	gga-miR-1791-5p	-	-	agggcugcucagggcgugugggc	ccucugcuguguucugcccucu	ccucugcuguguucugcccucuugcgaugcuguuuuggagggcugcucagggcgugugggc	chr19:56561836..56561897:+
+chr10_473	0	69 +/- 10%	-	4	4	0	0	yes	-	bdi-miR7726b-5p	-	-	uuugaugacuguuccuccuau	aggauuuuaggucaucauaaa	uuugaugacuguuccuccuauugccuucagaucuggcacuaggauuuuaggucaucauaaa	chr10:93638693..93638754:-
+chr14_1462	0	69 +/- 10%	-	1	1	0	0	yes	-	hsa-miR-1266-3p	-	-	gccuguucucugguuuguacccuuu	agggaccuggggagggggcgu	agggaccuggggagggggcgugggguggggggaaacacccucugccuggccuguucucugguuuguacccuuu	chr14:30052106..30052179:-
+chr16_1848	0	69 +/- 10%	-	1	1	0	0	yes	-	eca-miR-9141	-	-	ucugaguggaaugaaccgucugc	agacggucccuccucucgucagggg	agacggucccuccucucgucaggggaggaaggagacugagccuggugucucagcucuccgucuguccucugaguggaaugaaccgucugc	chr16:2586850..2586940:-
+chr11_673	0	69 +/- 10%	-	1	1	0	0	yes	-	mmu-miR-185-3p	-	-	aggggcugggaagggaugucaggg	aggagccaggacuuccuggccccuuu	aggagccaggacuuccuggccccuuuuuuggguguggaguggggagcuccgguccaggaaugaaggggcugggaagggaugucaggg	chr11:103220401..103220488:+
+chr13_1090	0	69 +/- 10%	-	1	1	0	0	yes	-	oan-miR-1388-3p	-	-	uucucagguuggacaguccug	gggcugacaaaccugagauug	gggcugacaaaccugagauugucccuggaugcucaccauucucagguuggacaguccug	chr13:54375942..54376001:-
+
+
+
+mature miRBase miRNAs detected by miRDeep2
+tag id	miRDeep2 score	estimated probability that the miRNA is a true positive	rfam alert	total read count	mature read count	loop read count	star read count	significant randfold p-value	mature miRBase miRNA	example miRBase miRNA with the same seed	UCSC browser	NCBI blastn	consensus mature sequence	consensus star sequence	consensus precursor sequence	precursor coordinate
+chr15_1497	171.1	0 +/- 0%	-	327	271	0	56	yes	bta-miR-34b	cel-miR-71-3p	-	-	aaucacuaguuccacugccauc	aggcaguguaauuagcugauugu	aggcaguguaauuagcugauuguacucucaugcuuacaaucacuaguuccacugccauc	chr15:22134737..22134796:+
+chr8_5958	105.9	0 +/- 0%	-	199	194	0	5	yes	bta-let-7a-5p	cel-let-7-5p	-	-	ugagguaguagguuguauagu	cuauacaaucuacugucuuucc	ugagguaguagguuguauaguuuuagggucacacccaccacugggagauaacuauacaaucuacugucuuucc	chr8:86884876..86884949:+
+chr5_5138	105.1	0 +/- 0%	-	197	192	0	5	yes	bta-let-7a-5p	cel-let-7-5p	-	-	ugagguaguagguuguauagu	cuauacaaucuacugucuuucc	ugagguaguagguuguauaguuuggggcucugcccugcuaugggauaacuauacaaucuacugucuuucc	chr5:117119387..117119457:+
+chr8_6081	70.1	0 +/- 0%	-	129	128	0	1	yes	bta-miR-204	mmu-miR-204-5p	-	-	uucccuuugucauccuaugccu	gcugggaaggcaaagggacg	uucccuuugucauccuaugccugagaauauaugaaggaggcugggaaggcaaagggacg	chr8:47259553..47259612:-
+chr3_4795	28.3	0 +/- 0%	-	46	41	0	5	yes	bta-miR-30e-5p	hsa-miR-30a-5p	-	-	uguaaacauccuugacuggaagcu	cuuucagucggauguuuacagc	uguaaacauccuugacuggaagcuguaaggcguugcaaggagcuuucagucggauguuuacagc	chr3:106062503..106062567:-
+chr7_5534	23.7	0 +/- 0%	-	39	36	0	3	yes	bta-miR-340	rno-miR-340-5p	-	-	uuauaaagcaaugagacugau	uccgucucaguuacuuuauag	uuauaaagcaaugagacugauugucaugugucguuugugggauccgucucaguuacuuuauag	chr7:1147002..1147065:+
+chr14_1149	19	0 +/- 0%	-	35	33	0	2	yes	bta-miR-151-5p	-	-	-	cuagacugaagcuccuugagg	ucgaggagcucacagucuag	ucgaggagcucacagucuaguacgucucauccccuacuagacugaagcuccuugagg	chr14:4030325..4030382:+
+chr25_4089	18.2	0 +/- 0%	-	26	24	0	2	yes	bta-miR-106b	mmu-miR-106b-3p	-	-	ccgcacuguggguacuugcu	uaaagugcugacagugcagaua	uaaagugcugacagugcagauagugguccugugugcuaccgcacuguggguacuugcu	chr25:36892056..36892114:+
+chr7_5765	14.2	0 +/- 0%	-	19	18	0	1	yes	bta-miR-9-5p	dme-miR-9a-5p	-	-	ucuuugguuaucuagcuguauga	uaaagcuagauaaccgaaaguaa	ucuuugguuaucuagcuguaugaguguauuggucuucauaaagcuagauaaccgaaaguaa	chr7:90554687..90554748:-
+chr21_3176	14.1	0 +/- 0%	-	19	18	0	1	yes	bta-miR-9-5p	dme-miR-9a-5p	-	-	ucuuugguuaucuagcuguauga	uaaagcuagauaaccgaaaguag	ucuuugguuaucuagcuguaugagugccacagagccgucauaaagcuagauaaccgaaaguag	chr21:21250115..21250178:+
+chr3_4610	14	0 +/- 0%	-	19	18	0	1	yes	bta-miR-9-5p	dme-miR-9a-5p	-	-	ucuuugguuaucuagcuguauga	uaaagcuagauaaccgaaaguaa	ucuuugguuaucuagcuguaugagugguguggagucuucauaaagcuagauaaccgaaaguaa	chr3:14462439..14462502:+
+chr5_5174	12.9	0 +/- 0%	-	18	17	0	1	yes	bta-miR-148b	mmu-miR-152-3p	-	-	ucagugcaucacagaacuuugu	gaaguucuguuauacacucagg	gaaguucuguuauacacucaggcuguggcucucugaaagucagugcaucacagaacuuugu	chr5:25849778..25849839:-
+chr8_5962	7.8	0 +/- 0%	-	6	2	0	4	yes	bta-let-7d	hsa-let-7d-3p	-	-	cuauacgaccugcugccuuucu	agagguaguagguugcauaguu	agagguaguagguugcauaguuuucgggcagggauuuugcccacaaggagguaacuauacgaccugcugccuuucu	chr8:86887437..86887513:+
+chr1_156	7.4	0 +/- 0%	-	9	4	0	5	yes	bta-miR-15b	mmu-miR-15b-3p	-	-	cgaaucauuauuugcugcucuag	uagcagcacaucaugguuuac	uagcagcacaucaugguuuacauacuacagucaagaugcgaaucauuauuugcugcucuag	chr1:107923396..107923457:-
+chr7_5678	6.5	0 +/- 0%	-	4	3	0	1	yes	bta-miR-24-3p	hsa-miR-24-3p	-	-	uggcucaguucagcaggaacag	cgugccuacugagcugaaacac	cgugccuacugagcugaaacacaguugauuugugcacacuggcucaguucagcaggaacag	chr7:12981642..12981703:-
+chr22_3446	5.6	85 +/- 36%	-	22	22	0	0	yes	bta-miR-26a	hsa-miR-26a-5p	-	-	uucaaguaauccaggauaggcu	ccuauucucgguuacuugcacg	uucaaguaauccaggauaggcugugcaggucccaaggggccuauucucgguuacuugcacg	chr22:11457914..11457975:+
+chr5_5189	5.6	85 +/- 36%	-	37	37	0	0	yes	bta-let-7i	cel-let-7-5p	-	-	ugagguaguaguuugugcuguug	acugcgcaagcuacugccuugcu	ugagguaguaguuugugcuguuggucggguugugacauugcccgcuguggagauaacugcgcaagcuacugccuugcu	chr5:51209081..51209159:-
+chr9_6209	5.6	85 +/- 36%	-	32	32	0	0	yes	bta-miR-30a-5p	hsa-miR-30a-5p	-	-	uguaaacauccucgacuggaag	uucagucggauguuugcagc	uguaaacauccucgacuggaagcugugaggcugcagaaaggcuuucagucggauguuugcagc	chr9:10768283..10768346:-
+chr22_3458	5.5	85 +/- 36%	-	86	86	0	0	yes	bta-let-7g	cel-let-7-5p	-	-	ugagguaguaguuuguacagu	uguacaggccacugccuugcc	ugagguaguaguuuguacaguuugagggucuaugauaccacccgguacaggagauaacuguacaggccacugccuugcc	chr22:49189343..49189422:+
+chr25_4092	5.5	85 +/- 36%	-	32	32	0	0	yes	bta-miR-93	hsa-miR-17-5p	-	-	caaagugcuguucgugcagguagu	uacugcugagccagcacuucccg	caaagugcuguucgugcagguagugugaucaccugaccuacugcugagccagcacuucccg	chr25:36892258..36892319:+
+chr8_5960	5.5	85 +/- 36%	-	45	45	0	0	yes	bta-let-7f	cel-let-7-5p	-	-	ugagguaguagauuguauagu	uauacaaucuauugccuuccc	ugagguaguagauuguauaguugugggguagugauuuuacccuguucaggagauaacuauacaaucuauugccuuccc	chr8:86885230..86885308:+
+chr22_3474	5.5	85 +/- 36%	-	231	231	0	0	yes	bta-miR-191	mmu-miR-191-5p	-	-	caacggaaucccaaaagcag	gcgcuuggauuucguuccc	caacggaaucccaaaagcagcuguugucuccagagcauuccagcugcgcuuggauuucguuccc	chr22:51543483..51543547:+
+chr8_5951	5.5	85 +/- 36%	-	69	69	0	0	yes	bta-miR-27b	hsa-miR-27a-3p	-	-	uucacaguggcuaaguucug	gagcuuagcugauuggugaaca	gagcuuagcugauuggugaacagugacugguuuccgcuuuguucacaguggcuaaguucug	chr8:83009841..83009902:+
+chr25_4165	5.4	85 +/- 36%	-	47	47	0	0	yes	bta-miR-3432a	gga-miR-6653-3p	-	-	ugcgggaucuuuaguuguggugu	gcagcaacuaaagaucccucagg	ugcgggaucuuuaguuguggugugugaauucuuaguugcagcaacuaaagaucccucagg	chr25:34409297..34409357:-
+chr1_105	5.4	85 +/- 36%	-	161	161	0	0	yes	bta-miR-99a-5p	cel-miR-51-5p	-	-	aacccguagauccgaucuugu	aagcucgcuucuaugggucug	aacccguagauccgaucuuguggugaaguggaccgcacaagcucgcuucuaugggucug	chr1:19931194..19931253:-
+chr21_3391	5.4	85 +/- 36%	-	12	12	0	0	yes	bta-miR-211	mmu-miR-204-5p	-	-	uucccuuugucauccuuugccc	gcagggacagcaaaggggugc	uucccuuugucauccuuugcccaggguucugaguggggcagggacagcaaaggggugc	chr21:28046435..28046493:-
+chr3_4661	5.4	85 +/- 36%	-	70	70	0	0	yes	bta-miR-101	hsa-miR-101-3p	-	-	uacaguacugugauaacugaag	ucaguuaucacagugcugaugcu	ucaguuaucacagugcugaugcuguccauucuaaagguacaguacugugauaacugaag	chr3:80666429..80666488:+
+chr16_1894	5.4	85 +/- 36%	-	60	42	0	18	yes	bta-miR-200a	mmu-miR-141-3p	-	-	uaacacugucugguaacgaug	caucuuaccggacagugcugga	caucuuaccggacagugcuggauuucucggcucgacucuaacacugucugguaacgaug	chr16:52521337..52521396:-
+chr5_5002	5.4	85 +/- 36%	-	22	22	0	0	yes	bta-miR-26a	hsa-miR-26a-5p	-	-	uucaaguaauccaggauaggcu	ccuauucuugauuacuuguuuc	uucaaguaauccaggauaggcuguuuccaucugugaggccuauucuugauuacuuguuuc	chr5:55977935..55977995:+
+chrX_6557	5.4	85 +/- 36%	-	48	48	0	0	yes	bta-let-7f	cel-let-7-5p	-	-	ugagguaguagauuguauagu	uauacagucuacugucuuucc	ugagguaguagauuguauaguuuuagggucauaccccaucuuggagauaacuauacagucuacugucuuucc	chrX:96383535..96383607:-
+chr21_3174	5.3	85 +/- 36%	-	227	227	0	0	yes	bta-miR-7	dme-miR-7-5p	-	-	uggaagacuagugauuuuguuguu	caacaagucccagucugccgca	uggaagacuagugauuuuguuguugucuccugcgcucaacaacaagucccagucugccgca	chr21:19989083..19989144:+
+chr1_99	5.3	85 +/- 36%	-	389	389	0	0	yes	bta-miR-2284x	chi-miR-2284b	-	-	ugaaaaguucguucggguuuuu	gaacucaaauaaacuuuuuggc	ugaaaaguucguucggguuuuuccauaagaacucaaauaaacuuuuuggc	chr1:3607772..3607822:-
+chr15_1581	5.3	85 +/- 36%	-	2678	2678	0	0	yes	bta-miR-100	cel-miR-51-5p	-	-	aacccguagauccgaacuugu	aagcuugugucuauagguaug	aacccguagauccgaacuuguggugguagugcacacaagcuugugucuauagguaug	chr15:33353401..33353458:-
+chr24_3900	5.3	85 +/- 36%	-	21	21	0	0	yes	bta-miR-122	mmu-miR-122-5p	-	-	uggagugugacaaugguguuugu	aaacgccauuaucacacuaaaua	uggagugugacaaugguguuuguguccaaacuaucaaacgccauuaucacacuaaaua	chr24:58095655..58095713:+
+chr3_4656	5.2	85 +/- 36%	-	73	73	0	0	yes	bta-miR-186	mmu-miR-186-5p	-	-	caaagaauucuccuuuugggc	ccaaaggugaauuuuuuggg	caaagaauucuccuuuugggcuuucugauuuuauuuuaagcccaaaggugaauuuuuuggg	chr3:74462308..74462369:+
+chr19_2544	5.2	85 +/- 36%	-	577	577	0	0	yes	bta-miR-21-5p	hsa-miR-21-5p	-	-	uagcuuaucagacugauguugac	caacagcagucgaugggcuguc	uagcuuaucagacugauguugacuguugaaucucauggcaacagcagucgaugggcuguc	chr19:11033078..11033138:+
+chr15_1577	5.2	85 +/- 36%	-	47	47	0	0	yes	bta-miR-125b	cel-lin-4-5p	-	-	ucccugagacccuaacuugugau	cacggguuaggcucuugggagc	ucccugagacccuaacuugugauguuuaccguuuaaauccacggguuaggcucuugggagc	chr15:33298827..33298888:-
+chr7_5711	5.2	85 +/- 36%	-	227	227	0	0	yes	bta-miR-7	dme-miR-7-5p	-	-	uggaagacuagugauuuuguuguu	caacaagucacagcuuccuca	uggaagacuagugauuuuguuguucugauguacuaugacaacaagucacagcuuccuca	chr7:20584149..20584208:-
+chr19_2668	5.2	85 +/- 36%	-	60	60	0	0	yes	bta-miR-22-5p	hsa-miR-22-3p	-	-	aagcugccaguugaagaacugu	aguucuucaguggcaagcuuua	aguucuucaguggcaagcuuuauguccugacccagcuaaagcugccaguugaagaacugu	chr19:23382445..23382505:-
+chrX_6506	5.2	85 +/- 36%	-	3	2	0	1	yes	bta-miR-3431	dre-miR-725-3p	-	-	cucagucagccuuguggauguau	caucuagaggacugacugaaa	cucagucagccuuguggauguauguucugcagaccugacaucuagaggacugacugaaa	chrX:34662676..34662735:-
+chr8_6121	5.2	85 +/- 36%	-	234	234	0	0	yes	bta-miR-7	dme-miR-7-5p	-	-	uggaagacuagugauuuuguuguu	caacaaaucacagucugccaua	uggaagacuagugauuuuguuguuuuuagauaacugaaucgacaacaaaucacagucugccaua	chr8:78575553..78575617:-
+chr1_101	5.1	85 +/- 36%	-	46	46	0	0	yes	bta-miR-125b	cel-lin-4-5p	-	-	ucccugagacccuaacuugugag	cacaagucaggcucuugggacc	ucccugagacccuaacuugugagguauuuuaguagcaucacaagucaggcucuugggacc	chr1:19881359..19881419:-
+chr12_900	5.1	85 +/- 36%	-	26	26	0	0	yes	bta-miR-20a	hsa-miR-17-5p	-	-	uaaagugcuuauagugcagguag	acugcauuaugagcacuuaaagu	uaaagugcuuauagugcagguaguguuuaguuaucuacugcauuaugagcacuuaaagu	chr12:66227011..66227070:+
+chr7_5664	5.1	85 +/- 36%	-	53	53	0	0	yes	bta-miR-146a	mmu-miR-146a-5p	-	-	ugagaacugaauuccauaggu	cugugaaguuuaguucuuuag	ugagaacugaauuccauagguugugucagugucagaccugugaaguuuaguucuuuag	chr7:74185054..74185112:+
+chr13_1088	5.1	85 +/- 36%	-	13	13	0	0	yes	bta-miR-103	hsa-miR-103a-3p	-	-	agcagcauuguacagggcuauga	agcuucuuuacagugcugccuug	agcuucuuuacagugcugccuuguagcauucaggucaagcagcauuguacagggcuauga	chr13:51742427..51742487:-
+chr29_4532	5	85 +/- 36%	-	40	40	0	0	yes	bta-miR-192	asu-miR-283-3p	-	-	ugaccuaugaauugacagccagu	uggcugccaauuccauaggucaca	ugaccuaugaauugacagccagugcucuuguguccccucuggcugccaauuccauaggucaca	chr29:43731679..43731742:+
+chr14_1152	5	85 +/- 36%	-	154	152	0	2	yes	bta-miR-30d	hsa-miR-30a-5p	-	-	uguaaacauccccgacuggaag	cuuucagucagauguuugcug	uguaaacauccccgacuggaagcuguaccacacagcuaagcuuucagucagauguuugcug	chr14:8080296..8080357:+
+chr20_2974	5	85 +/- 36%	-	31	29	0	2	yes	bta-miR-449a	cel-miR-34-5p	-	-	uggcaguguauuguuagcugg	ucagcuaacaugcaacugcuau	uggcaguguauuguuagcugguugaauaugugagugccaucagcuaacaugcaacugcuau	chr20:23967404..23967465:+
+chr14_1154	5	85 +/- 36%	-	20	20	0	0	yes	bta-miR-30b-5p	hsa-miR-30a-5p	-	-	uguaaacauccuacacucagc	ugggagguggauguuuacuuc	uguaaacauccuacacucagcuguaacacacgagucggcugggagguggauguuuacuuc	chr14:8084736..8084796:+
+chr4_4851	5	85 +/- 36%	-	338	338	0	0	yes	bta-miR-148a	mmu-miR-152-3p	-	-	ucagugcacuacagaacuuugu	aaaguucugagacacuccgacu	aaaguucugagacacuccgacucugaauaugauagaagucagugcacuacagaacuuugu	chr4:70414255..70414315:+
+chr2_2920	5	85 +/- 36%	-	41	41	0	0	yes	bta-miR-128	mmu-miR-128-3p	-	-	ucacagugaaccggucucuuuuu	uucggggccguagcacugucugaga	uucggggccguagcacugucugagagguuuacauuucucacagugaaccggucucuuuuu	chr2:62007761..62007821:-
+chr15_1579	4.9	50 +/- 50%	-	193	193	0	0	yes	bta-let-7a-5p	cel-let-7-5p	-	-	ugagguaguagguuguauagu	uguacagccuccuagcuuucc	ugagguaguagguuguauaguuuagaauuacaucaagggagauaacuguacagccuccuagcuuucc	chr15:33347569..33347636:-
+chr2_2901	4.9	50 +/- 50%	-	31	31	0	0	yes	bta-miR-10b	cel-miR-57-5p	-	-	uacccuguagaaccgaauuugu	agauucgauucuaggggaaua	uacccuguagaaccgaauuugugugguauccauguagucacagauucgauucuaggggaaua	chr2:20797623..20797685:-
+chr1_153	4.9	50 +/- 50%	-	26	26	0	0	yes	bta-miR-16b	hsa-miR-15a-5p	-	-	uagcagcacguaaauauuggc	caauauuauugugcugcuuua	uagcagcacguaaauauuggcguaguaaaauaaauauuaaacaccaauauuauugugcugcuuua	chr1:107923247..107923312:-
+chr12_921	4.8	50 +/- 50%	-	16	16	0	0	yes	bta-miR-16a	hsa-miR-15a-5p	-	-	uagcagcacguaaauauuggu	caguauuaacugugcugcugaa	uagcagcacguaaauauugguguuaagauucuaaaauuaucuccaguauuaacugugcugcugaa	chr12:19596210..19596275:-
+chr26_4196	4.8	50 +/- 50%	-	61	61	0	0	yes	bta-miR-146b	mmu-miR-146a-5p	-	-	ugagaacugaauuccauaggcug	cccuagggacucaguucuggu	ugagaacugaauuccauaggcugugagcucuagcaaaugcccuagggacucaguucuggu	chr26:22930914..22930974:+
+chr15_1500	4.7	50 +/- 50%	-	615	615	0	0	yes	bta-miR-34c	cel-miR-34-5p	-	-	aggcaguguaguuagcugauugc	aaucacuaaccacacggccagg	aggcaguguaguuagcugauugcuaauaauaccaaucacuaaccacacggccagg	chr15:22135437..22135492:+
+chr19_2580	4.5	50 +/- 50%	-	30	30	0	0	yes	bta-miR-10a	cel-miR-57-5p	-	-	uacccuguagauccgaauuugug	caaauucguaucuaggggaaua	uacccuguagauccgaauuuguguaaggaauuuugugaucacaaauucguaucuaggggaaua	chr19:38549274..38549337:+
+chr8_6080	4.5	50 +/- 50%	-	75	75	0	0	yes	bta-miR-101	hsa-miR-101-3p	-	-	uacaguacugugauaacugaag	ucgguuaucaugguaccgaugcu	ucgguuaucaugguaccgaugcuguauaucugaaagguacaguacugugauaacugaag	chr8:39940840..39940899:-
+chr1_133	3.9	14 +/- 28%	-	10	10	0	0	yes	bta-miR-6529a	mml-miR-6529-5p	-	-	gagagaucagaggcgcagagu	ccugugccuuuuaccucuuuaa	gagagaucagaggcgcagagugcgucaaugucaaugaagccugugccuuuuaccucuuuaa	chr1:65453356..65453417:-
+chr1_103	3.8	14 +/- 28%	-	9	9	0	0	yes	bta-let-7c	cel-let-7-5p	-	-	ugagguaguagguuguaugguu	cuguacaaccuucuagcuuucc	ugagguaguagguuguaugguuuagaguuacacccugggaguuaacuguacaaccuucuagcuuucc	chr1:19930465..19930532:-
+chr15_1591	3.2	14 +/- 28%	-	7	7	0	0	yes	bta-miR-139	hsa-miR-139-5p	-	-	ucuacagugcacgugucucca	gagacgcggcccuguuggagu	ucuacagugcacgugucuccaguguggcucggaggcuggagacgcggcccuguuggagu	chr15:52956184..52956243:-
+chr12_896	3.1	14 +/- 28%	-	8	8	0	0	yes	bta-miR-17-5p	hsa-miR-17-5p	-	-	caaagugcuuacagugcagguag	acugcagugaaggcacuuguag	caaagugcuuacagugcagguagugauaugugcaucuacugcagugaaggcacuuguag	chr12:66226566..66226625:+
+chrX_6448	3.1	14 +/- 28%	-	8	8	0	0	yes	bta-miR-660	hsa-miR-660-5p	-	-	uacccauugcauaucggagcugu	accuccuaugugcauggauuaca	uacccauugcauaucggagcugugaauucucaaagcaccuccuaugugcauggauuaca	chrX:92901864..92901923:+
+chr18_2331	2.7	19 +/- 28%	-	6	6	0	0	yes	bta-miR-140	mmu-miR-140-3p	-	-	uaccacaggguagaaccacggaca	gccagugguuuuacccuaugguagg	gccagugguuuuacccuaugguagguuacgucaugcuguucuaccacaggguagaaccacggaca	chr18:37088150..37088215:+
+chr18_2400	2.6	19 +/- 28%	-	6	6	0	0	yes	bta-let-7e	cel-let-7-5p	-	-	ugagguaggagguuguauag	auacggccuccuagcuuucc	ugagguaggagguuguauaguugaggaggacacccaaggagaucacuauacggccuccuagcuuucc	chr18:58015042..58015109:+
+chr21_3239	2.5	19 +/- 28%	-	6	6	0	0	yes	bta-miR-495	hsa-miR-495-3p	-	-	aaacaaacauggugcacuucuu	gaaguugcccauguucuuuucg	gaaguugcccauguucuuuucgcugauaugugacgaaacaaacauggugcacuucuu	chr21:67573247..67573304:+
+chr4_4936	2.4	19 +/- 28%	-	7	7	0	0	yes	bta-miR-29a	cel-miR-49-3p	-	-	uagcaccaucugaaaucgguu	cugauuucuuuugguguucaga	cugauuucuuuugguguucagagucaauauaauuuucuagcaccaucugaaaucgguu	chr4:95402320..95402378:-
+chr21_3237	2.3	19 +/- 28%	-	7	7	0	0	yes	bta-miR-543	mmu-miR-543-3p	-	-	aaacauucgcggugcacuucu	aaguugcccgugucuuuuucg	aaguugcccgugucuuuuucgcuuuauaugugacgaaacauucgcggugcacuucu	chr21:67571837..67571893:+
+chr19_2581	2.2	19 +/- 28%	-	5	5	0	0	yes	bta-miR-152	mmu-miR-152-3p	-	-	ucagugcaugacagaacuuggg	cagguucugugauacacuccgacu	cagguucugugauacacuccgacucgggcucuggagcagucagugcaugacagaacuuggg	chr19:39081177..39081238:+
+chr3_4612	2.2	19 +/- 28%	-	6	6	0	0	yes	bta-miR-190b	cel-miR-50-5p	-	-	ugauauguuugauauuggguugu	aacuaaaugucaaacauauucuu	ugauauguuugauauuggguuguuuaauuaggaaccaacuaaaugucaaacauauucuu	chr3:16374613..16374672:+
+chr21_3195	2.1	19 +/- 28%	-	6	6	0	0	yes	bta-miR-184	mmu-miR-184-3p	-	-	uggacggagaacugauaagggu	ccuuaucacuuuuccagccagc	ccuuaucacuuuuccagccagcuuugugacucuaacuguuggacggagaacugauaagggu	chr21:25913782..25913843:+
+chr19_2560	2	19 +/- 28%	-	5	4	0	1	yes	bta-miR-423-5p	hsa-miR-423-5p	-	-	ugaggggcagagagcgagacuuuuc	agcucggucugaggccccucagu	ugaggggcagagagcgagacuuuucuauuuuccaaaagcucggucugaggccccucagu	chr19:21799499..21799558:+
+chr2_2936	1.7	9 +/- 21%	-	112	112	0	0	no	bta-miR-375	hsa-miR-375	-	-	uuuguucguucggcucgcguga	gcgacgagccccucgcacaaacc	gcgacgagccccucgcacaaaccggaccugagcguuuuguucguucggcucgcguga	chr2:107667523..107667580:-
+chr14_1327	1.7	9 +/- 21%	-	17	17	0	0	yes	bta-miR-1839	oan-miR-1348	-	-	aagguagauagaacaggucuugu	augaccuacauaucuaccaaca	aagguagauagaacaggucuuguuugcaaaaugaauucaugaccuacauaucuaccaaca	chr14:1883851..1883911:-
+chr25_4093	1.5	9 +/- 21%	-	56	56	0	0	no	bta-miR-25	hsa-miR-25-3p	-	-	cauugcacuugucucggucuga	aggcggagacuugggcaauugc	aggcggagacuugggcaauugcuggacgcugccccgggcauugcacuugucucggucuga	chr25:36892461..36892521:+
+chr22_3443	1.5	9 +/- 21%	-	14	14	0	0	no	bta-miR-128	mmu-miR-128-3p	-	-	ucacagugaaccggucucuuu	gggggccgaggcacuguccgaga	gggggccgaggcacuguccgagagugaguagcaggucucacagugaaccggucucuuu	chr22:9738611..9738669:+
+chrX_6417	1.5	9 +/- 21%	-	4	4	0	0	yes	bta-miR-6526	hsa-miR-1914-5p	-	-	uccugugccucgaauggguau	gcccauucaggugcaguuca	gcccauucaggugcaguucacguacaauugguguccugugccucgaauggguau	chrX:30319611..30319665:+
+chrX_6409	1.5	9 +/- 21%	-	4	4	0	0	yes	bta-miR-6526	hsa-miR-1914-5p	-	-	uccugugccucgaauggguau	gcccguucaggugcaguuca	gcccguucaggugcaguucacguacaauugguguccugugccucgaauggguau	chrX:28508357..28508411:+
+chrX_6413	1.4	9 +/- 21%	-	4	4	0	0	yes	bta-miR-6526	hsa-miR-1914-5p	-	-	uccugugccucgaauggguau	gcccauucaggugcaguuca	gcccauucaggugcaguucauguacaauugguguccugugccucgaauggguau	chrX:30303214..30303268:+
+chr4_4929	1.4	9 +/- 21%	-	4	4	0	0	yes	bta-miR-182	mmu-miR-182-5p	-	-	uuuggcaaugguagaacucacacu	ugguucuagacuugccaacua	uuuggcaaugguagaacucacacuggugagguaaugggauccggugguucuagacuugccaacua	chr4:94406721..94406786:-
+chrX_6415	1.4	9 +/- 21%	-	4	4	0	0	yes	bta-miR-6526	hsa-miR-1914-5p	-	-	uccugugccucgaauggguau	gcccauucaggugcaguuca	gcccauucaggugcaguucauguacaauugguguccugugccucgaauggguau	chrX:30305153..30305207:+
+chr22_3476	1.4	9 +/- 21%	-	74	74	0	0	no	bta-miR-425-5p	cel-miR-63-3p	-	-	aaugacacgaucacucccguugagu	ccaucgggaaugucguguccgccc	aaugacacgaucacucccguugagugggcacccaagaagccaucgggaaugucguguccgccc	chr22:51543964..51544027:+
+chrX_6411	1.4	9 +/- 21%	-	4	4	0	0	yes	bta-miR-6526	hsa-miR-1914-5p	-	-	uccugugccucgaauggguau	gcccauucaggugcaguuca	gcccauucaggugcaguucauguacaauugguguccugugccucgaauggguau	chrX:30286988..30287042:+
+chr6_5532	1.3	9 +/- 21%	-	4	4	0	0	yes	bta-miR-95	hsa-miR-95-3p	-	-	uucaacggguauuuauugagc	ucaauaaauguuuguugaauu	ucaauaaauguuuguugaauugagaugcgcuaaauucaacggguauuuauugagc	chr6:119145915..119145970:-
+chr5_5244	1.3	9 +/- 21%	-	3	3	0	0	yes	bta-miR-200c	dme-miR-8-3p	-	-	uaauacugccggguaaugaugga	cgucuuacccagcaguguuugg	cgucuuacccagcaguguuugggugcugguugggagucucuaauacugccggguaaugaugga	chr5:103859437..103859500:-
+chr7_5682	1.3	9 +/- 21%	-	4	4	0	0	yes	bta-miR-23a	hsa-miR-23a-3p	-	-	aucacauugccagggauuucc	gguuccuggggaugggauuu	gguuccuggggaugggauuugcugccugucacaaaucacauugccagggauuucc	chr7:12981977..12982032:-
+chr20_2992	1.3	9 +/- 21%	-	13	13	0	0	no	bta-miR-103	hsa-miR-103a-3p	-	-	agcagcauuguacagggcuauga	ucggcuucuuuacagugcugccuug	ucggcuucuuuacagugcugccuuguugcauauggaucaagcagcauuguacagggcuauga	chr20:189860..189922:-
+chr12_901	1.2	9 +/- 21%	-	4	4	0	0	yes	bta-miR-19b	hsa-miR-19a-3p	-	-	ugugcaaauccaugcaaaacuga	aguuuugcagguuugcauccagc	aguuuugcagguuugcauccagcugugugauauucugcugugcaaauccaugcaaaacuga	chr12:66227147..66227208:+
+chr4_4876	1.2	9 +/- 21%	-	4	2	0	2	yes	bta-miR-335	rno-miR-335	-	-	ucaagagcaauaacgaaaaaugu	uuuuucauuauugcuccugacc	ucaagagcaauaacgaaaaauguuugucauaaaccguuuuucauuauugcuccugacc	chr4:95071005..95071063:+
+chrX_6502	1.1	9 +/- 21%	-	4	4	0	0	yes	bta-miR-19b	hsa-miR-19a-3p	-	-	ugugcaaauccaugcaaaacuga	aguuuugcugguuugcauuucagc	aguuuugcugguuugcauuucagcguguggauauauggcugugcaaauccaugcaaaacuga	chrX:17918012..17918074:-
+chr19_2682	1.1	9 +/- 21%	-	3	2	0	1	yes	bta-miR-195	hsa-miR-16-2-3p	-	-	ccaauauuggcugugcugcuc	uagcagcacagaaauauuggc	uagcagcacagaaauauuggcacugggaagaaagccugccaauauuggcugugcugcuc	chr19:27441356..27441415:-
+chr7_5635	1.1	9 +/- 21%	-	6	6	0	0	yes	bta-miR-6120-5p	hsa-miR-4781-3p	-	-	uauguuggacaacguggauag	guucccguuuuucacaugug	guucccguuuuucacauguguacugauguuugaucauauguuggacaacguggauag	chr7:45882308..45882365:+
+chr29_4530	0.9	69 +/- 10%	-	2	2	0	0	yes	bta-miR-194	mmu-miR-194-5p	-	-	uguaacagcaacuccaugugg	aguggggcugcuguuaucug	uguaacagcaacuccauguggaaguaccucuaguuccaguggggcugcuguuaucug	chr29:43731473..43731530:+
+chr3_4609	0.9	69 +/- 10%	-	18	18	0	0	no	bta-miR-9-5p	dme-miR-9a-5p	-	-	ucuuugguuaucuagcuguauga	aggcggcugcguggaagagg	aggcggcugcguggaagaggcggcgacugcagccaggaggcgggguugguuguuaucuuugguuaucuagcuguauga	chr3:14462384..14462462:+
+chr4_4931	0.7	69 +/- 10%	-	3	3	0	0	yes	bta-miR-183	mmu-miR-183-5p	-	-	uauggcacugguagaauucacu	ugaauuaccgaagggccauaaa	uauggcacugguagaauucacugugaacagucucggucagugaauuaccgaagggccauaaa	chr4:94411433..94411495:-
+chr20_2973	0.7	69 +/- 10%	-	29	29	0	0	no	bta-miR-449a	cel-miR-34-5p	-	-	uggcaguguauuguuagcugg	uguuaacgaaguacaccggugac	uguuaacgaaguacaccggugaccuaugugugauggguuggcaguguauuguuagcugg	chr20:23967366..23967425:+
+chr11_717	0.6	69 +/- 10%	-	4	4	0	0	yes	bta-miR-216b	dre-miR-216b	-	-	aaaucucugcaggcaaauguga	acacacuuacccguagagauucua	aaaucucugcaggcaaaugugaugucacuaaagaaaucacacacuuacccguagagauucua	chr11:38511127..38511189:-
+chr15_1586	0.6	69 +/- 10%	-	2	2	0	0	yes	bta-miR-2285b	mml-miR-3200-5p	-	-	aaaucugagugaacuuuuuggc	cgaaaaguucauuccaguuuuu	cgaaaaguucauuccaguuuuucuguacuaccuuaugggaaaaucugagugaacuuuuuggc	chr15:39596110..39596172:-
+chr22_3456	0.6	69 +/- 10%	-	2	2	0	0	yes	bta-miR-135a	mmu-miR-135a-5p	-	-	uauggcuuuuuauuccuaugug	uauagggauuggagccguggc	uauggcuuuuuauuccuaugugauucuacugcucacucauauagggauuggagccguggc	chr22:49142043..49142103:+
+chr3_4746	0.5	69 +/- 10%	-	2	2	0	0	yes	bta-miR-2285b	mml-miR-3200-5p	-	-	aaaucugagugaacuuuuuggc	caaaaaguucauuuggguuuuu	caaaaaguucauuuggguuuuucuguaagauguuacagaaaaaucugagugaacuuuuuggc	chr3:52524779..52524841:-
+chr3_4742	0.4	69 +/- 10%	-	2	2	0	0	yes	bta-miR-760-5p	mtr-miR5295a	-	-	ucggcucugggucugugggga	cccucaguccaccagagcccggau	cccucaguccaccagagcccggauaccuuagaaauucggcucugggucugugggga	chr3:49797119..49797175:-
+chr24_3867	0.4	69 +/- 10%	-	3	3	0	0	yes	bta-miR-1	cel-miR-1-3p	-	-	uggaauguaaagaaguau	acuucuuuauguacccaua	acuucuuuauguacccauaugaacauacaaugcuauggaauguaaagaaguau	chr24:34841112..34841165:+
+chr1_93	0.4	69 +/- 10%	-	2	2	0	0	yes	bta-miR-2284q	ebv-miR-BHRF1-1	-	-	aaaccugaacgaacuuuuu	aaaguucguucggauuucu	aaaguucguucggauuucucuguaagcugguguggauaaaccugaacgaacuuuuu	chr1:158102080..158102136:+
+chr10_273	0.4	69 +/- 10%	-	3	3	0	0	yes	bta-miR-628	hsa-miR-628-3p	-	-	ucuaguaagaguggcagucga	ugcugacauauuuacuagagg	ugcugacauauuuacuagaggguaaaauuaauaaccuucuaguaagaguggcagucga	chr10:55017706..55017764:+
+chr16_1867	0.3	69 +/- 10%	-	2	2	0	0	yes	bta-miR-194	mmu-miR-194-5p	-	-	uguaacagcaacuccaugugg	aguggagaugcuguuacuuu	uguaacagcaacuccauguggacugugcgucaauuuccaguggagaugcuguuacuuu	chr16:24306042..24306100:-
+chr13_1092	0.3	69 +/- 10%	-	3	3	0	0	yes	bta-miR-1	cel-miR-1-3p	-	-	uggaauguaaagaaguau	acuucuuuaugugcccaua	acuucuuuaugugcccauauggaccugcuaagcuauggaauguaaagaaguau	chr13:55237553..55237606:-
+chr12_897	0.2	69 +/- 10%	-	2	2	0	0	yes	bta-miR-19a	hsa-miR-19a-3p	-	-	ugugcaaaucuaugcaaaacuga	aguuuugcauaguugcacuac	aguuuugcauaguugcacuacaagaagaauguaguugugcaaaucuaugcaaaacuga	chr12:66226848..66226906:+
+chr13_1008	0.2	69 +/- 10%	-	1	1	0	0	yes	bta-miR-296-5p	oan-miR-1363-5p	-	-	gagggccccccccaauccugu	aggguugggcggaggcuuuccu	gagggccccccccaauccuguugugcuugguucagaggguugggcggaggcuuuccu	chr13:58091947..58092004:+
+chr6_5398	0.1	69 +/- 10%	-	2	2	0	0	yes	bta-miR-302d	mml-miR-302a-5p	-	-	uaaacguggauguacuugcuu	guaagugcuuccauguuuuag	uaaacguggauguacuugcuuuauagcuaaaaaaguaagugcuuccauguuuuag	chr6:14162980..14163035:+
+chr19_2657	0.1	69 +/- 10%	-	1	1	0	0	yes	bta-miR-451	hsa-miR-451a	-	-	aaaccguuaccauuacug	guaaugguaacgguucuc	aaaccguuaccauuacugaguuuaguaaugguaacgguucuc	chr19:20796873..20796915:-
+chr18_2505	0.1	69 +/- 10%	-	1	1	0	0	yes	bta-miR-150	mmu-miR-150-5p	-	-	ucucccaacccuuguaccagug	cugguacagguacggggaggca	ucucccaacccuuguaccagugugugucucagacccugguacagguacggggaggca	chr18:56407865..56407922:-
+chr5_5175	0	69 +/- 10%	-	1	1	0	0	yes	bta-miR-196a	hsa-miR-196a-5p	-	-	uagguaguuucauguuguugg	ggcaacaagaaacugccugag	uagguaguuucauguuguugggauugaguuuugaacucggcaacaagaaacugccugag	chr5:26199811..26199870:-
+chr21_3242	0	69 +/- 10%	-	1	1	0	0	yes	bta-miR-3956	oar-miR-3956-5p	-	-	guacguggaugcugaaggucagag	cugaccuuccugcaucccguuca	guacguggaugcugaaggucagagggaagugcuucugucugcacauguguucuccaguccucugaccuuccugcaucccguuca	chr21:67582113..67582197:+
+chr11_644	0	69 +/- 10%	-	1	1	0	0	yes	bta-miR-181a	mmu-miR-181a-5p	-	-	aacauucaacgcugucggu	cgaccguugacuguacc	aacauucaacgcugucggugaguuugggauuugaaaaaaccaccgaccguugacuguacc	chr11:95709448..95709508:+
+chr21_3412	0	69 +/- 10%	-	46	46	0	0	no	bta-miR-3432a	gga-miR-6653-3p	-	-	ugcgggaucuuuaguuguggugu	acagcaucuucgaucuuugucaug	acagcaucuucgaucuuugucauggugugcgggaucuuuaguuguggugu	chr21:55746834..55746884:-
+chr8_6131	0	69 +/- 10%	-	1	1	0	0	yes	bta-miR-32	hsa-miR-25-3p	-	-	uauugcacaugacuaaguugc	aauuuaguaugugugauauu	uauugcacaugacuaaguugcauguugucacggccucagugcaauuuaguaugugugauauu	chr8:100305162..100305224:-
+chrX_6444	0	69 +/- 10%	-	1	1	0	0	yes	bta-miR-362-5p	hsa-miR-362-5p	-	-	aauccuuggaaccuaggugugagu	acacaccuauucaaggauuca	aauccuuggaaccuaggugugagugcuguucuagugcaacacaccuauucaaggauuca	chrX:92898445..92898504:+
+chrX_6507	0	69 +/- 10%	-	1	1	0	0	yes	bta-miR-767	hsa-miR-767-5p	-	-	ugcaccaugguugucugagcaug	ugcucauaccccaugguuccug	ugcaccaugguugucugagcaugcagcaugcuugucugcucauaccccaugguuccug	chrX:35020241..35020299:-
+chr20_2998	0	69 +/- 10%	-	1	1	0	0	yes	bta-miR-2285q	mmu-miR-6962-5p	-	-	aaggaccugaaugaacuuucugg	aaaaaguucauucagguuuucu	aaaaaguucauucagguuuucuguaagauguuagggaaggaccugaaugaacuuucugg	chr20:13408720..13408779:-
+chr21_3246	-0.1	66 +/- 7%	-	1	1	0	0	yes	bta-miR-134	gga-miR-122b	-	-	ugugugacugguugaccagagu	ucugggccaccuagucaccaacc	ugugugacugguugaccagaguggccagcacucgguucacccucugggccaccuagucaccaacc	chr21:67593261..67593326:+
+chr12_903	-0.1	66 +/- 7%	-	1	1	0	0	yes	bta-miR-92a	hsa-miR-25-3p	-	-	uauugcacuugucccggccugu	agguugggaucgguugcaaugcu	agguugggaucgguugcaaugcuguguuucuguaugguauugcacuugucccggccugu	chr12:66227264..66227323:+
+chr7_5550	-0.2	66 +/- 7%	-	1	1	0	0	yes	bta-miR-181d	mmu-miR-181a-5p	-	-	aacauucauuguugucggugg	accgagggaugaaugucac	aacauucauuguugucgguggguugugacagagaccagacccaccgagggaugaaugucac	chr7:12915271..12915332:+
+chr8_5950	-0.2	66 +/- 7%	-	2	1	0	1	yes	bta-miR-23b-5p	hsa-miR-23a-5p	-	-	uggguuccuggcaugcugau	aucacauugccagggauuacc	uggguuccuggcaugcugauuugugacuuaagauuaaaaucacauugccagggauuacc	chr8:83009613..83009672:+
+chr7_5766	-0.2	66 +/- 7%	-	18	18	0	0	no	bta-miR-9-5p	dme-miR-9a-5p	-	-	ucuuugguuaucuagcuguauga	ucgcaccuggaguaugggccgaagaag	ucgcaccuggaguaugggccgaagaagacagaggcugugagggaagcgaguuguuaucuuugguuaucuagcuguauga	chr7:90554725..90554804:-
+chr21_3235	-0.2	66 +/- 7%	-	1	1	0	0	yes	bta-miR-323	rno-miR-323-3p	-	-	cacauuacacggucgaccucu	aggugguccguggcgcguucg	aggugguccguggcgcguucgcuuuauuuauggcgcacauuacacggucgaccucu	chr21:67565482..67565538:+
+chr5_5012	-0.5	66 +/- 7%	-	2	2	0	0	yes	bta-miR-135a	mmu-miR-135a-5p	-	-	uauggcuuuuuauuccuaugug	uguagggauggaagccaugaa	uauggcuuuuuauuccuaugugauaguaauaaagucucauguagggauggaagccaugaa	chr5:62117730..62117790:+
+chr21_3243	-0.5	66 +/- 7%	-	1	1	0	0	yes	bta-miR-382	hsa-miR-382-3p	-	-	aaucauucacggacaacacuuu	aaguuguucgugguggauucg	aaguuguucgugguggauucgcuuuacuuaugacgaaucauucacggacaacacuuu	chr21:67592888..67592945:+
+chrX_6500	-0.7	66 +/- 7%	-	1	1	0	0	yes	bta-miR-92a	hsa-miR-25-3p	-	-	uauugcacuugucccggccugu	ggguggggauuuguugcacugcu	ggguggggauuuguugcacugcuuguguuauauauaaaguauugcacuugucccggccugu	chrX:17917862..17917923:-
+chrX_6503	-0.8	66 +/- 7%	-	1	1	0	0	yes	bta-miR-450b	hsa-miR-450b-5p	-	-	uuuugcaauauguuccugaauauu	uauauugggaacauuuugcauccau	uuuugcaauauguuccugaauauuuaauauaaguauauugggaacauuuugcauccau	chrX:18178919..18178977:-
+chr16_1820	-0.8	66 +/- 7%	-	1	1	0	0	yes	bta-miR-29d-5p	mmu-miR-29c-5p	-	-	ugaccgauuucuccugguguu	caccauuugaaaucgguuaug	ugaccgauuucuccugguguucagagucuguuuuugucuagcaccauuugaaaucgguuaug	chr16:77478607..77478669:+
+chr1_152	-0.9	66 +/- 7%	-	2	2	0	0	yes	bta-miR-2285b	mml-miR-3200-5p	-	-	aaaucugagugaacuuuuuggc	caaaauguucugguuuuc	caaaauguucugguuuucccauagaaugcaaaaaucugagugaacuuuuuggc	chr1:107065365..107065418:-
+chr24_3899	-1	66 +/- 7%	-	21	21	0	0	no	bta-miR-122	mmu-miR-122-5p	-	-	uggagugugacaaugguguuugu	aagugaaauuaacacuuccacg	aagugaaauuaacacuuccacggcuaccgauuucccuuagcagagcuguggagugugacaaugguguuugu	chr24:58095607..58095678:+
+chrX_6442	-1	66 +/- 7%	-	1	1	0	0	yes	bta-miR-532	hsa-miR-532-5p	-	-	caugccuugaguguaggaccguu	cccucccacacccaaggcuugca	caugccuugaguguaggaccguuggcaucuuaauuacccucccacacccaaggcuugca	chrX:92886518..92886577:+
+chr21_3234	-1.1	0 +/- 0%	-	1	1	0	0	yes	bta-miR-411a	mmu-miR-411-5p	-	-	uaguagaccguauagcguac	auguaacacgguccacuaac	uaguagaccguauagcguacgcuuuaucugugacguauguaacacgguccacuaac	chr21:67563112..67563168:+
+chr16_1913	-1.4	0 +/- 0%	-	1	1	0	0	yes	bta-miR-181a	mmu-miR-181a-5p	-	-	aacauucaacgcugucggu	cgaccguugauuguacc	aacauucaacgcugucggugaguuuggaauuaaaaaucaaaaccaucgaccguugauuguacc	chr16:79685955..79686018:-
+chr18_2399	-1.6	0 +/- 0%	-	6	6	0	0	no	bta-let-7e	cel-let-7-5p	-	-	ugagguaggagguuguauag	gucuguccaccugccgcgcc	gucuguccaccugccgcgccccccgggcugagguaggagguuguauag	chr18:58015014..58015062:+
+chr21_3231	-1.6	0 +/- 0%	-	5	5	0	0	yes	bta-miR-342	-	-	-	ucucacacagaaaucgcacccau	gggugcuaucugugguugaggaca	gggugcuaucugugguugaggacacggcaaaugaaacugucucacacagaaaucgcacccau	chr21:66706868..66706930:+
+chr7_5647	-2.2	0 +/- 0%	-	3	3	0	0	yes	bta-miR-378	-	-	-	acuggacuuggagucagaaggcc	gcuccugacuccagguccugugu	gcuccugacuccagguccuguguguuaccucgaaauagcacuggacuuggagucagaaggcc	chr7:63067303..63067365:+
+chr1_100	-2.3	0 +/- 0%	-	389	389	0	0	no	bta-miR-2284x	chi-miR-2284b	-	-	ugaaaaguucguucggguuuuu	aagcccaggagaaggaaacagc	aagcccaggagaaggaaacagccauuuggauggcuugggauuuaguauuggguuggcugaaaaguucguucggguuuuu	chr1:3607800..3607879:-
+chr19_2563	-2.7	0 +/- 0%	-	3	3	0	0	yes	bta-miR-2336	-	-	-	cuaaccguaacuuugaagugcuu	gcauuucaaagcuaagguuaugg	gcauuucaaagcuaagguuauggguggcaauuuaucccuaaccguaacuuugaagugcuu	chr19:22824643..22824703:+
+chr1_176	-2.9	0 +/- 0%	-	7	7	0	0	yes	bta-miR-2285b	-	-	-	aaaaucugagugaacuuuuuggu	caaaaaccuuuuuccauaagauauugc	caaaaaccuuuuuccauaagauauugcagaaaaaucugagugaacuuuuuggu	chr1:127413755..127413808:-
+chr5_5013	-3.1	0 +/- 0%	-	2	2	0	0	yes	bta-miR-2435	-	-	-	aaacucgaaugaacucuuuggc	caaaaagaucauuuggguuuuu	caaaaagaucauuuggguuuuucugaugauguuauggaaaacucgaaugaacucuuuggc	chr5:68192488..68192548:+
+chr10_394	-3.1	0 +/- 0%	-	2	2	0	0	yes	bta-miR-2285v	-	-	-	agaaccggaacgaacuuuuugg	agaaaguucauuuggguuuuuc	agaaaguucauuuggguuuuucauuaccauggcaugggagaaccggaacgaacuuuuugg	chr10:9079860..9079920:-
+chr19_2671	-3.2	0 +/- 0%	-	2	2	0	0	no	bta-miR-212	hsa-miR-212-5p	-	-	accuuggcucuagacugcuu	acagucuccagucacggcca	accuuggcucuagacugcuuacugcccgggccgcccucaguaacagucuccagucacggcca	chr19:23651587..23651649:-
+chr26_4207	-3.2	0 +/- 0%	-	1	1	0	0	yes	bta-miR-6524	-	-	-	uuacucugaguaaccuaacug	guuaggccacucagaguaacu	guuaggccacucagaguaacuaucaguaacuaacugguuacucugaguaaccuaacug	chr26:31733589..31733647:+
+chr21_3196	-3.2	0 +/- 0%	-	6	6	0	0	no	bta-miR-184	mmu-miR-184-3p	-	-	uggacggagaacugauaagggu	cuguguuugugugugucuggg	uggacggagaacugauaaggguaggugauugacgcucacagcuucuggaagcccugagggucaccuguguuugugugugucuggg	chr21:25913821..25913906:+
+chrX_6433	-3.3	0 +/- 0%	-	2	2	0	0	yes	bta-miR-361	-	-	-	ucccccaggugugauucugauu	ucagaaucuccagggguacu	ucagaaucuccagggguacuuauaauuugaaaaagucccccaggugugauucugauu	chrX:74328429..74328486:+
+chr21_3212	-3.5	0 +/- 0%	-	1	1	0	0	yes	bta-miR-6522	-	-	-	ucggaauuguuuguguaccugu	aaguacacaaacaauuccaagu	ucggaauuguuuguguaccuguuuucaaauuccaaguacacaaacaauuccaagu	chr21:43809629..43809684:+
+chr10_347	-3.5	0 +/- 0%	-	6	6	0	0	yes	bta-miR-7859	-	-	-	aaaaacuggcagcuucauguaau	caugugaaauuaccaguauuugu	caugugaaauuaccaguauuugucugcuuugaccuacaaaaacuggcagcuucauguaau	chr10:85658689..85658749:+
+chr13_983	-3.6	0 +/- 0%	-	46	46	0	0	no	bta-miR-3432a	-	-	-	ugcgggaucuuuaguuguggugu	gcagcauguaggaucuucgaucuucacu	gcagcauguaggaucuucgaucuucacugcagcgugcgggaucuuuaguuguggugu	chr13:18813152..18813209:+
+chr2_2916	-3.6	0 +/- 0%	-	3	3	0	0	yes	bta-miR-2435	-	-	-	aaacucgaaugaacucuuuggc	cuuaaauuggguuuguucaaguuuuu	cuuaaauuggguuuguucaaguuuuuccauaagauguuaugggaaaacucgaaugaacucuuuggc	chr2:57787881..57787947:-
+chrX_6391	-3.7	0 +/- 0%	-	1	1	0	0	yes	bta-miR-2284w	-	-	-	aaaaaccucaaugaacucuuugg	aagaguuuguucggguuucucc	aagaguuuguucggguuucuccauaagcuguauagaaaaaccucaaugaacucuuugg	chrX:2676192..2676250:+
+chr5_4974	-3.7	0 +/- 0%	-	1	1	0	0	yes	bta-miR-331-5p	-	-	-	ucuagguauggucccagggau	cccugggccuauccuagaac	ucuagguauggucccagggaucccagaucaaaccaggccccugggccuauccuagaac	chr5:25109080..25109138:+
+chrX_6493	-3.9	0 +/- 0%	-	1	1	0	0	yes	bta-miR-2483-5p	-	-	-	uccgucaaccauccagcuguu	caucugguugguugagagaau	uccgucaaccauccagcuguuugaggugaugcaaacaaacaucugguugguugagagaau	chrX:9189814..9189874:-
+chr23_3814	-4.2	0 +/- 0%	-	2	1	0	1	no	bta-miR-7857	dme-miR-9376-5p	-	-	auagccaguuggggaagaaugcug	auuguucuccaaccuggcucuuua	auagccaguuggggaagaaugcuguuaccuuagagagaagcuggauuguucuccaaccuggcucuuua	chr23:30899896..30899964:-
+chr17_2034	-4.3	0 +/- 0%	-	1	1	0	0	no	bta-miR-1306	hsa-miR-1306-5p	-	-	ccaccuccccugcaaacgucc	acguuggcucugguggug	ccaccuccccugcaaacguccagugaugcagagguaauggacguuggcucugguggug	chr17:74987968..74988026:+
+chr19_2578	-4.9	0 +/- 0%	-	1	1	0	0	no	bta-miR-196a	hsa-miR-196a-5p	-	-	uagguaguuucauguuguugg	aacgacauuaaaccacccgac	uagguaguuucauguuguugggccuggauuucugaacacaacgacauuaaaccacccgac	chr19:38497006..38497066:+
+chrX_6418	-5	0 +/- 0%	-	4	4	0	0	no	bta-miR-6526	hsa-miR-1914-5p	-	-	uccugugccucgaauggguau	cgucauuugugguggauc	uccugugccucgaauggguaugguaaggcucacaagaucgucauuugugguggauc	chrX:30319644..30319700:+
+chr10_463	-5	0 +/- 0%	-	1	1	0	0	no	bta-miR-147	mmu-miR-147-5p	-	-	uggaaacacuucugcacaggcuag	ggauaccagugugcggaaaugcuucugcu	uggaaacacuucugcacaggcuagauuauggauaccagugugcggaaaugcuucugcu	chr10:65243388..65243446:-
+chr8_5959	-5.2	0 +/- 0%	-	45	45	0	0	no	bta-let-7f	cel-let-7-5p	-	-	ugagguaguagauuguauagu	guugcagucuucauuucaga	guugcagucuucauuucagaagaaaagauugcucuaucagagugagguaguagauuguauagu	chr8:86885188..86885251:+
+chr19_2577	-5.2	0 +/- 0%	-	1	1	0	0	no	bta-miR-196a	hsa-miR-196a-5p	-	-	uagguaguuucauguuguugg	gugaacuggaacugcugagu	gugaacuggaacugcugagugaauuagguaguuucauguuguugg	chr19:38496982..38497027:+
+chr16_1819	-5.5	0 +/- 0%	-	1	1	0	0	no	bta-miR-29d-5p	mmu-miR-29c-5p	-	-	ugaccgauuucuccugguguu	caccaccggacccaucucuua	caccaccggacccaucucuuacacaggcugaccgauuucuccugguguu	chr16:77478579..77478628:+
+chr16_1821	-5.5	0 +/- 0%	-	1	1	0	0	no	bta-miR-29d-5p	mmu-miR-29c-5p	-	-	ugaccgauuucuccugguguu	caccaccggacccaucucuua	caccaccggacccaucucuuacacaggcugaccgauuucuccugguguu	chr16:77562524..77562573:+
+chr17_2059	-8.7	0 +/- 0%	-	1	1	0	0	no	bta-miR-6520	-	-	-	uugaguauugucagagagagc	ucucuccgccuguacucagcc	uugaguauugucagagagagcgauucugugcccacccugagucgucucuccgccuguacucagcc	chr17:46090329..46090394:-
+chr22_3434	-9.1	0 +/- 0%	-	1	1	0	0	no	bta-miR-7857	dme-miR-9376-5p	-	-	auagccaguuggggaagaaugcug	gcaugcucuaccuacgcauuuggcgaagc	auagccaguuggggaagaaugcuguuagcuuaacgaaauacaaauugaaaggaucagacagcaugcucuaccuacgcauuuggcgaagc	chr22:2381403..2381492:+
+chr5_5014	-11	0.00 +/- 0.00	-	2	2	0	0	no	bta-miR-2435	-	-	-	aaacucgaaugaacucuuuggc	cagagagucaucagcauguuc	aaacucgaaugaacucuuuggcugacucaguauuauguuuagcaucagagagucaucagcauguuc	chr5:68192526..68192592:+
+chrX_6499	-11.9	0.00 +/- 0.00	-	1	1	0	0	no	bta-miR-92a	hsa-miR-25-3p	-	-	uauugcacuugucccggccugu	agguuguaaguucugauacu	uauugcacuugucccggccuguggaagaaaugaggaauuuaucaucuucuuuuaauguuuaaagguuguaaguucugauacu	chrX:17917802..17917884:-
+chrX_6441	-13.1	0.00 +/- 0.00	-	1	1	0	0	no	bta-miR-532	hsa-miR-532-5p	-	-	caugccuugaguguaggaccguu	cguccugacuugcuuucu	cguccugacuugcuuucucucuuacaugccuugaguguaggaccguu	chrX:92886494..92886541:+
+chr3_4745	-18.5	0.00 +/- 0.00	-	2	2	0	0	no	bta-miR-2285b	mml-miR-3200-5p	-	-	aaaucugagugaacuuuuuggc	aaaaugguuacuuuuaguuauuuuu	aaaucugagugaacuuuuuggccaacucuauaguuuuauauaacuuugugaggaaaaaaugguuacuuuuaguuauuuuu	chr3:52524721..52524801:-
+
+#miRBase miRNAs not detected by miRDeep2
+miRBase precursor id	total read count	5p read counts	3p read counts	remaining reads	UCSC browser	NCBI blastn	miRBase 5p sequence(s)	miRBase 3p sequence(s)	miRBase precursor sequence
+103	93	0	10	-	-	aauggauuuuuggagcagg	-	caacauauuaaauggauuuuuggagcaggaaguuggaauagaggcuuucucagacaaauacuuuacugugcag	
+27	0	27	0	-	-	agggcuuagcugcuugugagca	uucacaguggcuaaguuccg	uggccuggggagcagggcuuagcugcuugugagcagguccacaucaaaucguguucacaguggcuaaguuccgccccc	
+26	26	0	0	-	-	uguaaacauccuacacucucagc	-	cagacuguaaccaugccguaguguguguaaacauccuacacucucagcugugagcucgagguggcugggagaggguuguuuacuccuucugccauggaaaacguc	
+18	0	16	2	-	-	-	uaauacugccugguaaugaug	ccaucuuacugggcagcauuggauggugucuggucucuaauacugccugguaaugauga	
+26	26	0	0	-	-	aaaaguucguucggguuuuuc	cccaaaaguucguucggguuu	-	aggugggcccaaaaguucguucggguuuuuccauaccaucuuacagaaaaacccaaacaaauuuuuuggcccaccua	
+17	0	11	6	-	-	-	uaacagucuacagccauggucg	ccgcccccgcgucuccagggcaaccguggcuuucgauuguuacugugggaaccggagguaacagucuacagccauggucgccccgcagcacgcccacgcgc	
+9	9	0	0	-	-	ugagguaguagguugugugguu	-	cggggugagguaguagguugugugguuucaggguagugauguugcccccucggaagauaacuauacaaccuacugccuucc	
+5	0	4	1	-	-	-	aaaagcuggguugagagggcga	aaaaacgaaaaagaggccuucucuucccgguucuucccggagucgggaaaagcuggguugagagggcgaaaaaggaagaggg	
+3	3	0	0	-	-	cacccguagaaccgaccuugcg	-	ggcacccacccguagaaccgaccuugcggggccuucgccgcacacaagcucgugucuguggguccguguc	
+3	3	0	0	-	-	gaaaaguuuguucggguuuu	-	guuggccagaaaaguuuguucggguuuuccagaggguguuacccaucaaaugaacuuuucagccaac	
+10	0	2	8	-	-	-	uauucauuuaucucccagccuac	caggcuaggagaaaugauuggauagaaaauuuuauucuauucauuuaucucccagccuac	
+2	2	0	0	-	-	gaaaaguucguucagguuuu	-	guuggugggccgaaaaguucguucagguuuuccaaguuacagaauaacccagacaaacuguuuggccagcccaau	
+2	2	0	0	-	-	aaaaccugaaugaacuuuuugg	ccagaaaguucauucagguccu	-	uaauuuaaaauguguuggccagaaaguucauucagguccuucccuaacaucuuacagaaaaccugaaugaacuuuuuggccaacaacauuuaauug	
+2	2	0	0	-	-	ucccuguccuccaggagcucac	ucccuguccuccaggagcuc	-	ggggcagccgcugucccuguccuccaggagcucacuugguccggccgugcgcuccucgaggccagagcccgugucugc	
+1	1	0	0	-	-	acuggacuuggagucagaagu	-	caaaaccaccacuggacuuggagucagaaguuccaugugugagucuugguagggccaguggauugcuaa	
+1	0	1	0	-	-	-	aaaacccaaaugaacuuuuugg	aaaaguucguuucaguuuuuccauaacauuuuacagaaaacccaaaugaacuuuuugg	
+1	1	0	0	-	-	gaaaaguucggucggguuuuu	-	aguugaccagaaaaguucggucggguuuuucugcaacaucuaaugaaaaaaccaaaagaacuuuuuggccaccu	
+1	1	0	0	-	-	uuccuaugcauauacuucuuu	-	gccacucgcuguuccuuuuuccuaugcauauacuucuuugagggucuggccuaaagagguguagggcaugggaaaauggggccccgagguuccccugcg	
+1	1	0	0	-	-	uucgggaucuuuaguuguggu	-	cuuugaucuuuguugcggcauucgggaucuuuaguugugguaugcgaacucuuaguugcagcaugugggaucuaguucccuguccagggaucaaacc	
+1	0	1	0	-	-	-	aaaaacccgaaugaacuuuugg	ugggcugaccaaaaaguuuguucgaguuuuuccguaacaucccacugaaaaaacccgaaugaacuuuuggccaacccagc	
+4	1	3	0	-	-	gugccuacugagcugauaucagu	uggcucaguucagcaggaacag	cuccggugccuacugagcugauaucaguucucauuuuacacacuggcucaguucagcaggaacaggag	
+1	1	0	0	-	-	aaaaguucguugggguuuuu	-	gguuagccuaaaaguucguugggguuuuucuuuaugaucuuauggaagaacccuaacaaaauuuuuggcccacc	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+8	0	0	8	-	-	cgggaccgggguccggugcg	-	cgucgggaccgggguccggugcggagagcccuucgucccgggacacggggcgcggcc	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3	0	0	3	-	-	gggagccucgguuggccuc	-	acggcagcgccgcgggagccucgguuggccucggauagccggucccccgccguccccgccggcgggccgu	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1	0	0	1	-	-	-	accccacuccugguacc	aauugagaagggauaaggagguguguggagaaggcaauggcaccccacuccugguaccaacau	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1	0	0	1	-	-	agguuacccgagcaacuuugcau	-	ugguacgcggggagagguuacccgagcaacuuugcaucuggacgacgaauguugcucggugaaccccuuuucgguauca	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1	1	0	0	-	-	cccaaaaguucguucggguuu	accccaaugagcuuuugacc	guuggcccaaaaguucguucggguuuccuguaugugacggaaaaaccccaaugagcuuuugaccaac	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,46 @@
+Read the structure file mapping file /work/smarthey/miRNA_pipeline_template/quantifier/expression_analyses/expression_analyses_1519902888/miRBase.mrd file.
+Read the mature mapping file /work/smarthey/miRNA_pipeline_template/quantifier/expression_analyses/expression_analyses_1519902888/mature_and_new.fa_mapped.arf.
+! oha-miR-451-?? n'a pas une forme de mature reconnue
+# 7446 matures mapped to the 838 precursor
+
+Read the expression file -.
+! oha-miR-451-?? n'a pas une forme de mature reconnue -> skip line oha-miR-451-??	1,00	bta-mir-451	1,00	0	1,00	0	0	8,40	0 
+
+Print the results.
+! bta-mir-361 a pour seul mature detecté le miR hsa-miR-361-3p	2,00	bta-mir-361	3p	2,00	1,00	0	1,00	9,96	0	11,62
+! bta-mir-628 a pour seul mature detecté le miR hsa-miR-628-3p	3,00	bta-mir-628	3p	3,00	0	1,00	2,00	0	8,40	23,23
+! bta-mir-302a a pour seul mature detecté le miR hsa-miR-302a-5p	2,00	bta-mir-302a	5p	2,00	1,00	1,00	0	9,96	8,40	0
+! bta-mir-2285z a pour seul mature detecté le miR bta-miR-2285f	2,00	bta-mir-2285z	3p	2,00	1,00	1,00	0	9,96	8,40	0
+! bta-mir-409a a pour seul mature detecté le miR mmu-miR-409-3p	1,00	bta-mir-409a	3p	1,00	0	0	1,00	0	0	11,62
+! bta-mir-382 a pour seul mature detecté le miR hsa-miR-382-3p	1,00	bta-mir-382	3p	1,00	1,00	0	0	9,96	0	0
+! bta-mir-29c a pour seul mature detecté le miR mmu-miR-29c-5p	1,00	bta-mir-29c	5p	1,00	0	0	1,00	0	0	11,62
+######################## General statistics precursors ############
+
+# Total number of presursors in file: 211
+
+######################## Know precursors ############
+
+# Total number of Know presursors : 181
+# nb pre with know 5p and 3p mature detected : 6
+# nb pre with only know 5p mature detected : 99
+# nb pre with only know 3p mature detected : 57
+# nb pre with know 5p mature detected and annoted 3p detected (by homologie with mature from other species) : 13
+# nb pre with know 3p mature detected and annoted 5p detected (by homologie with mature from other species) : 6
+
+######################## putatifs precursors ############
+
+# Total number of putatifs presursors : 30
+# nb putative pre with 5p and 3p mature detected : 1
+# ---- nb putative pre with annoted 5p and 3p mature detected : 0
+# ---- nb putative pre with annoted 5p and new putatif 3p mature detected : 0
+# ---- nb putative pre with new putatif 5p and annoted 3p mature detected : 0
+# ---- nb putative pre with new putatif 5p and 3p mature detected : 1
+
+# nb putative pre with only 5p mature detected : 12
+# ---- nb putative pre with only annoted 5p mature detected : 0
+# ---- nb putative pre with only new putatif 5p mature detected : 12
+
+# nb putative pre with only 3p mature detected : 17
+# ---- nb putative pre with only annoted 3p mature detected : 0
+# ---- nb putative pre with only new putatif 3p mature detected : 17
+

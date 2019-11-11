@@ -1,0 +1,39 @@
+Read the structure file mapping file /work/smarthey/miRNA_pipeline_template/quantifier/expression_analyses/expression_analyses_1519902888/miRBase.mrd file.
+Read the mature mapping file /work/smarthey/miRNA_pipeline_template/quantifier/expression_analyses/expression_analyses_1519902888/mature_and_new.fa_mapped.arf.
+! oha-miR-451-?? n'a pas une forme de mature reconnue
+# 7446 matures mapped to the 838 precursor
+
+Read the expression file -.
+
+Print the results.
+! bta-mir-34b a pour seul mature detecté le miR chi-miR-34b-3p	271,00	bta-mir-34b	3p	271,00	79,00	120,00	72,00	786,98	1008,53	836,35
+######################## General statistics precursors ############
+
+# Total number of presursors in file: 17
+
+######################## Know precursors ############
+
+# Total number of Know presursors : 17
+# nb pre with know 5p and 3p mature detected : 0
+# nb pre with only know 5p mature detected : 14
+# nb pre with only know 3p mature detected : 3
+# nb pre with know 5p mature detected and annoted 3p detected (by homologie with mature from other species) : 0
+# nb pre with know 3p mature detected and annoted 5p detected (by homologie with mature from other species) : 0
+
+######################## putatifs precursors ############
+
+# Total number of putatifs presursors : 0
+# nb putative pre with 5p and 3p mature detected : 0
+# ---- nb putative pre with annoted 5p and 3p mature detected : 0
+# ---- nb putative pre with annoted 5p and new putatif 3p mature detected : 0
+# ---- nb putative pre with new putatif 5p and annoted 3p mature detected : 0
+# ---- nb putative pre with new putatif 5p and 3p mature detected : 0
+
+# nb putative pre with only 5p mature detected : 0
+# ---- nb putative pre with only annoted 5p mature detected : 0
+# ---- nb putative pre with only new putatif 5p mature detected : 0
+
+# nb putative pre with only 3p mature detected : 0
+# ---- nb putative pre with only annoted 3p mature detected : 0
+# ---- nb putative pre with only new putatif 3p mature detected : 0
+

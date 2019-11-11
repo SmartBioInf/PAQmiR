@@ -1,0 +1,665 @@
+#Starting miRDeep2
+/home/smarthey/bin/miRDeep2.pl ../mapper/processed_reads.fa /home/smarthey/work/miRNA_pipeline_template/index/bosTau8.fa ../mapper/reads_vs_genome_bta8.arf ../mirbase21/mature_bta.fa ../mirbase21/mature_no_bta.fa ../mirbase21/hairpin_bta.fa -t Cow -P -g 100000
+
+miRDeep2 started at 11:30:34
+
+
+mkdir mirdeep_runs/run_01_03_2018_t_11_30_34
+
+#testing input files
+started: 11:30:58
+sanity_check_mature_ref.pl ../mirbase21/mature_bta.fa
+
+
+ended: 11:30:58
+total:0h:0m:0s
+
+started: 11:30:58
+sanity_check_mature_ref.pl ../mirbase21/mature_no_bta.fa
+
+
+ended: 11:30:58
+total:0h:0m:0s
+
+sanity_check_reads_ready_file.pl ../mapper/processed_reads.fa
+
+started: 11:30:58
+
+ended: 11:30:59
+total:0h:0m:1s
+
+started: 11:30:59
+sanity_check_genome.pl /home/smarthey/work/miRNA_pipeline_template/index/bosTau8.fa
+
+
+ended: 11:31:46
+total:0h:0m:47s
+
+started: 11:31:46
+sanity_check_mapping_file.pl ../mapper/reads_vs_genome_bta8.arf
+
+
+ended: 11:31:46
+total:0h:0m:0s
+
+started: 11:31:46
+sanity_check_mature_ref.pl ../mirbase21/hairpin_bta.fa
+
+
+ended: 11:31:46
+total:0h:0m:0s
+
+started: 11:31:46
+Quantitation of expressed miRNAs in data
+
+
+quantifier.pl -p ../mirbase21/hairpin_bta.fa -m ../mirbase21/mature_bta.fa  -r ../mapper/processed_reads.fa  -t Cow -y 01_03_2018_t_11_30_34 -k  -P
+getting samples and corresponding read numbers
+
+Converting input files
+building bowtie index
+mapping mature sequences against index
+mapping read sequences against index
+Mapping statistics
+
+#desc	total	mapped	unmapped	%mapped	%unmapped
+total: 67513	7957	59556	0.118	0.882
+F01: 22126	2606	19520	0.118	0.882
+F02: 22840	3010	19830	0.132	0.868
+F03: 22547	2341	20206	0.104	0.896
+analyzing data
+Expressed miRNAs are written to expression_analyses/expression_analyses_01_03_2018_t_11_30_34/miRNA_expressed.csv
+not expressed miRNAs are written to expression_analyses/expression_analyses_01_03_2018_t_11_30_34/miRNA_not_expressed.csv
+
+Creating miRBase.mrd file
+
+make_html2.pl -q expression_analyses/expression_analyses_01_03_2018_t_11_30_34/miRBase.mrd -k mature_bta.fa -t cow -y 01_03_2018_t_11_30_34  -o -i expression_analyses/expression_analyses_01_03_2018_t_11_30_34/mature_bta.fa_mapped.arf   -m bta -M miRNAs_expressed_all_samples_01_03_2018_t_11_30_34.csv -P 
+miRNAs_expressed_all_samples_01_03_2018_t_11_30_34.csv file with miRNA expression values
+parsing miRBase.mrd file finished
+Could not determine where bta-miR-24 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-2285f sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-2285z sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-29c sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-1306 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-1291 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-2285ae sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-199b sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-199c sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-7863 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-1835 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-4657 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-339b sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-6516 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-1224 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-376c sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-376e sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-7865 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-677 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-2284ab sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-7857 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-1842 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-2284ac sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-376c sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-376b sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-2897 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-199c sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-8550 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-129 sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-2284q sits in precursor
+Putting it to the 5p species hash
+Could not determine where bta-miR-199c sits in precursor
+Putting it to the 5p species hash
+creating PDF files
+creating pdf for bta-mir-125b-2 finished
+creating pdf for bta-mir-34b finished
+creating pdf for bta-mir-9-1 finished
+creating pdf for bta-mir-19b-2 finished
+creating pdf for bta-let-7a-1 finished
+creating pdf for bta-mir-335 finished
+creating pdf for bta-mir-19b finished
+creating pdf for bta-mir-3431 finished
+creating pdf for bta-mir-2284z-1 finished
+creating pdf for bta-mir-101-1 finished
+creating pdf for bta-mir-543 finished
+creating pdf for bta-mir-182 finished
+creating pdf for bta-mir-6522 finished
+creating pdf for bta-mir-767 finished
+creating pdf for bta-mir-30a finished
+creating pdf for bta-mir-25 finished
+creating pdf for bta-mir-2284k finished
+creating pdf for bta-mir-2284y-3 finished
+creating pdf for bta-mir-7-3 finished
+creating pdf for bta-mir-1-2 finished
+creating pdf for bta-mir-451 finished
+creating pdf for bta-mir-9-2 finished
+creating pdf for bta-mir-150 finished
+creating pdf for bta-mir-664b finished
+creating pdf for bta-mir-2904-2 finished
+creating pdf for bta-mir-10a finished
+creating pdf for bta-let-7i finished
+creating pdf for bta-mir-2285m-3 finished
+creating pdf for bta-mir-2285z finished
+creating pdf for bta-mir-30d finished
+creating pdf for bta-mir-342 finished
+creating pdf for bta-mir-6120 finished
+creating pdf for bta-mir-6520 finished
+creating pdf for bta-mir-29c finished
+creating pdf for bta-mir-1-1 finished
+creating pdf for bta-mir-6529a finished
+creating pdf for bta-mir-19a finished
+creating pdf for bta-let-7f-1 finished
+creating pdf for bta-mir-26a-2 finished
+creating pdf for bta-let-7a-2 finished
+creating pdf for bta-mir-1306 finished
+creating pdf for bta-mir-125b-1 finished
+creating pdf for bta-mir-184 finished
+creating pdf for bta-mir-200c finished
+creating pdf for bta-mir-23a finished
+creating pdf for bta-mir-27b finished
+creating pdf for bta-mir-101-2 finished
+creating pdf for bta-mir-2284z-4 finished
+creating pdf for bta-mir-6526-1 finished
+creating pdf for bta-mir-2285m-1 finished
+creating pdf for bta-mir-30c finished
+creating pdf for bta-mir-2904-1 finished
+creating pdf for bta-mir-3432b finished
+creating pdf for bta-mir-212 finished
+creating pdf for bta-mir-1246 finished
+creating pdf for bta-mir-128-2 finished
+creating pdf for bta-mir-2284a finished
+creating pdf for bta-mir-3956 finished
+creating pdf for bta-mir-183 finished
+creating pdf for bta-mir-2284m finished
+creating pdf for bta-mir-378-1 finished
+creating pdf for bta-mir-2285f-2 finished
+creating pdf for bta-mir-194-2 finished
+creating pdf for bta-mir-27a finished
+creating pdf for bta-mir-7859 finished
+creating pdf for bta-mir-32 finished
+creating pdf for bta-mir-628 finished
+creating pdf for bta-mir-200b finished
+creating pdf for bta-mir-375 finished
+creating pdf for bta-mir-10b finished
+creating pdf for bta-mir-2284y-1 finished
+creating pdf for bta-mir-100 finished
+creating pdf for bta-mir-2284y-7 finished
+creating pdf for bta-mir-216b finished
+creating pdf for bta-mir-7-1 finished
+creating pdf for bta-mir-2285b-1 finished
+creating pdf for bta-mir-200a finished
+creating pdf for bta-mir-320a-1 finished
+creating pdf for bta-mir-186 finished
+creating pdf for bta-mir-1839 finished
+creating pdf for bta-mir-409a finished
+creating pdf for bta-mir-147 finished
+creating pdf for bta-mir-425 finished
+creating pdf for bta-mir-320a-2 finished
+creating pdf for bta-mir-2284y-2 finished
+creating pdf for bta-mir-181a-1 finished
+creating pdf for bta-mir-296 finished
+creating pdf for bta-mir-760 finished
+creating pdf for bta-mir-2887-1 finished
+creating pdf for bta-mir-17 finished
+creating pdf for bta-mir-2887-2 finished
+creating pdf for bta-let-7c finished
+creating pdf for bta-mir-331 finished
+creating pdf for bta-mir-148a finished
+creating pdf for bta-mir-99b finished
+creating pdf for bta-mir-2285e-1 finished
+creating pdf for bta-mir-21 finished
+creating pdf for bta-mir-361 finished
+creating pdf for bta-mir-2284y-6 finished
+creating pdf for bta-mir-26a-1 finished
+creating pdf for bta-mir-191 finished
+creating pdf for bta-mir-323 finished
+creating pdf for bta-mir-2284w finished
+creating pdf for bta-mir-99a finished
+creating pdf for bta-mir-106b finished
+creating pdf for bta-mir-93 finished
+creating pdf for bta-mir-2336 finished
+creating pdf for bta-mir-340 finished
+creating pdf for bta-mir-29d finished
+creating pdf for bta-mir-302a finished
+creating pdf for bta-mir-24-1 finished
+creating pdf for bta-mir-92a-2 finished
+creating pdf for bta-mir-2904-3 finished
+creating pdf for bta-mir-2284h finished
+creating pdf for bta-mir-204 finished
+creating pdf for bta-let-7b finished
+creating pdf for bta-mir-2284x finished
+creating pdf for bta-mir-2284y-5 finished
+creating pdf for bta-mir-339a finished
+creating pdf for bta-mir-30e finished
+creating pdf for bta-mir-146a finished
+creating pdf for bta-mir-2285f-1 finished
+creating pdf for bta-mir-22 finished
+creating pdf for bta-mir-92a-1 finished
+creating pdf for bta-mir-103-2 finished
+creating pdf for bta-mir-192 finished
+creating pdf for bta-let-7e finished
+creating pdf for bta-mir-194-1 finished
+creating pdf for bta-mir-532 finished
+creating pdf for bta-mir-423 finished
+creating pdf for bta-mir-211 finished
+creating pdf for bta-mir-2285b-2 finished
+creating pdf for bta-mir-362 finished
+creating pdf for bta-mir-24-2 finished
+creating pdf for bta-mir-140 finished
+creating pdf for bta-mir-132 finished
+creating pdf for bta-mir-378-2 finished
+creating pdf for bta-mir-2483 finished
+creating pdf for bta-mir-148b finished
+creating pdf for bta-mir-151 finished
+creating pdf for bta-mir-135a-2 finished
+creating pdf for bta-mir-20a finished
+creating pdf for bta-mir-2285n-7 finished
+creating pdf for bta-mir-2285q finished
+creating pdf for bta-mir-196a-1 finished
+creating pdf for bta-mir-2435 finished
+creating pdf for bta-mir-660 finished
+creating pdf for bta-mir-2285v finished
+creating pdf for bta-mir-449a finished
+creating pdf for bta-mir-378c finished
+creating pdf for bta-mir-139 finished
+creating pdf for bta-mir-202 finished
+creating pdf for bta-mir-6524 finished
+creating pdf for bta-let-7d finished
+creating pdf for bta-let-7g finished
+creating pdf for bta-mir-181a-2 finished
+creating pdf for bta-mir-2284y-4 finished
+creating pdf for bta-mir-23b finished
+creating pdf for bta-mir-134 finished
+creating pdf for bta-mir-95 finished
+creating pdf for bta-mir-146b finished
+creating pdf for bta-mir-3432a-1 finished
+creating pdf for bta-let-7a-3 finished
+creating pdf for bta-mir-2285e-2 finished
+creating pdf for bta-mir-495 finished
+creating pdf for bta-mir-34c finished
+creating pdf for bta-mir-152 finished
+creating pdf for bta-mir-2285m-4 finished
+creating pdf for bta-mir-6526-2 finished
+creating pdf for bta-mir-4286-2 finished
+creating pdf for bta-mir-128-1 finished
+creating pdf for bta-let-7f-2 finished
+creating pdf for bta-mir-196a-2 finished
+creating pdf for bta-mir-30b finished
+creating pdf for bta-mir-135a-1 finished
+creating pdf for bta-mir-382 finished
+creating pdf for bta-mir-411a finished
+creating pdf for bta-mir-6526-3 finished
+creating pdf for bta-mir-195 finished
+creating pdf for bta-mir-2284z-2 finished
+creating pdf for bta-mir-16b finished
+creating pdf for bta-mir-29a finished
+creating pdf for bta-mir-181d finished
+creating pdf for bta-mir-122 finished
+creating pdf for bta-mir-2284j finished
+creating pdf for bta-mir-16a finished
+creating pdf for bta-mir-450b finished
+creating pdf for bta-mir-190b finished
+creating pdf for bta-mir-103-1 finished
+creating pdf for bta-mir-15b finished
+creating pdf for bta-mir-2284aa-1 finished
+creating pdf for bta-mir-2285ad finished
+creating pdf for bta-mir-7-2 finished
+creating pdf for bta-mir-3432a-2 finished
+
+ended: 11:35:59
+total:0h:4m:13s
+
+started: 11:35:59
+rna2dna.pl ../mirbase21/mature_bta.fa > mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/mature_bta.fa
+
+rna2dna.pl ../mirbase21/mature_no_bta.fa > mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/mature_no_bta.fa
+
+
+ended: 11:35:59
+total:0h:0m:0s
+
+rna2dna.pl ../mirbase21/hairpin_bta.fa > mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/hairpin_bta.fa
+
+
+ended: 11:35:59
+total:0h:0m:0s
+
+#parsing genome mappings
+parse_mappings.pl ../mapper/reads_vs_genome_bta8.arf -a 0 -b 18 -c 25 -i 5 > mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/reads_vs_genome_bta8.arf_parsed.arf
+
+started: 11:35:59
+
+ended: 11:36:00
+total:0h:0m:1s
+
+#excising precursors
+started: 11:36:00
+excise_precursors_iterative_final.pl /home/smarthey/work/miRNA_pipeline_template/index/bosTau8.fa mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/reads_vs_genome_bta8.arf_parsed.arf mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.fa mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.coords 100000
+1	6600
+
+ended: 11:36:23
+total:0h:0m:23s
+
+#preparing signature
+prepare_signature.pl ../mapper/processed_reads.fa mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.fa 1 -a mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/mature_bta.fa -o mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/signature.arf 2>>error_01_03_2018_t_11_30_34.log
+
+started: 11:36:23
+
+ended: 11:36:27
+total:0h:0m:4s
+
+#folding precursors
+RNAfold < mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.fa -noPS > mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.str
+
+started: 11:36:27
+
+ended: 11:37:03
+total:0h:0m:36s
+
+#computing randfold p-values
+select_for_randfold.pl mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/signature.arf mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.str > mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors_for_randfold.ids
+
+started: 11:37:03
+
+ended: 11:37:05
+total:0h:0m:2s
+
+started: 11:37:05
+fastaselect.pl mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.fa mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors_for_randfold.ids > mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors_for_randfold.fa
+
+
+ended: 11:37:06
+total:0h:0m:1s
+
+started: 11:37:06
+randfold -s mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors_for_randfold.fa 99 > mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors_for_randfold.rand
+
+
+ended: 11:56:04
+total:0h:18m:58s
+
+#running miRDeep core algorithm
+started: 11:56:04
+miRDeep2_core_algorithm.pl mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/signature.arf mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.str -s mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/mature_no_bta.fa -v -50 -l 16 -y mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors_for_randfold.rand > mirdeep_runs/run_01_03_2018_t_11_30_34/output.mrd
+
+ended: 11:56:06
+total:0h:0m:2s
+
+#running permuted controls
+started: 11:56:06
+echo 'miRDeep2_core_algorithm.pl mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/signature.arf mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.str -s mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/mature_no_bta.fa -v -50 -y mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors_for_randfold.rand > mirdeep_runs/run_01_03_2018_t_11_30_34/output.mrd' > mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/command_line
+
+perform_controls.pl mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/command_line mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.str 100 -a > mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/output_permuted.mrd 2>>error_01_03_2018_t_11_30_34.log
+
+
+ended: 12:1:17
+total:0h:5m:11s
+
+#doing survey of accuracy
+survey.pl mirdeep_runs/run_01_03_2018_t_11_30_34/output.mrd -a mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/output_permuted.mrd -b mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/mature_bta.fa -c mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/signature.arf -d 1 > mirdeep_runs/run_01_03_2018_t_11_30_34/survey.csv
+
+started: 12:1:17
+
+ended: 12:1:19
+total:0h:0m:2s
+
+#producing graphic results
+started: 12:1:19
+make_html.pl -f mirdeep_runs/run_01_03_2018_t_11_30_34/output.mrd -k mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/mature_bta.fa -p mirdeep_runs/run_01_03_2018_t_11_30_34/tmp/precursors.coords -s mirdeep_runs/run_01_03_2018_t_11_30_34/survey.csv -c -e -q expression_analyses/expression_analyses_01_03_2018_t_11_30_34/miRBase.mrd -x expression_analyses/expression_analyses_01_03_2018_t_11_30_34/miRNA_expressed.csv -r /home/smarthey/bin/Rfam_for_miRDeep.fa -v 0 -y 01_03_2018_t_11_30_34 -o  -t Cow -V 2.0.0.7 
+
+parsing input file finished
+checking Rfam for hits to precursors
+Build bowtie index of Rfam entries
+
+Mapping mature,star and loop sequences against index
+# reads processed: 2415
+# reads with at least one reported alignment: 27 (1.12%)
+# reads that failed to align: 2388 (98.88%)
+Reported 91 alignments to 1 output stream(s)
+parsing miRBase.mrd file finished
+creating PDF files
+creating pdf for chr15_1497 finished
+creating pdf for chr8_5958 finished
+creating pdf for chr5_5138 finished
+creating pdf for chr8_6081 finished
+creating pdf for chr3_4795 finished
+creating pdf for chr7_5534 finished
+creating pdf for chr14_1149 finished
+creating pdf for chr25_4089 finished
+creating pdf for chr7_5765 finished
+creating pdf for chr21_3176 finished
+creating pdf for chr3_4610 finished
+creating pdf for chr5_5174 finished
+creating pdf for chr8_5962 finished
+creating pdf for chr1_156 finished
+creating pdf for chr7_5678 finished
+creating pdf for chr22_3446 finished
+creating pdf for chr5_5189 finished
+creating pdf for chr9_6209 finished
+creating pdf for chr22_3458 finished
+creating pdf for chr25_4092 finished
+creating pdf for chr8_5960 finished
+creating pdf for chr22_3474 finished
+creating pdf for chr8_5951 finished
+creating pdf for chr25_4165 finished
+creating pdf for chr1_105 finished
+creating pdf for chr21_3391 finished
+creating pdf for chr3_4661 finished
+creating pdf for chr16_1894 finished
+creating pdf for chr5_5002 finished
+creating pdf for chrX_6557 finished
+creating pdf for chr21_3174 finished
+creating pdf for chr1_99 finished
+creating pdf for chr15_1581 finished
+creating pdf for chr24_3900 finished
+creating pdf for chr3_4656 finished
+creating pdf for chr19_2544 finished
+creating pdf for chr15_1577 finished
+creating pdf for chr7_5711 finished
+creating pdf for chr19_2668 finished
+creating pdf for chrX_6506 finished
+creating pdf for chr8_6121 finished
+creating pdf for chr1_101 finished
+creating pdf for chr12_900 finished
+creating pdf for chr28_4425 finished
+creating pdf for chr7_5664 finished
+creating pdf for chr13_1088 finished
+creating pdf for chr29_4532 finished
+creating pdf for chr14_1152 finished
+creating pdf for chr20_2974 finished
+creating pdf for chr14_1154 finished
+creating pdf for chr4_4851 finished
+creating pdf for chr2_2920 finished
+creating pdf for chr15_1579 finished
+creating pdf for chr2_2901 finished
+creating pdf for chr1_153 finished
+creating pdf for chr12_921 finished
+creating pdf for chr26_4196 finished
+creating pdf for chr15_1500 finished
+creating pdf for chr19_2580 finished
+creating pdf for chr8_6080 finished
+creating pdf for chr1_133 finished
+creating pdf for chr1_103 finished
+creating pdf for chr15_1591 finished
+creating pdf for chr12_896 finished
+creating pdf for chrX_6448 finished
+creating pdf for chr23_3703 finished
+creating pdf for chr18_2331 finished
+creating pdf for chr18_2400 finished
+creating pdf for chr1_158 finished
+creating pdf for chr21_3239 finished
+creating pdf for chrX_6576 finished
+creating pdf for chr4_4936 finished
+creating pdf for chr21_3237 finished
+creating pdf for chr19_2581 finished
+creating pdf for chr3_4612 finished
+creating pdf for chr21_3195 finished
+creating pdf for chr19_2560 finished
+creating pdf for chr2_2936 finished
+creating pdf for chr14_1327 finished
+creating pdf for chr25_4093 finished
+creating pdf for chr22_3443 finished
+creating pdf for chrX_6417 finished
+creating pdf for chrX_6409 finished
+creating pdf for chrX_6413 finished
+creating pdf for chr4_4929 finished
+creating pdf for chrX_6415 finished
+creating pdf for chr22_3476 finished
+creating pdf for chrX_6411 finished
+creating pdf for chr6_5532 finished
+creating pdf for chr5_5244 finished
+creating pdf for chr7_5682 finished
+creating pdf for chr20_2992 finished
+creating pdf for chr12_901 finished
+creating pdf for chr4_4876 finished
+creating pdf for chrX_6502 finished
+creating pdf for chr19_2682 finished
+creating pdf for chr7_5635 finished
+creating pdf for chr29_4530 finished
+creating pdf for chr3_4609 finished
+creating pdf for chr4_4931 finished
+creating pdf for chr12_894 finished
+creating pdf for chr20_2973 finished
+creating pdf for chr11_717 finished
+creating pdf for chr15_1586 finished
+creating pdf for chr22_3456 finished
+creating pdf for chrX_6479 finished
+creating pdf for chr3_4746 finished
+creating pdf for chrX_6475 finished
+creating pdf for chr5_5363 finished
+creating pdf for chr3_4742 finished
+creating pdf for chr24_3867 finished
+creating pdf for chrX_6439 finished
+creating pdf for chr1_93 finished
+creating pdf for chr10_273 finished
+creating pdf for chr10_397 finished
+creating pdf for chr16_1867 finished
+creating pdf for chr25_4070 finished
+creating pdf for chr9_6235 finished
+creating pdf for chr18_2378 finished
+creating pdf for chr13_1092 finished
+creating pdf for chr11_669 finished
+creating pdf for chr2_2863 finished
+creating pdf for chr12_897 finished
+creating pdf for chr21_3362 finished
+creating pdf for chr13_1008 finished
+creating pdf for chr6_5398 finished
+creating pdf for chr19_2657 finished
+creating pdf for chr17_2214 finished
+creating pdf for chr18_2374 finished
+creating pdf for chr18_2505 finished
+creating pdf for chrX_6561 finished
+creating pdf for chr18_2379 finished
+creating pdf for chr21_3026 finished
+creating pdf for chr5_5175 finished
+creating pdf for chr17_2246 finished
+creating pdf for chr21_3242 finished
+creating pdf for chr11_644 finished
+creating pdf for chr21_3412 finished
+creating pdf for chr8_6111 finished
+creating pdf for chr15_1607 finished
+creating pdf for chr19_2625 finished
+creating pdf for chr10_473 finished
+creating pdf for chr14_1462 finished
+creating pdf for chr8_6131 finished
+creating pdf for chr16_1848 finished
+creating pdf for chrX_6444 finished
+creating pdf for chrX_6507 finished
+creating pdf for chr20_2998 finished
+creating pdf for chr11_673 finished
+creating pdf for chr13_1090 finished
+creating pdf for chr21_3246 finished
+creating pdf for chr12_903 finished
+creating pdf for chr7_5550 finished
+creating pdf for chr8_5950 finished
+creating pdf for chr7_5766 finished
+creating pdf for chr21_3235 finished
+creating pdf for chr5_5012 finished
+creating pdf for chr21_3243 finished
+creating pdf for chrX_6500 finished
+creating pdf for chrX_6503 finished
+creating pdf for chr16_1820 finished
+creating pdf for chr1_152 finished
+creating pdf for chr24_3899 finished
+creating pdf for chrX_6442 finished
+creating pdf for chr21_3234 finished
+creating pdf for chr16_1913 finished
+creating pdf for chr18_2399 finished
+creating pdf for chr21_3231 finished
+creating pdf for chr7_5647 finished
+creating pdf for chr1_100 finished
+creating pdf for chr19_2563 finished
+creating pdf for chr1_176 finished
+creating pdf for chr5_5013 finished
+creating pdf for chr10_394 finished
+creating pdf for chr19_2671 finished
+creating pdf for chr26_4207 finished
+creating pdf for chr21_3196 finished
+creating pdf for chrX_6433 finished
+creating pdf for chr21_3212 finished
+creating pdf for chr10_347 finished
+creating pdf for chr13_983 finished
+creating pdf for chr2_2916 finished
+creating pdf for chrX_6391 finished
+creating pdf for chr5_4974 finished
+creating pdf for chrX_6493 finished
+creating pdf for chr23_3814 finished
+creating pdf for chr17_2034 finished
+creating pdf for chr19_2578 finished
+creating pdf for chrX_6418 finished
+creating pdf for chr10_463 finished
+creating pdf for chr8_5959 finished
+creating pdf for chr19_2577 finished
+creating pdf for chr16_1819 finished
+creating pdf for chr16_1821 finished
+creating pdf for chr17_2059 finished
+creating pdf for chr22_3434 finished
+creating pdf for chr5_5014 finished
+creating pdf for chrX_6499 finished
+creating pdf for chrX_6441 finished
+creating pdf for chr3_4745 finished
+creating PDF files
+
+ended: 12:4:34
+total:0h:3m:15s
+
+Can't exec "get_mirdeep2_precursors.pl": Aucun fichier ou dossier de ce type at /home/smarthey/bin/miRDeep2.pl line 1044.
+Can't exec "get_mirdeep2_precursors.pl": Aucun fichier ou dossier de ce type at /home/smarthey/bin/miRDeep2.pl line 1045.
+Can't exec "get_mirdeep2_precursors.pl": Aucun fichier ou dossier de ce type at /home/smarthey/bin/miRDeep2.pl line 1046.
+fasta and bed files have been created in subfolder mirna_results_01_03_2018_t_11_30_34
+
+
+miRDeep runtime: 
+
+started: 11:30:34
+ended: 12:4:34
+total:0h:34m:0s
+
