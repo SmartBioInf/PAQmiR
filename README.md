@@ -20,5 +20,5 @@ PLoS One. 2014 Mar 21;9(3):e91938. doi: 10.1371/journal.pone.0091938.
 
 Directory contents : 
 - [Galaxy directory](https://github.com/SmartBioInf/PAQmiR/tree/master/Galaxy) contains all the wrappers to use the PAQmiR approach with Galaxy.
-- [miRNA_pipeline_template](https://github.com/SmartBioInf/PAQmiR/tree/master/miRNA_pipeline_template) is an example of a project using the PAQmiR approach. It will help you understand what is used and produced at each step of the processing.
-The [miRNA_pipeline_template/sh](https://github.com/SmartBioInf/PAQmiR/tree/master/miRNA_pipeline_template/sh) directory contains all the scripts required to run the PAQmiR approach on a calculation server.  You will need to change the relative paths into absolute paths in the scripts (.qsub) to be executed on the cluster (sge).
+- [pipeline_template](https://github.com/SmartBioInf/PAQmiR/tree/master/pipeline_template) is an example of a project using the PAQmiR approach. It will help you understand what is used and produced at each step of the processing.
+The [pipeline_template/sh](https://github.com/SmartBioInf/PAQmiR/tree/master/pipeline_template/sh) directory contains all the scripts required to run the PAQmiR approach on a calculation server.  You will need to change the relative paths into absolute paths in the scripts (.qsub) to be executed on the cluster (sge).
