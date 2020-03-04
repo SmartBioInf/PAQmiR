@@ -29,7 +29,14 @@ It will help you understand what is used and produced at each step of the proces
 The [/pipeline_XX_template/sh-[sge|slurm]] directory contains all the scripts required to run the PAQmiR approach on a calculation server. 
 You will need to change the relative paths into absolute paths in the scripts to be executed on the cluster (sge/slurm). 
 
-**[/pipeline_1_template](pipeline_1_template)** is the first and simplest version of the pipeline. It was the version used in publications [1-4].
+**[/pipeline_1_template](pipeline_1_template)** is the first and simplest version of the pipeline. It was the version used in publications [1-4].  
+the main steps of the pipeline are :
+   * reads collapsing and mapping against reference genome using mapper.pl (from miRDeep2 suite)  
+   * precursor/miRNA prediction using mirdeep2.pl  
+   * creation of new precursor/miRNA dataset by merging know and predicted precursors/miRNA  
+   * quantification and annotation of the Know/novel miRNAs using quantifier.pl (from miRDeep suite)
+   * post processing to remove redundancy between miRNAs  
+More informations/descriptions of the pipeline can be found in the [/pipeline_1_template/documentation](pipeline_1_template/documentation) folder.
 
 **[/pipeline_2_template](pipeline_2_template)** is the second version of the pipeline. It is the version actually used in the majority of current projects.
 the major additions to the pipeline_1 are :  
@@ -37,5 +44,5 @@ the major additions to the pipeline_1 are :
    * Generic sncRNA analysis: exploitation of all unique sequences (miRNA or not):  
       * creation of a general counting matrix of all the unique sequences  
       * annotation of sequences against reference databases  
-      * cross-checking with the results of the miRNA analysis  
-
+      * merge with the results of the miRNA analysis  
+More informations/descriptions of the pipeline can be found in the [/pipeline_2_template/documentation](pipeline_2_template/documentation) folder
