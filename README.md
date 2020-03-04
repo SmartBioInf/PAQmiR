@@ -18,7 +18,7 @@ BMC Genomics. 2015 Apr 11;16:285. doi: 10.1186/s12864-015-1471-y.
 Le Guillou S, **Marthey S**, Laloë D, Laubier J, Mobuchon L, Leroux C, Le Provost F.
 PLoS One. 2014 Mar 21;9(3):e91938. doi: 10.1371/journal.pone.0091938.
 
-Directory contents :  
+### Directory contents :  
 
 **[/bin](bin)** contains all custom scripts used in the pipeline.  
 
@@ -36,7 +36,10 @@ the main steps of the pipeline are :
    * creation of new precursor/miRNA dataset by merging know and predicted precursors/miRNA  
    * quantification and annotation of the Know/novel miRNAs using quantifier.pl (from miRDeep suite)
    * post processing to remove redundancy between miRNAs  
-More informations/descriptions of the pipeline can be found in the [/pipeline_1_template/documentation](pipeline_1_template/documentation) folder.
+More informations/descriptions of the pipeline can be found in the [/pipeline_1_template/documentation](pipeline_1_template/documentation) folder.  
+
+*Comment : the shell scripts provided are set up for a cluster using a **sge** scheduler*  
+
 
 **[/pipeline_2_template](pipeline_2_template)** is the second version of the pipeline. It is the version actually used in the majority of current projects.
 the major additions to the pipeline_1 are :  
@@ -46,3 +49,5 @@ the major additions to the pipeline_1 are :
       * annotation of sequences against reference databases  
       * merge with the results of the miRNA analysis  
 More informations/descriptions of the pipeline can be found in the [/pipeline_2_template/documentation](pipeline_2_template/documentation) folder
+
+*Comment : the shell scripts provided are set up for a cluster using a **slurm** scheduler*
