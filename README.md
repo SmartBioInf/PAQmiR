@@ -18,15 +18,24 @@ BMC Genomics. 2015 Apr 11;16:285. doi: 10.1186/s12864-015-1471-y.
 Le Guillou S, **Marthey S**, Laloë D, Laubier J, Mobuchon L, Leroux C, Le Provost F.
 PLoS One. 2014 Mar 21;9(3):e91938. doi: 10.1371/journal.pone.0091938.
 
-Directory contents : 
-- [bin](bin) contains all custom scripts used in the pipeline.
-- [Galaxy directory](Galaxy) contains all the wrappers to use the PAQmiR approach with Galaxy. Custom scripts used in the wrapper are symbolink links to the [bin](bin) folder.
-- [pipeline_XX_template] is examples of a projects using the PAQmiR approach. 
-It will help you understand what is used and produced at each step of the processing.
-The [pipeline_XX_template/sh-[sge|slurm]] directory contains all the scripts required to run the PAQmiR approach on a calculation server. 
-You will need to change the relative paths into absolute paths in the scripts to be executed on the cluster (sge/slurm).
-- [pipeline_1_template](pipeline_1_template) is the first and simplest version of the pipeline. It was the version used in publications [1-4].
-- [pipeline_1_template](pipeline_1_template) is the first and simplest version of the pipeline. It is the version actually used in the majority of current projects.
+Directory contents :  
 
+**[/bin](bin)** contains all custom scripts used in the pipeline.  
 
+**[/Galaxy directory](Galaxy)** contains all the wrappers to use the PAQmiR approach with Galaxy. Custom scripts used in the wrapper are symbolink links to the [bin](bin) folder.  
+
+**[/pipeline_XX_template]** is examples of a projects using the PAQmiR approach. 
+It will help you understand what is used and produced at each step of the processing. 
+The [/pipeline_XX_template/sh-[sge|slurm]] directory contains all the scripts required to run the PAQmiR approach on a calculation server. 
+You will need to change the relative paths into absolute paths in the scripts to be executed on the cluster (sge/slurm). 
+
+**[/pipeline_1_template](pipeline_1_template)** is the first and simplest version of the pipeline. It was the version used in publications [1-4].
+
+**[/pipeline_2_template](pipeline_2_template)** is the second version of the pipeline. It is the version actually used in the majority of current projects.
+the major additions to the pipeline_1 are :  
+   * IsomiR analysis: creation of a count table of all the miRNA IsomiRs quantified by the miRDeep2 quantifier module. 
+   * Generic sncRNA analysis: exploitation of all unique sequences (miRNA or not):  
+      * creation of a general counting matrix of all the unique sequences  
+      * annotation of sequences against reference databases  
+      * cross-checking with the results of the miRNA analysis  
 
