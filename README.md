@@ -26,3 +26,7 @@ It will help you understand what is used and produced at each step of the proces
 The [pipeline_XX_template/sh-[sge|slurm]] directory contains all the scripts required to run the PAQmiR approach on a calculation server. 
 You will need to change the relative paths into absolute paths in the scripts to be executed on the cluster (sge/slurm).
 - [pipeline_1_template](pipeline_1_template) is the first and simplest version of the pipeline. It was the version used in publications [1-4].
+- [pipeline_1_template](pipeline_1_template) is the first and simplest version of the pipeline. It is the version actually used in the majority of current projects.
+
+
+
