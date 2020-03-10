@@ -1,79 +1,79 @@
-current dir:	/work/smarthey/miRNA_pipeline_template/mapper
-mapper command:	/home/smarthey/bin/mapper.pl config_mapper.txt -h -e -i -j -d -m -l 18 -v -n -p /home/smarthey/work/miRNA_pipeline_template/index/bosTau8 -s processed_reads.fa -t reads_vs_genome_bta8.arf
+current dir:	/projet/gabi/work/smarthey/formation_miRNA/PAQmiR/pipeline_1_template/mapper
+mapper command:	/projet/gabi/save/smarthey/bin/mapper.pl config_mapper.txt -h -e -i -j -d -m -l 18 -v -n -p ../index/bosTau9 -s processed_reads.fa -t reads_vs_genome_bta9.arf
 
 handling file 'fichier1.clean.fastq' with prefix 'F01'
 
-timestamp:	01_03_2018_t_11_17_34
+timestamp:	09_03_2020_t_22_31_40
 
 parsing fastq to fasta format
-fastq2fasta.pl fichier1.clean.fastq > dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads.fa
+fastq2fasta.pl fichier1.clean.fastq > dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads.fa
 converting rna to dna alphabet
-rna2dna.pl dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads.fa > dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads_dna.fa
+rna2dna.pl dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads.fa > dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads_dna.fa
 discarding sequences with non-canonical letters
-fastaparse.pl dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads_dna.fa -b > dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads_letters.fa 2>dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads_discarded.fa
+fastaparse.pl dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads_dna.fa -b > dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads_letters.fa 2>dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads_discarded.fa
 discarding short reads
-fastaparse.pl dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads_letters.fa -a 18 > dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads_no_short.fa 2>dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads_too_short
+fastaparse.pl dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads_letters.fa -a 18 > dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads_no_short.fa 2>dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads_too_short
 collapsing reads
-collapse_reads_md.pl dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads_no_short.fa F01 > dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads_nr.fa
+collapse_reads_md.pl dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads_no_short.fa F01 > dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads_nr.fa
 mapping reads to genome index
-bowtie -p 1 -f -n 0 -e 80 -l 18 -a -m 5 --best --strata /home/smarthey/work/miRNA_pipeline_template/index/bosTau8  --al dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/fichier1.clean.fastq_mapped --un dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/fichier1.clean.fastq_not_mapped  dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/reads_nr.fa dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/mappings.bwt 2>bowtie.log
+bowtie -p 1 -f -n 0 -e 80 -l 18 -a -m 5 --best --strata ../index/bosTau9  --al dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/fichier1.clean.fastq_mapped --un dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/fichier1.clean.fastq_not_mapped  dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/reads_nr.fa dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/mappings.bwt 2>bowtie.log
 
-convert_bowtie_output.pl dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/mappings.bwt > dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/mappings.arf
+convert_bowtie_output.pl dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/mappings.bwt > dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/mappings.arf
 trimming unmapped nts in the 3' ends
-parse_mappings.pl dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/mappings.arf -j > dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34/mappings_trim.arf
+parse_mappings.pl dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/mappings.arf -j > dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40/mappings_trim.arf
 
 remove tmp dir
-rmtree(dir_mapper_F01_fichier1.clean.fastq_2299916155_01_03_2018_t_11_17_34)
+rmtree(dir_mapper_F01_fichier1.clean.fastq_3088219934_09_03_2020_t_22_31_40)
 
 
 handling file 'fichier2.clean.fastq' with prefix 'F02'
 
-timestamp:	01_03_2018_t_11_17_42
+timestamp:	09_03_2020_t_22_31_51
 
 parsing fastq to fasta format
-fastq2fasta.pl fichier2.clean.fastq > dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads.fa
+fastq2fasta.pl fichier2.clean.fastq > dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads.fa
 converting rna to dna alphabet
-rna2dna.pl dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads.fa > dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads_dna.fa
+rna2dna.pl dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads.fa > dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads_dna.fa
 discarding sequences with non-canonical letters
-fastaparse.pl dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads_dna.fa -b > dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads_letters.fa 2>dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads_discarded.fa
+fastaparse.pl dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads_dna.fa -b > dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads_letters.fa 2>dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads_discarded.fa
 discarding short reads
-fastaparse.pl dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads_letters.fa -a 18 > dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads_no_short.fa 2>dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads_too_short
+fastaparse.pl dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads_letters.fa -a 18 > dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads_no_short.fa 2>dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads_too_short
 collapsing reads
-collapse_reads_md.pl dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads_no_short.fa F02 > dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads_nr.fa
+collapse_reads_md.pl dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads_no_short.fa F02 > dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads_nr.fa
 mapping reads to genome index
-bowtie -p 1 -f -n 0 -e 80 -l 18 -a -m 5 --best --strata /home/smarthey/work/miRNA_pipeline_template/index/bosTau8  --al dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/fichier2.clean.fastq_mapped --un dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/fichier2.clean.fastq_not_mapped  dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/reads_nr.fa dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/mappings.bwt 2>bowtie.log
+bowtie -p 1 -f -n 0 -e 80 -l 18 -a -m 5 --best --strata ../index/bosTau9  --al dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/fichier2.clean.fastq_mapped --un dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/fichier2.clean.fastq_not_mapped  dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/reads_nr.fa dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/mappings.bwt 2>bowtie.log
 
-convert_bowtie_output.pl dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/mappings.bwt > dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/mappings.arf
+convert_bowtie_output.pl dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/mappings.bwt > dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/mappings.arf
 trimming unmapped nts in the 3' ends
-parse_mappings.pl dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/mappings.arf -j > dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42/mappings_trim.arf
+parse_mappings.pl dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/mappings.arf -j > dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51/mappings_trim.arf
 
 remove tmp dir
-rmtree(dir_mapper_F02_fichier2.clean.fastq_8360465831_01_03_2018_t_11_17_42)
+rmtree(dir_mapper_F02_fichier2.clean.fastq_2559471333_09_03_2020_t_22_31_51)
 
 
 handling file 'fichier3.clean.fastq' with prefix 'F03'
 
-timestamp:	01_03_2018_t_11_17_51
+timestamp:	09_03_2020_t_22_31_54
 
 parsing fastq to fasta format
-fastq2fasta.pl fichier3.clean.fastq > dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads.fa
+fastq2fasta.pl fichier3.clean.fastq > dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads.fa
 converting rna to dna alphabet
-rna2dna.pl dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads.fa > dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads_dna.fa
+rna2dna.pl dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads.fa > dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads_dna.fa
 discarding sequences with non-canonical letters
-fastaparse.pl dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads_dna.fa -b > dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads_letters.fa 2>dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads_discarded.fa
+fastaparse.pl dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads_dna.fa -b > dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads_letters.fa 2>dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads_discarded.fa
 discarding short reads
-fastaparse.pl dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads_letters.fa -a 18 > dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads_no_short.fa 2>dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads_too_short
+fastaparse.pl dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads_letters.fa -a 18 > dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads_no_short.fa 2>dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads_too_short
 collapsing reads
-collapse_reads_md.pl dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads_no_short.fa F03 > dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads_nr.fa
+collapse_reads_md.pl dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads_no_short.fa F03 > dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads_nr.fa
 mapping reads to genome index
-bowtie -p 1 -f -n 0 -e 80 -l 18 -a -m 5 --best --strata /home/smarthey/work/miRNA_pipeline_template/index/bosTau8  --al dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/fichier3.clean.fastq_mapped --un dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/fichier3.clean.fastq_not_mapped  dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/reads_nr.fa dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/mappings.bwt 2>bowtie.log
+bowtie -p 1 -f -n 0 -e 80 -l 18 -a -m 5 --best --strata ../index/bosTau9  --al dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/fichier3.clean.fastq_mapped --un dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/fichier3.clean.fastq_not_mapped  dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/reads_nr.fa dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/mappings.bwt 2>bowtie.log
 
-convert_bowtie_output.pl dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/mappings.bwt > dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/mappings.arf
+convert_bowtie_output.pl dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/mappings.bwt > dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/mappings.arf
 trimming unmapped nts in the 3' ends
-parse_mappings.pl dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/mappings.arf -j > dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51/mappings_trim.arf
+parse_mappings.pl dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/mappings.arf -j > dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54/mappings_trim.arf
 
 remove tmp dir
-rmtree(dir_mapper_F03_fichier3.clean.fastq_2463148879_01_03_2018_t_11_17_51)
+rmtree(dir_mapper_F03_fichier3.clean.fastq_1051508903_09_03_2020_t_22_31_54)
 
 ############################################################
 

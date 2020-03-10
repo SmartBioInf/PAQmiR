@@ -1,0 +1,27 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -o ../mapper/mapper.qsub.out
+#$ -e ../mapper/mapper.qsub.err
+#$ -M sylvain.marthey@inrae.fr
+#$ -m ea
+#$ -cwd
+#$ -q long.q
+
+# move to mapper directory 
+cd ../mapper/
+
+# lunch mapper
+
+mapper.pl config_mapper.txt -h -e -i -j -d -m -l 18 -v -n \
+-p ../index/bosTau9 \
+-s processed_reads.fa \
+-t reads_vs_genome_bta9.arf \
+2> ../mapper/logs-mapper.txt
+
+# -p bowtie index of reference genome
+# -e input file is fastq format
+# -i convert rna to dna alphabet (to map against genome)
+# -j remove all entries that have a sequence that contains letters other than a,c,g,t,u,n,A,C,G,T,U,N
+# -l int          discard reads shorter than int nts, default = 18
+# -d input file is a config file (see miRDeep2 documentation).
+# -h              parse to fasta format
