@@ -1,0 +1,4 @@
+source_fastq.gz	miRDeep2_id
+fichier1.clean.fastq.gz	F01
+fichier2.clean.fastq.gz	F02
+fichier3.clean.fastq.gz	F03

@@ -1,0 +1,25 @@
+# Project path
+project_path="/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template"
+
+# Reference genome (indexed for bowtie)
+# see step0_preprocess_3_download_and_index_bosTau8.sh if needed
+genome_bwt="${project_path}/index/bosTau8"
+
+# sample description file
+sample_desc="$project_path/sh-slurm/samples.txt"
+
+# processed_reads_path = file containing all collapsed reads in Mirdeep2 format (ex: A01_1_x472343)
+processed_reads_path="$project_path/FASTA_Collapsed/all_reads_244.trim.siz17.collapsed.fasta"
+
+# sources folder = folder containing original fastq files compressed in gzip format
+sources="$project_path/sources"
+
+# fasta collapsed folder = folder containing collapsed fasta files corresponding to original fastq.gz source files
+collapsed="$project_path/collapsed_reads"
+# discard sequences shorter than min_length nucleotides
+min_length=17
+
+########
+# You probably don't need to change them
+# PAQmiR scripts
+PAQmiR_bin="${project_path}/bin"
