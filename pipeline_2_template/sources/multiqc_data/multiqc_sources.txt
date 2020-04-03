@@ -1,0 +1,4 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	fichier3	/work/smarthey/PAQmiR_Github/PAQmiR/pipeline_1_template/sources/fichier3.clean_fastqc.zip
+FastQC	all_sections	fichier1	/work/smarthey/PAQmiR_Github/PAQmiR/pipeline_1_template/sources/fichier1.clean_fastqc.zip
+FastQC	all_sections	fichier2	/work/smarthey/PAQmiR_Github/PAQmiR/pipeline_1_template/sources/fichier2.clean_fastqc.zip

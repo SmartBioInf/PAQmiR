@@ -1,0 +1,18 @@
+Start: 02_04_2020_t_18_22_36
+Script	/usr/local/bioinfo/src/miRDeep2/mirdeep2_0_0_8/bin/miRDeep2.pl
+args /usr/local/bioinfo/src/miRDeep2/mirdeep2_0_0_8/bin/miRDeep2.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/collapsed_reads/processed_reads.fasta /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/index/bosTau8.fa /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/bowtie/all_samples.arf /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_bta.fa /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_no_bta.fa /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/hairpin_bta.fa -t human -P
+
+dir_with_tmp_files	dir_miRDeep2_02_04_2020_t_18_22_36
+dir	/work/smarthey/PAQmiR_Github/PAQmiR/pipeline_1_template/mirdeep2
+file_reads	/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/collapsed_reads/processed_reads.fasta
+file_genome	/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/index/bosTau8.fa
+file_reads_vs_genome	/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/bowtie/all_samples.arf
+file_mature_ref_this_species	/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_bta.fa
+file_mature_ref_other_species	/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_no_bta.fa
+option{t} =	human
+miRDeep runtime: 
+
+started: 18:22:36
+ended: 18:44:23
+total:0h:21m:47s
+

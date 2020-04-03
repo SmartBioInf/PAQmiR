@@ -1,0 +1,78 @@
+# Project path
+project_path="/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template"
+
+# sample description file
+sample_desc="$project_path/sh-slurm/samples.txt"
+
+# number of sample described in 
+nb_samples=3
+
+# sources folder = folder containing original fastq files compressed in gzip format
+sources="$project_path/sources"
+
+# of the reference genome path of the reference genome
+genome="${project_path}/index/bosTau8.fa"
+
+# bowtie index name of the reference genome : (can be genereted with step0_preprocess_3_download_and_index_bosTau8.sh)
+genome_bwt="${project_path}/index/bosTau8"
+
+# mirbase folder : (can be genereted with step0_preprocess_2_download_miRBase22_ref.sh)
+mirbase_folder="$project_path/mirbase22"
+# mirbase species code 
+species_code="bta";
+
+# Minimal sequence length = discard sequences shorter than min_length nucleotides
+# value <17 is not compatible with miRDeep2
+min_length=17
+
+###### Mirdeep2 requiered files and options ##
+# miRNAs_ref = miRBase miRNA sequences in fasta format. These should be the known mature 
+# sequences for the species being analyzed. (can be genereted with step0_preprocess_2_download_miRBase22_ref.sh)
+miRNAs_ref="$mirbase_folder/mature_${species_code}.fa"
+
+# miRNAs_other = miRBase miRNA sequences in fasta format. These should be the pooled known
+# mature sequences for 1-5 species closely related to the species being analyzed. 
+# (can be genereted with step0_preprocess_2_download_miRBase22_ref.sh)
+miRNAs_other="$mirbase_folder/mature_no_${species_code}.fa"
+
+# precursors_ref = miRBase miRNA precursor sequences in fasta format. These should be the known precursor
+# sequences for the species being analyzed. (can be genereted with step0_preprocess_2_download_miRBase22_ref.sh)
+precursors_ref="$mirbase_folder/hairpin_${species_code}.fa"
+
+# minimum read stack height (-a) = minimum read stack height that triggers analysis. Using this option disables
+# automatic estimation of the optimal value and all detected precursors are analyzed. Using this option is recommended 
+# this option is recommended when analyzing massive data (large number of libraries and/or large sequencing depth).
+# If You want to use it, add the option "-a $min_stack" it in the script step4-1_run_miRDeep2.sh and adapt the value below.
+min_stack=20;
+
+########
+# The following variables specify the working directories used in the workflow. 
+# You probably do not need to change them  
+# bowtie results folder = folder containing results of bowtie
+bowtie_results="$project_path/bowtie"
+
+# fasta collapsed folder = folder containing collapsed fasta files corresponding to original fastq.gz source files
+collapsed_reads_location="$project_path/collapsed_reads"
+
+# miRDeep2 results folder = folder containing mirdeep2 results
+mirdeep2_results="$project_path/mirdeep2"
+
+# quantifier results folder = folder containing quantifier.pl results
+quantifier_results="$project_path/quantifier"
+
+# final results folder = folder containing final files
+final_results="$project_path/quantification_annotation"
+
+# PAQmiR scripts
+PAQmiR_bin="${project_path}/bin"
+
+########
+# the following variables specify intermediate file names 
+# You probably don't need to change them
+# processed reads file path = file containing all collapsed reads in Mirdeep2 format (ex: A01_1_x472343)
+# this file is a merge of all collapsed file 
+processed_reads_path="$collapsed_reads_location/processed_reads.fasta"
+
+# merged arf file path = file containing all alignments against genome in Mirdeep2 Arf format
+# this file is a merge of all aligned samples
+merged_arf_path="$bowtie_results/all_samples.arf"

@@ -1,0 +1,1 @@
+miRDeep2_core_algorithm.pl mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/signature.arf mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.str -s mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/mature_no_bta.fa -v -50 -y mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors_for_randfold.rand > mirdeep_runs/run_02_04_2020_t_18_22_36/output.mrd

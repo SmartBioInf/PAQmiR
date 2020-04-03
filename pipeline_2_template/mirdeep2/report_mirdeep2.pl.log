@@ -1,0 +1,189 @@
+#Starting miRDeep2
+/usr/local/bioinfo/src/miRDeep2/mirdeep2_0_0_8/bin/miRDeep2.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/collapsed_reads/processed_reads.fasta /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/index/bosTau8.fa /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/bowtie/all_samples.arf /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_bta.fa /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_no_bta.fa /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/hairpin_bta.fa -t human -P
+
+miRDeep2 started at 18:22:36
+
+
+mkdir mirdeep_runs/run_02_04_2020_t_18_22_36
+
+#testing input files
+started: 18:22:39
+sanity_check_mature_ref.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_bta.fa
+
+
+ended: 18:22:39
+total:0h:0m:0s
+
+started: 18:22:39
+sanity_check_mature_ref.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_no_bta.fa
+
+
+ended: 18:22:39
+total:0h:0m:0s
+
+sanity_check_reads_ready_file.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/collapsed_reads/processed_reads.fasta
+
+started: 18:22:39
+
+ended: 18:22:39
+total:0h:0m:0s
+
+started: 18:22:39
+sanity_check_genome.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/index/bosTau8.fa
+
+
+ended: 18:23:17
+total:0h:0m:38s
+
+started: 18:23:17
+sanity_check_mapping_file.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/bowtie/all_samples.arf
+
+
+ended: 18:23:17
+total:0h:0m:0s
+
+started: 18:23:17
+sanity_check_mature_ref.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/hairpin_bta.fa
+
+
+ended: 18:23:17
+total:0h:0m:0s
+
+started: 18:23:17
+Quantitation of expressed miRNAs in data
+
+
+quantifier.pl -p /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/hairpin_bta.fa -m /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_bta.fa  -r /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/collapsed_reads/processed_reads.fasta  -t human -y 02_04_2020_t_18_22_36 -k  -P
+getting samples and corresponding read numbers
+
+Converting input files
+
+Error: No entrys for species "human or hsa" found in file /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/hairpin_bta.fa
+Please make sure that the given species argument matches the species id in your file /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/hairpin_bta.fa or say none
+
+
+
+ended: 18:23:18
+total:0h:0m:1s
+
+started: 18:23:18
+rna2dna.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_bta.fa > mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/mature_bta.fa
+
+rna2dna.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/mature_no_bta.fa > mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/mature_no_bta.fa
+
+
+ended: 18:23:18
+total:0h:0m:0s
+
+rna2dna.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/mirbase22/hairpin_bta.fa > mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/hairpin_bta.fa
+
+
+ended: 18:23:18
+total:0h:0m:0s
+
+#parsing genome mappings
+parse_mappings.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/bowtie/all_samples.arf -a 0 -b 18 -c 25 -i 5 > mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/all_samples.arf_parsed.arf
+
+started: 18:23:18
+
+ended: 18:23:18
+total:0h:0m:0s
+
+#excising precursors
+started: 18:23:18
+excise_precursors_iterative_final.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/index/bosTau8.fa mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/all_samples.arf_parsed.arf mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.fa mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.coords 50000
+1	5290
+
+ended: 18:23:39
+total:0h:0m:21s
+
+#preparing signature
+prepare_signature.pl /home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template/collapsed_reads/processed_reads.fasta mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.fa 1 -a mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/mature_bta.fa -o mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/signature.arf 2>>error_02_04_2020_t_18_22_36.log
+
+started: 18:23:39
+
+ended: 18:23:42
+total:0h:0m:3s
+
+#folding precursors
+started: 18:23:42
+RNAfold < mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.fa -noPS > mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.str
+
+
+ended: 18:24:19
+total:0h:0m:37s
+
+#computing randfold p-values
+select_for_randfold.pl mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/signature.arf mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.str > mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors_for_randfold.ids
+
+started: 18:24:19
+
+ended: 18:24:21
+total:0h:0m:2s
+
+started: 18:24:21
+fastaselect.pl mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.fa mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors_for_randfold.ids > mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors_for_randfold.fa
+
+
+ended: 18:24:21
+total:0h:0m:0s
+
+started: 18:24:21
+randfold -s mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors_for_randfold.fa 99 > mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors_for_randfold.rand
+
+
+ended: 18:40:57
+total:0h:16m:36s
+
+#running miRDeep core algorithm
+started: 18:40:57
+miRDeep2_core_algorithm.pl mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/signature.arf mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.str -s mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/mature_no_bta.fa -v -50 -l 17 -y mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors_for_randfold.rand > mirdeep_runs/run_02_04_2020_t_18_22_36/output.mrd
+
+ended: 18:40:59
+total:0h:0m:2s
+
+#running permuted controls
+started: 18:40:59
+echo 'miRDeep2_core_algorithm.pl mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/signature.arf mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.str -s mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/mature_no_bta.fa -v -50 -y mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors_for_randfold.rand > mirdeep_runs/run_02_04_2020_t_18_22_36/output.mrd' > mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/command_line
+
+perform_controls.pl mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/command_line mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.str 100 -a > mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/output_permuted.mrd 2>>error_02_04_2020_t_18_22_36.log
+
+
+ended: 18:44:21
+total:0h:3m:22s
+
+#doing survey of accuracy
+survey.pl mirdeep_runs/run_02_04_2020_t_18_22_36/output.mrd -a mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/output_permuted.mrd -b mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/mature_bta.fa -c mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/signature.arf -d 1 > mirdeep_runs/run_02_04_2020_t_18_22_36/survey.csv
+
+started: 18:44:21
+
+ended: 18:44:22
+total:0h:0m:1s
+
+#producing graphic results
+started: 18:44:22
+make_html.pl -f mirdeep_runs/run_02_04_2020_t_18_22_36/output.mrd -k mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/mature_bta.fa -p mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/precursors.coords -s mirdeep_runs/run_02_04_2020_t_18_22_36/survey.csv -c -e -q expression_analyses/expression_analyses_02_04_2020_t_18_22_36/miRBase.mrd -x mirdeep_runs/run_02_04_2020_t_18_22_36/tmp/signature.arf -r /usr/local/bioinfo/src/miRDeep2/mirdeep2_0_0_8/bin//../Rfam_for_miRDeep.fa -v 0 -y 02_04_2020_t_18_22_36 -o  -t human -V 2.0.0.8 
+
+parsing input file finished
+checking Rfam for hits to precursors
+Build bowtie index of Rfam entries
+
+Mapping mature,star and loop sequences against index
+# reads processed: 1934
+# reads with at least one reported alignment: 145 (7.50%)
+# reads that failed to align: 1789 (92.50%)
+Reported 145 alignments to 1 output stream(s)
+Error: File expression_analyses/expression_analyses_02_04_2020_t_18_22_36/miRNA_expressed.csv not found
+
+ended: 18:44:23
+total:0h:0m:1s
+
+fasta and bed files have been created in subfolder mirna_results_02_04_2020_t_18_22_36
+
+
+miRDeep runtime: 
+
+started: 18:22:36
+ended: 18:44:23
+total:0h:21m:47s
+
