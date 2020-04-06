@@ -1,5 +1,5 @@
 # Project path
-project_path="/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_1_template"
+project_path=".../put_your_project_path_here"
 
 # sample description file
 sample_desc="$project_path/sh-slurm/samples.txt"
