@@ -1,0 +1,17 @@
+blast-db_path	db_name
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/tRNAs-Btau8	tRNAs-Btau8
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/ncRNA-bta-ena	ncRNA-bta-ena
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/ncRNA-bta-ensembl	ncRNA-bta-ensembl
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/ncRNA-oar-ena	ncRNA-oar-ena
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/ncRNA-hsa-ensembl	ncRNA-hsa-ensembl
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/piRBase-bta	piRBase-bta
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/piRNA-capra	piRNA-capra
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/piRNA-bta-testis	piRNA-bta-testis
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/piRNA-bta-ovocyte	piRNA-bta-ovocyte
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/piRNA-bta-cluster-embryo	piRNA-bta-cluster-embryo
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/piRNA-hsa-ena	piRNA-hsa-ena
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/piRNA-mmu-ena	piRNA-mmu-ena
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/circRNA-db	circRNA-db
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/circRNAs-hsa	circRNAs-hsa
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/circRNAs-mmu	circRNAs-mmu
+/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template/reads_annotation/indexs/cDNA-bta-Ensembl	cDNA-bta-Ensembl
