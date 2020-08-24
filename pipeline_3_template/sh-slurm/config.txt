@@ -1,13 +1,17 @@
 # Project path
 project_path="/home/smarthey/work/PAQmiR_Github/PAQmiR/pipeline_3_template"
 
+# template main shell scripts location 
+# You probably don't need to change it
+shell_scripts="$project_path/sh-slurm"
+
 # sample description file
 # source_fastq.gz\tmiRDeep2_id\toriginal_location\t
-sample_desc="$project_path/sh-slurm/samples.txt"
+sample_desc="$shell_scripts/samples.txt"
 
 # blast annotation databases description file
 # blast-db_path\tdb_name\t
-blast_db_file="$project_path/sh-slurm/reads_matrix/bowtie_annots.txt"
+blast_db_file="$shell_scripts/reads_matrix/bowtie_annots.txt"
 
 # number of sample described in samples.txt
 nb_samples=3
@@ -55,7 +59,7 @@ miRNAs_ref="$mirbase_folder/mature_${species_code}.fa"
 
 # miRNAs_other = miRBase miRNA sequences in fasta format. These should be the pooled known
 # mature sequences for 1-5 species closely related to the species being analyzed. 
-# (can be genereted with step0_preprocess_2_download_miRBase22_ref.sh)
+# (can be genereted with step0_preprocess_2_download_miRBase_ref.sh)
 miRNAs_other="$mirbase_folder/mature_no_${species_code}.fa"
 
 # precursors_ref = miRBase miRNA precursor sequences in fasta format. These should be the known precursor

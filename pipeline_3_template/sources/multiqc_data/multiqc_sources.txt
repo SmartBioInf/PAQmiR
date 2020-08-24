@@ -1,0 +1,4 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	sample3	/work/smarthey/PAQmiR_Github/PAQmiR/pipeline_3_template/sources/sample3_fastqc.zip
+FastQC	all_sections	sample1	/work/smarthey/PAQmiR_Github/PAQmiR/pipeline_3_template/sources/sample1_fastqc.zip
+FastQC	all_sections	sample2	/work/smarthey/PAQmiR_Github/PAQmiR/pipeline_3_template/sources/sample2_fastqc.zip
