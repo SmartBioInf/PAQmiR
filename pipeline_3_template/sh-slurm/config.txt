@@ -19,6 +19,8 @@ nb_samples=3
 # sources folder = folder containing a symbolic link to original fastq files compressed in gzip format
 sources="$project_path/sources"
 
+UMI_adaptor=AACTGTAGGCACCATCAAT
+
 # path of the reference genome path of the reference genome
 genome="${project_path}/index/bosTau9.fa"
 
