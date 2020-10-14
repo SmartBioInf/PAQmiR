@@ -1,0 +1,4 @@
+File	nb reads input	nb reads not match	%reads not match	nb reads match/output	% reads match/output	nb reads containing N (outputed)
+sample1.tag	150000	16832	0.112213	133168	0.887787	44
+sample2.tag	150000	11218	0.0747867	138782	0.925213	34
+sample3.tag	150000	14802	0.09868	135198	0.90132	48

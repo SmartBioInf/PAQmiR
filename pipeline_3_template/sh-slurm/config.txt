@@ -19,6 +19,7 @@ nb_samples=3
 # sources folder = folder containing a symbolic link to original fastq files compressed in gzip format
 sources="$project_path/sources"
 
+# sequence of UMI primer/adaptor, the UMI tag is supposed to be found just after this sequence
 UMI_adaptor=AACTGTAGGCACCATCAAT
 
 # path of the reference genome path of the reference genome
