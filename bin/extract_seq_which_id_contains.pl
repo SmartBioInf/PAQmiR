@@ -1,8 +1,8 @@
-#! /usr/bin/perl
+#!/usr/bin/perl
 #
 #       extract_seq_which_id_contains.pl
 #
-#       Copyright 2013 Sylvain Marthey <sylvain.marthey@jouy.inra.fr>
+#       Copyright 2020 Sylvain Marthey <sylvain.marthey@inrae.fr>
 #       
 #       This program is free software; you can redistribute it and/or modify
 #       it under the terms of the GNU General Public License as published by

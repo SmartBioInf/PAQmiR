@@ -1,0 +1,1 @@
+../../bin/collapse_UMI_duplicates.sh
