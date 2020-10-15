@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#       extract_seq_which_id_contains.pl
+#       collapse_UMI_duplicates.sh
 #
 #       Copyright 2020 Sylvain Marthey <sylvain.marthey@inrae.fr>
 #
@@ -19,10 +19,14 @@
 
 
 
-# awk comm :
-# retirer les équences contenant des N
-# collapser les duplicats PCR (meme séquence et meme UMI) et faire la moyenne des scores par base
-# filrer les séquences collapsées qui contiennent au moins 1 Nucléotide avec un valeur phred (33) inférieur à 20 (53)
+# this awk script will :
+# 1/ remove sequences contaning N
+# 2/ collapse UMI duplicates (same sequence with same UMI Tag). The mean score of duplicates is calculated at each position and associated to the sequence in the result fastQ file.  
+# 3/ discard sequences containing at least one nucleotide with a phred(33) score inferior to $3 (53)
+# usage  : collapse_UMI_duplicates.sh <file_in> <file_out> <phred_thresold> 
+# $1 file_in => fastQ input file containing tag (fastq.gz)
+# $2 file_out => fastQ collapsed output (fastq.gz)
+# $3 phred_thresold => Phred(33) thresold to use to remove reads after collapsing default value: 25 (58)
 
 # TAGGED FILE IN (from command umi_tools extract)
 TAGGED_FILE_IN=$1

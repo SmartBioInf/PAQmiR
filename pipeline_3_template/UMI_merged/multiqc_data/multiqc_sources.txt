@@ -1,0 +1,4 @@
+Module	Section	Sample Name	Source
+FastQC	all_sections	sample1.UMIMerged	/work/smarthey/PAQmiR_Github/PAQmiR/pipeline_3_template/UMI_merged/sample1.UMIMerged_fastqc.zip
+FastQC	all_sections	sample3.UMIMerged	/work/smarthey/PAQmiR_Github/PAQmiR/pipeline_3_template/UMI_merged/sample3.UMIMerged_fastqc.zip
+FastQC	all_sections	sample2.UMIMerged	/work/smarthey/PAQmiR_Github/PAQmiR/pipeline_3_template/UMI_merged/sample2.UMIMerged_fastqc.zip

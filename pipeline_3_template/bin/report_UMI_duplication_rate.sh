@@ -1,0 +1,1 @@
+../../bin/report_UMI_duplication_rate.sh

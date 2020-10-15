@@ -1,0 +1,4 @@
+Sample	FastQC_mqc-generalstats-fastqc-percent_duplicates	FastQC_mqc-generalstats-fastqc-percent_gc	FastQC_mqc-generalstats-fastqc-avg_sequence_length	FastQC_mqc-generalstats-fastqc-percent_fails	FastQC_mqc-generalstats-fastqc-total_sequences
+sample1.UMIMerged	63.37923051146922	51.0	20.73218691930423	50.0	131308.0
+sample2.UMIMerged	68.02299705970334	53.0	18.272725282903235	50.0	137061.0
+sample3.UMIMerged	68.01847048769883	52.0	19.082667426275467	50.0	133402.0
