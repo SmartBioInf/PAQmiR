@@ -18,6 +18,14 @@ BMC Genomics. 2015 Apr 11;16:285. doi: 10.1186/s12864-015-1471-y.
 Le Guillou S, **Marthey S**, Laloë D, Laubier J, Mobuchon L, Leroux C, Le Provost F.
 PLoS One. 2014 Mar 21;9(3):e91938. doi: 10.1371/journal.pone.0091938.
 
+- **[5] A comprehensive overview of bull sperm-borne small non-coding RNAs and their diversity across breeds.**
+Sellem E, **Marthey S**, Rau A, Jouneau L, Bonnet A, Perrier JP, Fritz S, Le Danvic C, Boussaha M, Kiefer H, Jammes H, Schibler L.
+Chromatin. 2020 Mar 30;13(1):19. doi: 10.1186/s13072-020-00340-0. PMID: 32228651; PMCID: PMC7106649.
+
+- **[6] Dynamics of cattle sperm sncRNAs during maturation, from testis to ejaculated sperm.**
+Sellem E, **Marthey S**, Rau A, Jouneau L, Bonnet A, Le Danvic C, Guyonnet B, Kiefer H, Jammes H, Schibler L.
+Chromatin. 2021 May 24;14(1):24. doi: 10.1186/s13072-021-00397-5. PMID: 34030709; PMCID: PMC8146655.
+
 ### Directory contents :  
 
 **[/bin](bin)** contains all custom scripts used in the pipeline.  
@@ -58,13 +66,13 @@ More informations/descriptions of the pipeline can be found in the [/pipeline_2_
 
 *Comment : the shell scripts provided are set up for a cluster using a **slurm** scheduler* and preconfigured for [Genotoul Bioinformatics Facility](http://bioinfo.genotoul.fr/)
 
-**[/pipeline_3_template](pipeline_3_template)** is the second version of the pipeline. It is the version actually used in the majority of current projects.
+**[/pipeline_3_template](pipeline_3_template)** is the second version of the pipeline. It is the version actually used in the majority of current projects. It was the version used in publications [5-6].  
 the major additions to the pipeline_1 are :  
    * IsomiR analysis: creation of a count table of all the miRNA IsomiRs quantified by the miRDeep2 quantifier module. 
    * Generic sncRNA analysis: exploitation of all unique sequences (miRNA or not):  
       * creation of a general counting matrix of all the unique sequences  
       * annotation of sequences against reference databases  
       * merge with the results of the miRNA analysis  
-More informations/descriptions of the pipeline can be found in the [/pipeline_3_template/documentation](pipeline_2_template/documentation) folder
+More informations/descriptions of the pipeline can be found in the [/pipeline_3_template/documentation](pipeline_3_template/documentation) folder
 
 *Comment : the shell scripts provided are set up for a cluster using a **slurm** scheduler*
